@@ -1,0 +1,11 @@
+SELECT * FROM Stud;
+SELECT * from Stud WHERE grade='A';
+SELECT count(*) from Stud WHERE grade='A';
+SELECT Sname from Stud WHERE grade='A';
+SELECT Sname,Sroll from Stud WHERE grade='A';
+SELECT Sname,Sroll from Stud WHERE Sname='Ram';
+SELECT count(*) from Stud WHERE Sname='Ram';
+SELECT * FROM Stud ORDER by Sroll;
+SELECT * FROM Stud ORDER by Sroll DESC;
+SELECT * FROM Stud ORDER by Sname;
+SELECT * FROM Stud ORDER by Sname DESC;
