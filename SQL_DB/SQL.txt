@@ -7,24 +7,23 @@
 .Alter
 .Update
 Drop 
-Delete
+.Delete
 
 .Where
 .AS
-IS NULL
+.IS NULL
 NOT NULL
-COUNT
+.COUNT
 AND
 BETWEEN
 
 ----------------------------------------------------------------
-
 SHOW :
-SHOW DATABASES;
-
+	SHOW DATABASES;
+----------------------------------------------------------------
 Create a data base named SQL1.db
 USE SQL1.db;
-
+----------------------------------------------------------------
 CREATE :
 CREATE TABLE EMP
 (
@@ -33,63 +32,64 @@ ename TEXT
 sal FLOAT
 );
 
-----------------------------------------------------
+-----------------------------------------------------------------
 DESC EMPLOYEE;
 SELECT * FROM EMPLOYEE;
 INSERT INTO EMPLOYEE VALUES(1,'DRJ',1000.0);
 INSERT INTO EMPLOYEE VALUES(2,'CND',4000.0);
 INSERT INTO EMPLOYEE VALUES(3,'RAM',2000.0);
 SELECT * FROM EMPLOYEE;
-
+-----------------------------------------------------------------
 ALTER TABLE EMPLOYEE ADD age INTEGER;
 SELECT * FROM EMPLOYEE;
-
+-----------------------------------------------------------------
 INSERT INTO EMPLOYEE VALUES(4,'SAM',2700.0,38);
 INSERT INTO EMPLOYEE VALUES(5,'DRJ',2700.0,40);
 SELECT * FROM EMPLOYEE;
-
+-----------------------------------------------------------------
 UPDATE EMPLOYEE SET age=24 WHERE empID=1;
 UPDATE EMPLOYEE SET age=44 WHERE empID=2;
 UPDATE EMPLOYEE SET age=30 WHERE empID=3;
 SELECT * FROM EMPLOYEE;
-
+-----------------------------------------------------------------
 SELECT empID,ename FROM EMPLOYEE;
 SELECT empID AS ID,ename AS NAME FROM EMPLOYEE;
 SELECT * FROM EMPLOYEE;
-
+-----------------------------------------------------------------
 UPDATE EMPLOYEE SET age=NULL WHERE age<30;
 SELECT * FROM EMPLOYEE;
-
+-----------------------------------------------------------------
 INSERT INTO EMPLOYEE(age) VALUES(1);
 SELECT * FROM EMPLOYEE;
-
+-----------------------------------------------------------------
 DELETE FROM EMPLOYEE WHERE age=1;
 SELECT * FROM EMPLOYEE;
 
-
-ALTER - ADD,DROP,RENAME, <datatype chnge for column>
-	ALTER TABLE EMPLOYEE ADD tempcol INTEGER;
-	SELECT * FROM EMPLOYEE;
-	ALTER TABLE EMPLOYEE DROP tempcol;
-	SELECT * FROM EMPLOYEE;
-	ALTER TABLE EMPLOYEE RENAME age TO AGE;
-	SELECT * FROM EMPLOYEE;
-
-UPDATE - 
-	UPDATE EMPLOYEE SET age=NULL WHERE age<30;
-	UPDATE EMPLOYEE SET age=25 WHERE age IS NULL;
-		INSERT INTO EMPLOYEE(age) VALUES(1);
-	SELECT * FROM EMPLOYEE;
-	UPDATE EMPLOYEE SET empID=6 WHERE ename IS NULL;
-	SELECT * FROM EMPLOYEE;
-
-DELETE -
+=========================================================================================================
+ALTER - ADD,DROP,RENAME
+		ALTER TABLE EMPLOYEE ADD tempcol INTEGER;
+			SELECT * FROM EMPLOYEE;
+		ALTER TABLE EMPLOYEE DROP tempcol;
+			SELECT * FROM EMPLOYEE;
+		ALTER TABLE EMPLOYEE RENAME age TO AGE;
+			SELECT * FROM EMPLOYEE;
+--------------------------------------------------------------------------------------
+UPDATE - SET
+		UPDATE EMPLOYEE SET age=NULL WHERE age<30;
+			SELECT * FROM EMPLOYEE;
+		UPDATE EMPLOYEE SET age=25 WHERE age IS NULL;
+			INSERT INTO EMPLOYEE(age) VALUES(1);
+			SELECT * FROM EMPLOYEE;
+		UPDATE EMPLOYEE SET empID=6 WHERE ename IS NULL;
+			SELECT * FROM EMPLOYEE;
+--------------------------------------------------------------------------------------
+DELETE - Deleting row
 	DELETE FROM EMPLOYEE WHERE sal IS NULL;
-SELECT * FROM EMPLOYEE;
+		SELECT * FROM EMPLOYEE;
 
+===========================================================================================================
 SELECT * FROM EMPLOYEE WHERE AGE>30;
 SELECT count(*) FROM EMPLOYEE WHERE AGE>30;
-
 SELECT ename,sal FROM (SELECT * FROM EMPLOYEE WHERE AGE>30);
 SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
 SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal DESC;
