@@ -14,9 +14,10 @@ Drop
 .IS NULL
 NOT NULL
 .COUNT
-AND
-BETWEEN
-where
+.AND
+.BETWEEN
+.where
+.DISTINCT 
 
 ----------------------------------------------------------------
 SHOW :
