@@ -1,14 +1,13 @@
-.Create
+DDL(Data Definition Language) -	   	CREATE , ALTER , DROP , TRUNCATE , RENAME
+DML(Data Manipulation Language) -  	INSERT , UPDATE , DELETE , MERGE
+DCL(Data Control Language)- 	   	GRANT , REVOKE
+TCL(Transaction Control Language) - 	COMMIT , ROLLBACK , SAVE POINT
+DQL(Data Quewry Language) -		SELECT
+
+
 .use
 .Show
 .Desc
-.Select
-.Insert 
-.Alter
-.Update
-.Drop 
-.Delete
-
 .Where
 .AS
 .IS NULL
@@ -18,11 +17,12 @@ NOT NULL
 .BETWEEN
 .where
 .DISTINCT 
-Truncate
+
 
 ----------------------------------------------------------------
 SHOW :
 	SHOW DATABASES;
+	SHOW TABLES;
 ----------------------------------------------------------------
 Create a data base named SQL1.db
 USE SQL1.db;
@@ -30,9 +30,9 @@ USE SQL1.db;
 CREATE :
 CREATE TABLE EMP
 (
-empID INTEGER UNIQUE,
-ename TEXT
-sal FLOAT
+	empID 	INTEGER 	UNIQUE,
+	ename 	TEXT,
+	sal 	FLOAT,
 );
 
 -----------------------------------------------------------------
