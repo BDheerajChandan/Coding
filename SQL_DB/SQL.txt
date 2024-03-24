@@ -6,7 +6,7 @@
 .Insert 
 .Alter
 .Update
-Drop 
+.Drop 
 .Delete
 
 .Where
@@ -18,6 +18,7 @@ NOT NULL
 .BETWEEN
 .where
 .DISTINCT 
+Truncate
 
 ----------------------------------------------------------------
 SHOW :
