@@ -69,12 +69,13 @@ SELECT * FROM EMPLOYEE;
 
 =========================================================================================================
 ALTER - ADD,DROP,RENAME
-		ALTER TABLE EMPLOYEE ADD tempcol INTEGER;
+		ALTER TABLE EMPLOYEE ADD COLUMN tempcol INTEGER;
 			SELECT * FROM EMPLOYEE;
-		ALTER TABLE EMPLOYEE DROP tempcol;
+		ALTER TABLE EMPLOYEE DROP COLUMN tempcol;
 			SELECT * FROM EMPLOYEE;
-		ALTER TABLE EMPLOYEE RENAME age TO AGE;
+		ALTER TABLE EMPLOYEE RENAME COLUMN AGE TO age;
 			SELECT * FROM EMPLOYEE;
+
 --------------------------------------------------------------------------------------
 UPDATE - SET
 		UPDATE EMPLOYEE SET age=NULL WHERE age<30;
@@ -84,6 +85,7 @@ UPDATE - SET
 			SELECT * FROM EMPLOYEE;
 		UPDATE EMPLOYEE SET empID=6 WHERE ename IS NULL;
 			SELECT * FROM EMPLOYEE;
+
 --------------------------------------------------------------------------------------
 DELETE - Deleting row
 	DELETE FROM EMPLOYEE WHERE sal IS NULL;
@@ -112,8 +114,13 @@ SELECT DISTINCT ename FROM EMPLOYEE;
 
 
 
-
+============================================================================================================
 SELECT count(*) FROM EMPLOYEE WHERE ename=(SELECT ename FROM EMPLOYEE);
 SELECT ename FROM EMPLOYEE;
 SELECT count(*) FROM EMPLOYEE WHERE ename IN (SELECT ename FROM EMPLOYEE);
 SELECT AGE FROM EMPLOYEE GROUP BY AGE HAVING COUNT(*) >= 1;
+
+ALTER TABLE EMPLOYEE RENAME employee;
+SELECT * FROM employee;
+ALTER TABLE employee RENAME EMPLOYEE;
+SELECT * FROM EMPLOYEE;
