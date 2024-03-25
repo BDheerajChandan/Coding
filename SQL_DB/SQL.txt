@@ -9,6 +9,12 @@ Aggregate functions - 			min, max, count, avg, sum
 NOT NULL
 Truncate 
 
+
+
+=====================================================================================================================================================================
+								   TABLE AND DATABASE CREATION
+=====================================================================================================================================================================
+
 ----------------------------------------------------------------
 SHOW :
 	SHOW DATABASES;
@@ -58,7 +64,12 @@ SELECT * FROM EMPLOYEE;
 DELETE FROM EMPLOYEE WHERE age=1;
 SELECT * FROM EMPLOYEE;
 
-=========================================================================================================
+
+
+=====================================================================================================================================================================
+									MAIN SQL COMMANDS
+=====================================================================================================================================================================
+
 ALTER - ADD,DROP,RENAME
 		ALTER TABLE EMPLOYEE ADD COLUMN tempcol INTEGER;
 			SELECT * FROM EMPLOYEE;
@@ -67,7 +78,7 @@ ALTER - ADD,DROP,RENAME
 		ALTER TABLE EMPLOYEE RENAME COLUMN AGE TO age;
 			SELECT * FROM EMPLOYEE;
 
---------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
 UPDATE - SET
 		UPDATE EMPLOYEE SET age=NULL WHERE age<30;
 			SELECT * FROM EMPLOYEE;
@@ -76,31 +87,36 @@ UPDATE - SET
 			SELECT * FROM EMPLOYEE;
 		UPDATE EMPLOYEE SET empID=6 WHERE ename IS NULL;
 			SELECT * FROM EMPLOYEE;
-
---------------------------------------------------------------------------------------
-DELETE - Deleting row
+			SELECT * FROM EMPLOYEE;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+DELETE - 
 	DELETE FROM EMPLOYEE WHERE sal IS NULL;
 		SELECT * FROM EMPLOYEE;
-
-===========================================================================================================
-SELECT * FROM EMPLOYEE WHERE AGE>30;
-SELECT count(*) FROM EMPLOYEE WHERE AGE>30;
-SELECT ename,sal FROM (SELECT * FROM EMPLOYEE WHERE AGE>30);
-SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal DESC;
-SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal ASC;
-SELECT * FROM EMPLOYEE;
-SELECT * FROM EMPLOYEE WHERE AGE>30 AND age<40;
-SELECT * FROM EMPLOYEE WHERE AGE>=30 AND age<=40;
-SELECT * FROM EMPLOYEE WHERE AGE BETWEEN 30 AND 40;
-SELECT * FROM EMPLOYEE WHERE ename='DRJ';
-SELECT count(*) FROM EMPLOYEE WHERE ename='DRJ';
-SELECT ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
-SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+WHERE -
+	SELECT * FROM EMPLOYEE WHERE AGE>30;
+	SELECT count(*) FROM EMPLOYEE WHERE AGE>30;
+		SELECT * FROM EMPLOYEE;
+	SELECT * FROM EMPLOYEE WHERE AGE>30 AND age<40;
+	SELECT * FROM EMPLOYEE WHERE AGE>=30 AND age<=40;
+	SELECT * FROM EMPLOYEE WHERE AGE BETWEEN 30 AND 40;
+	SELECT * FROM EMPLOYEE WHERE ename='DRJ';
+	SELECT count(*) FROM EMPLOYEE WHERE ename='DRJ';
+	SELECT ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
+	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ORDER BY -
+	SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal DESC;
+	SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal ASC;
 	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID;
 	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID DESC;
 	SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+GROUP BY -
+	SELECT ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
+	SELECT ename,count(*) FROM EMPLOYEE GROUP by ename;
+-----------------------------------------------------------------------------------------------------------------------------------------------------	
+DISTINCT -
 	SELECT DISTINCT ename FROM EMPLOYEE;
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 AGGREGATE - sum, max, min, avg, count
@@ -112,6 +128,7 @@ AGGREGATE - sum, max, min, avg, count
 		SELECT count(*) FROM EMPLOYEE;
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 SUBQUERY -
+	SELECT ename,sal FROM (SELECT * FROM EMPLOYEE WHERE AGE>30);
 	SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
 	SELECT ename as NAME,sal AS SALLARY FROM (SELECT ename,sal FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
 	SELECT ename as NAME,sal-(sal*0.02) AS DEDUCTED_SALLARY FROM (SELECT ename,sal FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
@@ -121,8 +138,28 @@ IN -
 	SELECT * FROM EMPLOYEE WHERE ename IN ('CND');
 	SELECT * FROM EMPLOYEE WHERE ename IN ('DRJ','CND','RAM');
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-SELECT * FROM EMPLOYEE GROUP by age HAVING age>30 and sal>3000;
-SELECT * FROM EMPLOYEE WHERE age>30 and sal>3000;
+HAVING -
+	SELECT * FROM EMPLOYEE GROUP by age HAVING age>30 and sal>3000;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+AND -	
+	SELECT * FROM EMPLOYEE WHERE age>30 and sal>3000;
+	SELECT * FROM EMPLOYEE WHERE age>30 and age<45;
+	SELECT * FROM EMPLOYEE WHERE age>=30 and age<=45;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+BETWEEN -
+	SELECT * FROM EMPLOYEE WHERE age BETWEEN 30 and 45;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+LIKE - 
+	SELECT * FROM EMPLOYEE WHERE ename like '%D';
+	SELECT * FROM EMPLOYEE WHERE ename like 'D%';
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+IS NULL and NOT NULL -
+	
+
+
+
+
+
 
 ============================================================================================================
 SELECT count(*) FROM EMPLOYEE WHERE ename=(SELECT ename FROM EMPLOYEE);
