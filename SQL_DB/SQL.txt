@@ -105,12 +105,12 @@ WHERE -
 	SELECT ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
 	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-ORDER BY -
-	SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal DESC;
-	SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal ASC;
-	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID;
-	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID DESC;
-	SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
+ORDER BY - ASC, DESC
+		SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal DESC;
+		SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal ASC;
+		SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID;
+		SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID DESC;
+		SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 GROUP BY -
 	SELECT ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
@@ -139,6 +139,7 @@ IN -
 	SELECT * FROM EMPLOYEE WHERE ename IN ('DRJ','CND','RAM');
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 HAVING -
+	SELECT ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
 	SELECT * FROM EMPLOYEE GROUP by age HAVING age>30 and sal>3000;
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 AND -	
@@ -154,12 +155,19 @@ LIKE -
 	SELECT * FROM EMPLOYEE WHERE ename like 'D%';
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 IS NULL and NOT NULL -
-	
-
-
-
-
-
+		ALTER TABLE EMPLOYEE ADD experience INTEGER;
+	SELECT empID,ename,age FROM EMPLOYEE WHERE experience IS NULL;
+		UPDATE EMPLOYEE SET experience=10 WHERE empID=1;
+		UPDATE EMPLOYEE SET experience=10 WHERE empID=2;
+		UPDATE EMPLOYEE SET experience=10 WHERE empID=3;
+		SELECT * FROM EMPLOYEE;
+	UPDATE EMPLOYEE SET experience=5 WHERE experience IS NULL;
+	UPDATE EMPLOYEE SET experience=10 WHERE experience IS NOT NULL;
+	UPDATE EMPLOYEE SET experience=20 WHERE experience IS NULL;
+		SELECT * FROM EMPLOYEE;
+		ALTER TABLE EMPLOYEE DROP experience;
+		SELECT * FROM EMPLOYEE;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ============================================================================================================
 SELECT count(*) FROM EMPLOYEE WHERE ename=(SELECT ename FROM EMPLOYEE);
