@@ -93,6 +93,9 @@ DELETE -
 	DELETE FROM EMPLOYEE WHERE sal IS NULL;
 		SELECT * FROM EMPLOYEE;
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+TRUNCATE -
+	TRUNCATE TABLE EMPLOYEE;
+----------------------------------------------------------------------------------------------------------------------------------------------------
 WHERE -
 	SELECT * FROM EMPLOYEE WHERE AGE>30;
 	SELECT count(*) FROM EMPLOYEE WHERE AGE>30;
