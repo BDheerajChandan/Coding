@@ -4,20 +4,10 @@ DCL(Data Control Language)- 	   	GRANT , REVOKE
 TCL(Transaction Control Language) - 	COMMIT , ROLLBACK , SAVE POINT
 DQL(Data Quewry Language) -		SELECT
 
+Aggregate functions - 			min, max, count, avg, sum
 
-.use
-.Show
-.Desc
-.Where
-.AS
-.IS NULL
 NOT NULL
-.COUNT
-.AND
-.BETWEEN
-.where
-.DISTINCT 
-
+Truncate 
 
 ----------------------------------------------------------------
 SHOW :
@@ -110,17 +100,31 @@ SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
 SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID;
 SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID DESC;
 SELECT DISTINCT ename FROM EMPLOYEE;
-
-
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+AGGREGATE - sum, max, min, avg, count
+		SELECT sum(sal) FROM EMPLOYEE WHERE age>=40;
+		SELECT max(sal) FROM EMPLOYEE WHERE age>=40;
+		SELECT min(sal) FROM EMPLOYEE WHERE age>=40;
+		SELECT avg(sal) FROM EMPLOYEE WHERE age>=40;
+		SELECT count(*) FROM EMPLOYEE WHERE age>=40;
+		SELECT count(*) FROM EMPLOYEE;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+SUBQUERY -
+	SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
+	SELECT ename as NAME,sal AS SALLARY FROM (SELECT ename,sal FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
+	SELECT ename as NAME,sal-(sal*0.02) AS DEDUCTED_SALLARY FROM (SELECT ename,sal FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+IN -
+	SELECT * FROM EMPLOYEE WHERE ename IN ('DRJ');
+	SELECT * FROM EMPLOYEE WHERE ename IN ('CND');
+	SELECT * FROM EMPLOYEE WHERE ename IN ('DRJ','CND','RAM');
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ============================================================================================================
 SELECT count(*) FROM EMPLOYEE WHERE ename=(SELECT ename FROM EMPLOYEE);
 SELECT ename FROM EMPLOYEE;
 SELECT count(*) FROM EMPLOYEE WHERE ename IN (SELECT ename FROM EMPLOYEE);
 SELECT AGE FROM EMPLOYEE GROUP BY AGE HAVING COUNT(*) >= 1;
-
 ALTER TABLE EMPLOYEE RENAME employee;
 SELECT * FROM employee;
 ALTER TABLE employee RENAME EMPLOYEE;
