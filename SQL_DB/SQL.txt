@@ -86,7 +86,6 @@ DELETE - Deleting row
 SELECT * FROM EMPLOYEE WHERE AGE>30;
 SELECT count(*) FROM EMPLOYEE WHERE AGE>30;
 SELECT ename,sal FROM (SELECT * FROM EMPLOYEE WHERE AGE>30);
-SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
 SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal DESC;
 SELECT * FROM EMPLOYEE WHERE AGE>30 ORDER BY sal ASC;
 SELECT * FROM EMPLOYEE;
@@ -97,9 +96,12 @@ SELECT * FROM EMPLOYEE WHERE ename='DRJ';
 SELECT count(*) FROM EMPLOYEE WHERE ename='DRJ';
 SELECT ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
 SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1;
-SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID;
-SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID DESC;
-SELECT DISTINCT ename FROM EMPLOYEE;
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ORDER BY -
+	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID;
+	SELECT empid,ename,count(*) FROM EMPLOYEE GROUP BY ename HAVING COUNT(*) >= 1 ORDER BY empID DESC;
+	SELECT ename as NAME,sal AS SALLARY FROM (SELECT * FROM EMPLOYEE WHERE AGE>30) ORDER BY sal;
+	SELECT DISTINCT ename FROM EMPLOYEE;
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 AGGREGATE - sum, max, min, avg, count
 		SELECT sum(sal) FROM EMPLOYEE WHERE age>=40;
@@ -119,6 +121,8 @@ IN -
 	SELECT * FROM EMPLOYEE WHERE ename IN ('CND');
 	SELECT * FROM EMPLOYEE WHERE ename IN ('DRJ','CND','RAM');
 -----------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT * FROM EMPLOYEE GROUP by age HAVING age>30 and sal>3000;
+SELECT * FROM EMPLOYEE WHERE age>30 and sal>3000;
 
 ============================================================================================================
 SELECT count(*) FROM EMPLOYEE WHERE ename=(SELECT ename FROM EMPLOYEE);
