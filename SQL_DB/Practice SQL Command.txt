@@ -1,0 +1,41 @@
+=================================================================================================================================================
+								CREATING A TABLE
+=================================================================================================================================================
+CREATE TABLE EMPLOYEE_1
+(
+Employeeid INTEGER,
+Name TEXT,
+Gender varchar(15),
+Salary float,
+Department varchar(15),
+Experience INTEGER
+);
+
+=================================================================================================================================================
+							INSERTING VALUES INTO TABLE
+=================================================================================================================================================
+INSERT INTO EMPLOYEE_1 VALUES(5,'Priya Sharma','Female',45000.0,'IT',2);
+INSERT INTO EMPLOYEE_1 VALUES(6,'Rahul Patel','Male',65000.0,'Sales',5);
+INSERT INTO EMPLOYEE_1 VALUES(7,'Nisha Gupta','Female',55000.0,'Marketing',4);
+INSERT INTO EMPLOYEE_1 VALUES(8,'Vikram Singh','Male',75000.0,'Finance',7);
+INSERT INTO EMPLOYEE_1 VALUES(9,'Aarti Desai','Female',50000.0,'IT',3);
+
+=================================================================================================================================================
+							RETRIEVING DATA WITH QUERIES
+=================================================================================================================================================
+- SELECT * FROM EMPLOYEE_1;
+- SELECT sum(Salary) AS SALARY FROM EMPLOYEE_1;
+- SELECT Department,sum(Salary) as SALARY FROM EMPLOYEE_1 GROUP BY Department;
+- SELECT Department,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Department ORDER BY sum(SALARY);
+- SELECT Department,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Department ORDER BY sum(SALARY) DESC;
+- SELECT Department,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Department ORDER BY sum(SALARY) ASC;
+- SELECT Department,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Department HAVING sum(Salary)>55000;
+- SELECT Department,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Department HAVING sum(Salary)>55000 ORDER BY sum(Salary);
+- SELECT Department,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Department HAVING sum(Salary)>55000 ORDER BY sum(Salary) DESC;
+- SELECT Department,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Department HAVING sum(Salary)>55000 ORDER BY sum(Salary) ASC;
+- SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Gender;
+- SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary);
+- SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary) ASC;
+- SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary) DESC;
+- SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 WHERE experience>2 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary) ASC;
+- SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 WHERE Employeeid>2 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary) DESC;
