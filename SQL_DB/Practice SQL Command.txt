@@ -1,5 +1,5 @@
 =================================================================================================================================================
-								CREATING A TABLE
+								CREATING A TABLE-1
 =================================================================================================================================================
 CREATE TABLE EMPLOYEE_1
 (
@@ -10,7 +10,6 @@ Salary float,
 Department varchar(15),
 Experience INTEGER
 );
-
 =================================================================================================================================================
 							INSERTING VALUES INTO TABLE
 =================================================================================================================================================
@@ -19,7 +18,6 @@ INSERT INTO EMPLOYEE_1 VALUES(6,'Rahul Patel','Male',65000.0,'Sales',5);
 INSERT INTO EMPLOYEE_1 VALUES(7,'Nisha Gupta','Female',55000.0,'Marketing',4);
 INSERT INTO EMPLOYEE_1 VALUES(8,'Vikram Singh','Male',75000.0,'Finance',7);
 INSERT INTO EMPLOYEE_1 VALUES(9,'Aarti Desai','Female',50000.0,'IT',3);
-
 =================================================================================================================================================
 							RETRIEVING DATA WITH QUERIES
 =================================================================================================================================================
@@ -39,3 +37,75 @@ INSERT INTO EMPLOYEE_1 VALUES(9,'Aarti Desai','Female',50000.0,'IT',3);
 - SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary) DESC;
 - SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 WHERE experience>2 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary) ASC;
 - SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 WHERE Employeeid>2 GROUP BY Gender HAVING sum(Salary)>=50000 ORDER BY sum(Salary) DESC;
+- SELECT * FROM EMPLOYEE_1;
+- SELECT * FROM EMPLOYEE_1 LIMIT 3;
+- SELECT * FROM EMPLOYEE_1 WHERE experience>3 ORDER BY Salary desc;
+- SELECT * FROM EMPLOYEE_1 WHERE experience>3 ORDER BY Salary desc LIMIT 2;
+- SELECT Gender,sum(Salary) AS SALARY FROM EMPLOYEE_1 GROUP BY Gender;
+- SELECT Gender,sum(Salary) FROM EMPLOYEE_1 GROUP BY Gender ORDER BY sum(Salary);
+- SELECT Gender,sum(Salary) FROM EMPLOYEE_1 WHERE experience>3 GROUP BY Gender ORDER BY sum(Salary) DESC LIMIT 1;
+- SELECT Gender,sum(Salary) FROM EMPLOYEE_1 WHERE experience>3 GROUP BY Gender ORDER BY sum(Salary) ASC LIMIT 1;
+- SELECT * FROM EMPLOYEE_1 WHERE experience>2;
+- SELECT * FROM EMPLOYEE_1 WHERE NOT experience>2;
+- SELECT * FROM EMPLOYEE_1 WHERE Salary BETWEEN 45000 AND 50000;
+- SELECT * FROM EMPLOYEE_1 WHERE Salary NOT BETWEEN 45000 AND 50000;
+- SELECT * FROM EMPLOYEE_1 WHERE Name like 'R%';
+- SELECT * FROM EMPLOYEE_1 WHERE Name NOT like 'R%';
+- SELECT * FROM EMPLOYEE_1 WHERE Name like '%a %';
+- SELECT * FROM EMPLOYEE_1 WHERE Name NOT like '%a %';
+- SELECT * FROM EMPLOYEE_1 WHERE Name like '%r__%';
+- SELECT * FROM EMPLOYEE_1 WHERE Name like '%___r%';
+- SELECT * FROM EMPLOYEE_1 WHERE Name like 'P%a';
+- SELECT * FROM EMPLOYEE_1 WHERE Name like 'V%h';
+- SELECT * FROM EMPLOYEE_1 WHERE Name not like 'P%a';
+- SELECT * FROM EMPLOYEE_1 WHERE Name not like 'V%h';
+- SELECT * FROM EMPLOYEE_1 WHERE Name not like 'P%a' AND Name NOT like 'V%h';
+
+
+
+
+
+
+#################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+
+
+
+
+
+=================================================================================================================================
+							CREATING A TABLE-2
+=================================================================================================================================
+CREATE TABLE EMPLOYEE_2
+(
+empID INTEGER,
+emp_name varchar(15),
+emp_sal float,
+emp_City varchar(15)
+);
+==================================================================================================================================
+						INSERTING VALUES INTO TABLE-2
+==================================================================================================================================
+INSERT INTO EMPLOYEE_2 VALUES(201,'Abhay',2000,'Goa');
+INSERT INTO EMPLOYEE_2 VALUES(202,'Ankit',65000,'Delhi');
+INSERT INTO EMPLOYEE_2 VALUES(203,'Bheem',8000,'Jaipur');
+INSERT INTO EMPLOYEE_2 VALUES(204,'Ram',50000,'Goa');
+INSERT INTO EMPLOYEE_2 VALUES(205,'Sumit',5000,'Delhi');
+===================================================================================================================================
+						RETRIEVING DATA WITH QUERIES
+===================================================================================================================================
+- SELECT * FROM EMPLOYEE_2;
+- SELECT emp_City,sum(emp_sal) from EMPLOYEE_1 GROUP BY emp_City;
+- SELECT emp_City,sum(emp_sal) from EMPLOYEE_1 WHERE empID>202 GROUP BY emp_City;
+
+
+
+
+
+#################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+SELECT * FROM EMPLOYEE_1;
+SELECT * FROM EMPLOYEE_2;
+ALTER TABLE EMPLOYEE_1 RENAME emp_sal TO Salary;
+SELECT EMPLOYEE_1.empID,EMPLOYEE_1.emp_name,EMPLOYEE_2.Salary FROM EMPLOYEE_1 INNER JOIN EMPLOYEE_2 ON EMPLOYEE_1.Salary=EMPLOYEE_2.Salary; 
+SELECT EMPLOYEE_1.empID,EMPLOYEE_1.emp_name,EMPLOYEE_2.Salary FROM EMPLOYEE_1 LEFT JOIN EMPLOYEE_2 ON EMPLOYEE_1.Salary=EMPLOYEE_2.Salary;
