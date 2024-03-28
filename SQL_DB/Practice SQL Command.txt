@@ -117,3 +117,38 @@ SELECT Salary FROM EMPLOYEE_1 WHERE EXISTS (SELECT Name FROM EMPLOYEE_2 WHERE EM
 SELECT count(*),sum(Salary) FROM EMPLOYEE_1 WHERE EXISTS (SELECT Name FROM EMPLOYEE_2 WHERE EMPLOYEE_1.Salary=EMPLOYEE_2.Salary GROUP BY Salary);
 SELECT Employeeid,Name,Department,Salary FROM EMPLOYEE_1 WHERE EXISTS (SELECT Name FROM EMPLOYEE_2 WHERE EMPLOYEE_1.Salary=EMPLOYEE_2.Salary and Department='IT');
 SELECT Employeeid,Name,Department,Salary FROM EMPLOYEE_1 WHERE NOT EXISTS (SELECT Name FROM EMPLOYEE_2 WHERE EMPLOYEE_1.Salary=EMPLOYEE_2.Salary and Department='IT');
+
+
+
+
+
+
+
+=================================================================================================================================
+							CREATING A TABLE-3
+=================================================================================================================================
+CREATE TABLE EMPLOYEE_3
+(
+Employeeid INTEGER,
+Name varchar(15),
+emp_sal float,
+emp_City varchar(15)
+);
+==================================================================================================================================
+						INSERTING VALUES INTO TABLE-2
+==================================================================================================================================
+INSERT INTO EMPLOYEE_3 VALUES(201,'Sam',2000,'Goa');
+INSERT INTO EMPLOYEE_3 VALUES(202,'Jose',65000,'Delhi');
+INSERT INTO EMPLOYEE_3 VALUES(203,'Puttin',8000,'Khurda');
+INSERT INTO EMPLOYEE_3 VALUES(204,'Ram',50000,'Vizag');
+INSERT INTO EMPLOYEE_3 VALUES(205,'Modi',5000,'Delhi');
+
+===================================================================================================================================
+						RETRIEVING DATA WITH QUERIES
+===================================================================================================================================
+SELECT * FROM EMPLOYEE_2 UNION SELECT * FROM EMPLOYEE_3;
+SELECT emp_name,Salary FROM EMPLOYEE_2 UNION SELECT Name,emp_sal FROM EMPLOYEE_3;
+SELECT emp_name,Salary FROM EMPLOYEE_2 UNION SELECT Name,emp_sal FROM EMPLOYEE_3 WHERE Name like 'A%';
+SELECT emp_name,Salary FROM EMPLOYEE_2 WHERE emp_name like 'R%' UNION SELECT Name,emp_sal FROM EMPLOYEE_3 WHERE Name like 'S%';
+SELECT emp_name FROM EMPLOYEE_2 UNION SELECT Name FROM EMPLOYEE_3;
+SELECT count(*),sum(Salary) FROM EMPLOYEE_2;
