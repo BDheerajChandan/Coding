@@ -40,3 +40,39 @@ Location varchar(20)
 INSERT INTO Departments VALUES(1,'Sales','New York');
 INSERT INTO Departments VALUES(2,'Marketing','Chicago');
 INSERT INTO Departments VALUES(3,'Finance','Boston');
+
+
+
+
+
+
+
+------------------------------------------------------------------------------
+SELECT Employees.Name,Departments.DepartmentName FROM Employees 
+LEFT JOIN Departments ON Employees.DepartmentID=Departments.DepartmentID;
+------------------------------------------------------------------------------
+SELECT Name,ManagerName FROM Employees;
+------------------------------------------------------------------------------
+SELECT Sales.EmployeeID,Employees.Name,sum(Sales.Amount) FROM Sales 
+LEFT JOIN Employees ON Employees.EmployeeID=Sales.EmployeeID 
+GROUP BY Employees.Name ORDER BY Employees.Employeeid;
+
+SELECT Employees.Name,sum(Sales.Amount),Departments.DepartmentName FROM Employees
+LEFT JOIN Sales ON Employees.EmployeeID=Sales.EmployeeID
+LEFT JOIN Departments ON Employees.DepartmentID=Departments.DepartmentID
+GROUP BY Employees.Name ORDER BY Employees.Employeeid;
+------------------------------------------------------------------------------
+SELECT Employees.Name FROM Employees 
+LEFT JOIN Departments ON Employees.DepartmentID=Departments.DepartmentID 
+WHERE Departments.DepartmentName='Sales';
+------------------------------------------------------------------------------
+SELECT Employees.Name FROM Employees 
+LEFT JOIN Departments ON Employees.DepartmentID=Departments.DepartmentID
+LEFT JOIN Sales ON Employees.EmployeeID=Sales.EmployeeID
+WHERE Sales.Amount;
+
+
+
+
+
+
