@@ -1,0 +1,42 @@
+CREATE TABLE Employees
+(
+EmployeeID INTEGER PRIMARY KEY,
+Name varchar(20),
+ManagerName varchar(20),
+DepartmentID INTEGER,
+MangerID INTEGER,
+Salary float
+);
+INSERT INTO Employees VALUES(1,'John','Doe',1,NULL,50000);
+INSERT INTO Employees VALUES(2,'Jane','Smith',1,1,60000);
+INSERT INTO Employees VALUES(3,'Mike','Johnson',2,1,55000);
+INSERT INTO Employees VALUES(4,'Emily','Brown',2,2,52000);
+INSERT INTO Employees VALUES(5,'David','Lee',1,1,58000);
+INSERT INTO Employees VALUES(6,'Sarah','White',2,1,53000);
+INSERT INTO Employees VALUES(7,'James','Anderson',3,NULL,65000);
+-------------------------------------------------------------------------------
+CREATE TABLE Sales(
+SaleID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+Amount float,
+SalesDate date
+);
+INSERT INTO Sales VALUES(1,2,1000,'05-01-2023');
+INSERT INTO Sales VALUES(2,3,1500,'10-02-2023');
+INSERT INTO Sales VALUES(3,1,2000,'15-03-2023');
+INSERT INTO Sales VALUES(4,2,1200,'20-04-2023');
+INSERT INTO Sales VALUES(5,4,1800,'25-05-2023');
+INSERT INTO Sales VALUES(6,5,1300,'30-06-2023');
+INSERT INTO Sales VALUES(7,3,1700,'05-07-2023');
+INSERT INTO Sales VALUES(8,1,1900,'10-08-2023');
+INSERT INTO Sales VALUES(9,2,1100,'15-09-2023');
+INSERT INTO Sales VALUES(10,4,1600,'20-10-2023');
+---------------------------------------------------------------------------------
+CREATE TABLE Departments(
+DepartmentID INTEGER PRIMARY KEY,
+DepartmentName varchar(20),
+Location varchar(20)
+);
+INSERT INTO Departments VALUES(1,'Sales','New York');
+INSERT INTO Departments VALUES(2,'Marketing','Chicago');
+INSERT INTO Departments VALUES(3,'Finance','Boston');
