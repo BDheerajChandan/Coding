@@ -1,0 +1,106 @@
+
+ls - List all files and directories
+ls -l -List all files with permission
+ls -lt - List all files with sorted as per time
+ls -la - List all normal+hidden files
+mkdir - To make new directory
+cd - To go into the directory
+cd .. - To come out of the directory
+touch - To create a new file
+cat> - Overwrite data into the file
+cat>> - Append data with existing data(Writing data)
+cat< - Read data from file
+echo - Read data 
+echo ""> - writing data into file
+chmod - To set permission for user,group,guests(other users)
+chmod 777 - To give read,write,executable permissions to user,group,guests(other users)
+chmod 700 - To give read,write,executable permissions to user only
+chmod u=r,g=r,o=r <filename> - To give users,groups,guests(Other user) permission for read only
+rm - To remove and delete a file
+rm -r - To remove and deleting a directory
+rm -f - Force to remove and delete a file
+rm -rf - Force to remove and deleting a directory
+<cmd>;<cmd> - To execute multiple commands in a single line
+pwd - To get current working directory location
+chown - To change owner
+sudo - As a Superuser 
+sudo su - To get into the root.Switch to root user(sudo su -)
+su root - To switch to root user directly
+sudo useradd - To create new user
+sudo groupadd - To create new group
+sudo usermod -aG - To add users to group
+groups <user> - To verify whether user is added to which group
+getent group - To get group information
+who - To check who other users currently logged in
+whoami - To get username of current user
+sudo userdel - To delete user
+sudo delgroup - To delete group
+getfacl - To check permissions/user access who can access or displays access control list.
+setfacl - To set or modify ACLs(Access Control Lists) for file and directories. It allows to grant or revoke permissions for users and groups.
+		- setfacl -m u:<username>:permission <filename>
+		- setfacl -m g:<username>:permission <filename>
+		- setfacl -m o:<username>:permission <filename> 
+	    'u'-Users, 'g'-Groups, 'o'-Guests(Other Users)
+gcc - To compile C file
+./a.out - To run/execute C file
+clear - To get clean Linux prompt or to clear command on linux
+vi - To open file editor
+sh - To run all commands in shell script file
+su - To switch to other user
+sudo passwd - To change current users password
+sudo passwd -l - Tolocl user's password
+cp - To copy a file/directory to other location or copy the content of a file to other
+mv - To move or shift a file/directory to other location or to rename a file
+tail - To get last 10 lines of a file
+head - To get first 10 lines of a file
+top - To get PID number of running program
+kill - To kill running program using PID number
+killall - To kill processing programs using PID or name
+
+tar cf <zipname>.tar <file_1> <file_2>....<file_n>  -  To zip as .tar
+tar czf <zipname>.tar.gz <file_1> <file_2>....<file_n>  -  To zip as .gz
+tar cjf <zipname>.tar.bz2 <file_1> <file_2>....<file_n>  -  To zip as .bz2
+
+tar xf <zipname>.tar - UnZip .tar
+tar xzf <zipname>.tar.gz - UnZip .gz
+tar xjf <zipname>.tar.bz2 - UnZip .bz2
+
+gzip <filename> - Compressing a file to zip .gz
+gzip -d <filename>.gz - Decompress a file from zip .gz
+help - To get guide
+
+wc  -l - To count
+ls | wc -l - To count number of files and directorires in current location
+head <filename>|tail -1 - Last line of first 10 lines from a file
+tail <filename>|head -1 - First line of last 10 lines from a file
+ls|grep '\.<extension>$' - To get file names with specified extension
+ls|grep '\.<extension>$'|wc -l - To get count for number of files name with specified extension
+
+find - To search for specified files in computer directory
+locate - To search for files only on Linux database   
+ps - List of running processes
+@ - List all arguments
+# - Total number of arguments
+* - List of arguments
+? - Exit status of previous command (1 is fail;0 is pass)
+! - PID of last background process
+$ - PID of current script
+`` - echo `date`;echo `cal`
+expr - To express the calculation , echo $a+$b
+eval - c=$a+$b;eval c=`echo $HOME`;eval $c
+
+cal - To get a calender
+cal <year> - To get a calender for specified year
+date - To get date
+%A - WeekdayName
+%B - MonthName
+%a - WeekdayName(Short)
+%b - MonthName(Sort)
+%m - Month number
+%d - Day Number
+%y - Year number
+%H - Hour (in 24 hours)
+%I - Hour (in 12 hours)
+%P - AM/PM
+%M - Minute
+
