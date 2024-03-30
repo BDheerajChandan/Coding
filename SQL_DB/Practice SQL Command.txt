@@ -61,16 +61,37 @@ INSERT INTO EMPLOYEE_1 VALUES(9,'Aarti Desai','Female',50000.0,'IT',3);
 - SELECT * FROM EMPLOYEE_1 WHERE Name not like 'V%h';
 - SELECT * FROM EMPLOYEE_1 WHERE Name not like 'P%a' AND Name NOT like 'V%h';
 
+drop procedure if exists func_1;
+delimiter |;
+create procedure func_1()
+begin
+select * from employee_1;
+select * from employee_2;
+end
+|;
+delimiter ;
+call func_1()
 
+
+drop view if exists view_1;
+create view view_1 as select * from employee_1;
+select * from view_1;
+
+select Salary from employee_1 union select Salary from employee_2;
+select Salary from employee_1 union all select Salary from employee_2;
+
+select * from employee_1;
+select concat(Name,'_',Gender) as Name_Gender from employee_1;
+select substr(Name,1,5) as Substr_Name from employee_1;
+select upper(Name) as upper_Name from employee_1;
+select lower(Name) as upper_Name from employee_1;
+select upper(substr(Name,1,5)) as UpperSubstr_Name from employee_1;
+select lower(substr(Name,1,5)) as LowerSubstr_Name from employee_1;
 
 
 
 
 #################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
-
-
-
-
 
 
 =================================================================================================================================
@@ -149,3 +170,79 @@ SELECT emp_name,Salary FROM EMPLOYEE_2 UNION SELECT Name,emp_sal FROM EMPLOYEE_3
 SELECT emp_name,Salary FROM EMPLOYEE_2 WHERE emp_name like 'R%' UNION SELECT Name,emp_sal FROM EMPLOYEE_3 WHERE Name like 'S%';
 SELECT emp_name FROM EMPLOYEE_2 UNION SELECT Name FROM EMPLOYEE_3;
 SELECT count(*),sum(Salary) FROM EMPLOYEE_2;
+
+
+#################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+
+===================================================================================================================================
+							DELIMITER - IF STATEMENT WITH DECLARED VARIABLE
+===================================================================================================================================
+drop procedure if exists FindEvOdd;
+delimiter |;
+create procedure FindEvOdd()
+begin
+	declare num int default 0;
+	set num=32;
+	if num%2=0 then
+		select num as 'Number','Even' as 'Results';
+	else
+		select num as 'Number','Odd' as 'Results';
+	end if;
+end
+|;
+delimiter ;
+call FindEvOdd();
+
+
+===================================================================================================================================
+							DELIMITER - IF STATEMENT WITH INPUT VARIABLE						
+===================================================================================================================================
+
+drop procedure if exists FindEvOdd;
+delimiter |;
+create procedure FindEvOdd(in num int)
+begin
+	if num%2=0 then
+		select num as 'Number','Even' as 'Results';
+	else
+		select num as 'Number','Odd' as 'Results';
+	end if;
+end
+|;
+delimiter ;
+call FindEvOdd(21);
+call FindEvOdd(20);
+
+===================================================================================================================================
+							    DOUBT IN OUTPUT AND ERRORS
+===================================================================================================================================
+drop procedure if exists dispEmp;
+delimiter |;
+create procedure dispEmp(out Ename varchar(20))
+begin
+select Name into Ename from employee_1 where Employeeid=5;
+end
+|;
+delimiter ;
+select @Ename;
+
+
+drop procedure if exists FindEvOdd;
+delimiter |;
+create procedure FindEvOdd()
+begin
+declare num int default 0;
+declare i int default 0;
+set num=10;
+while i<num do
+if num%2=0 then
+select num as 'Number','Even' as 'Results';
+else
+select num as 'Number','Odd' as 'Results';
+end if;
+done
+end;
+|;
+delimiter ;
+call FindEvOdd();
