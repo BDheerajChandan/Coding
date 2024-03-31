@@ -1,4 +1,6 @@
-
+----------------------------------------------------------------------------------------------------------
+						LINUX COMMANDS
+----------------------------------------------------------------------------------------------------------
 ls - List all files and directories
 ls -l -List all files with permission
 ls -lt - List all files with sorted as per time
