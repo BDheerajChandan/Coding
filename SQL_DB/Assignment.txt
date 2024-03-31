@@ -43,7 +43,16 @@ INSERT INTO Departments VALUES(3,'Finance','Boston');
 
 
 
-
+=========================================================================================================================
+Problem 1: List all employees along with their departments.
+Problem 2: Display employee names along with their managers' names.
+Problem 3: Show the total sales made by each employee along with their names and departments.
+Problem 4: Find the names of employees who are working on sales department.
+Problem 5: Display the names of employees who have a salary greater than the average salary in their department.
+Problem 6: Show the names of departments along with the number of employees working in each department
+Problem 7: List the names of employees along with the name and location of the department they belong to.
+Problem 8: Display the names of employees who have the samanager.
+=========================================================================================================================
 
 
 
@@ -72,6 +81,51 @@ LEFT JOIN Sales ON Employees.EmployeeID=Sales.EmployeeID
 WHERE Sales.Amount;
 
 
+
+======================================================================================================================
+
+
+
+
+============================================================================================================================================================
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+SELECT Sales.EmployeeID,Employees.Name,sum(Sales.Amount)
+FROM Sales
+LEFT JOIN Employees ON Employees.EmployeeID=Sales.EmployeeID 
+GROUP BY Employees.Name ORDER BY Employees.Employeeid;
+
+SELECT Employees.Name,sum(Sales.Amount),Departments.DepartmentName
+FROM Employees
+LEFT JOIN Sales ON Employees.EmployeeID=Sales.EmployeeID
+LEFT JOIN Departments ON Employees.DepartmentID=Departments.DepartmentID
+GROUP BY Employees.Name ORDER BY Employees.Employeeid;
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+
+WITH AvgSalDept AS (
+SELECT DepartmentID,AVG(Salary) AS AvgSalary FROM Employees GROUP BY DepartmentID
+)
+SELECT Employees.Name FROM Employees
+LEFT JOIN AvgSalDept ON Employees.DepartmentID = AvgSalDept.DepartmentID
+WHERE Employees.Salary > AvgSalDept.AvgSalary;
+
+
+
+------------------------------------------------------------------------------
+SELECT Departments.DepartmentName, COUNT(Employees.EmployeeID) AS EmployeeStrength 
+FROM Departments 
+LEFT JOIN Employees ON Departments.DepartmentID = Employees.DepartmentID
+GROUP BY Departments.DepartmentName;
+------------------------------------------------------------------------------
+SELECT Employees.Name, Departments.DepartmentName, Departments.Location
+FROM Employees
+JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID;
+------------------------------------------------------------------------------
 
 
 
