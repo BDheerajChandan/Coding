@@ -1,0 +1,10 @@
+To solve vi editor issue
+usermod -a -G <username>
+su root
+nano /etc/sudoers # <user>ALL(ALL:ALL) ALL
+	pwd
+	exit
+sudo su
+sudo apt-get update
+sudo apt-get install vim
+sudo apt upgrade vim
