@@ -1,3 +1,5 @@
+
+
 Before writing shell script we need to write : #!/bin/bash which tells that we are using bash shell for shell scripting.
 
 read <variable_name> : To take(Write in) input data from user
