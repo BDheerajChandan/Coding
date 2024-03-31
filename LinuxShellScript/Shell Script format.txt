@@ -1,0 +1,145 @@
+Before writing shell script we need to write : #!/bin/bash which tells that we are using bash shell for shell scripting.
+
+read <variable_name> : To take(Write in) input data from user
+echo $<variable_name> : To give(Read out) output data
+
+Relation operators :-  	-lt : less than
+			-le : less than and equal to
+			-gt : greater than
+			-ge : greater than and equal to
+			-eq : equal to
+			-ne : not equal to
+			==  : equal to
+			!=  : not equal to
+3 Loops : 
+- For loop : 
+----------------------------------------
+read n
+for((i=0;i<n;i++))
+do
+echo $i
+done
+----------------------------------------
+for i in a ab def
+do
+echo $i
+done
+----------------------------------------
+for i in {1..5}
+do
+echo $i
+done
+----------------------------------------
+for i in $(seq 1 5)
+do
+echo $i
+done
+----------------------------------------
+l1=(1,2,3)
+l2=(1,2,3,'a','b')
+for i in "${l1[@]}"
+do
+echo $i
+done
+-----------------------------------------
+
+- While loop :
+============
+-----------------------------------------
+read n
+i=0
+while [ $i -le $n ]
+do
+echo $i
+((i++))
+done
+------------------------------------------
+i=5
+while [ $i -ge 1 ]
+do
+echo $i
+i=$(($i-1))
+done
+------------------------------------------
+i=1
+while ((i<=5))
+do
+echo $i
+((i++))
+done
+------------------------------------------
+
+
+- Until loop :
+------------------------------------------
+i=1
+until [ $i -gt 5 ]
+do
+echo $i
+((i++))
+done
+------------------------------------------
+i=1
+until [ $i -gt 5 ]
+do
+echo $i
+i=$(($i+1))
+done
+------------------------------------------
+i=1
+until ((i<5))
+do 
+echo $((i++))
+done
+------------------------------------------
+i=1
+until ((i<5))
+do 
+printf "%d\n"$i
+((i++))
+done
+
+
+
+
+Conditional statements :-
+------------------------------------------
+read num
+if [ $num -gt 0 ];
+then
+ech "+ve"
+elif((num<0))
+then
+echo "-ve"
+else
+echo "Zero"
+fi
+------------------------------------------
+res=$(expr 10+10)
+if [ $res -eq 20 ];
+then 
+echo "Same"
+fi
+------------------------------------------
+num=5
+if [ $((num%2)) -ne 0 ];
+then
+echo "Even"
+fi
+------------------------------------------
+if(($((num%2))!=0))
+then 
+echo "Odd"
+fi
+
+
+Case :
+------------------------------------------
+read c
+case $c in
+1) echo "One";;
+2) echo "Two";;
+3) echo "Three";;
+*)
+echo "Invalid choice";;
+esac
