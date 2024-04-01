@@ -3,13 +3,18 @@ DML(Data Manipulation Language) -  	INSERT , UPDATE , DELETE , MERGE
 DCL(Data Control Language)- 	   	GRANT , REVOKE
 TCL(Transaction Control Language) - 	COMMIT , ROLLBACK , SAVE POINT
 DQL(Data Quewry Language) -		SELECT
-
 Aggregate functions - 			min, max, count, avg, sum
 
-NOT NULL
-Truncate 
-
-
+SQL : 	Structured Query Language used to manage data in RDBMS.
+	It can execute quries,retrieving data, insert records,update records, delete records, Create new databases, create new tables, create new procedure and views.
+	Can set permissions on table,procedure and views.
+RDBMS : Relational Data Base Management Systems 
+	It is basis for SQL and all of the modern database systems like MS SQL server, IBM DB2, Oracle, MySQL and Microsoft access.
+	Data in RDBMS stored in databaseobjects called tables(Collection of relatable data entities and consists of rows and columns).
+NoSQL : It appraches to database design that focuses on providing a mechanism for storage and retrieval of data.
+	NoSQL database use a variety of data models for accessing and managing data.
+	It is reffered to as non SQl or Not only SQl database independent to each other and tables also independent to each other.
+CQl :	It is known as Contextual  Query language and previously known as Commom query language.
 
 =====================================================================================================================================================================
 								   TABLE AND DATABASE CREATION
