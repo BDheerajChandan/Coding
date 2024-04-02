@@ -12,8 +12,8 @@ show dbs :						To see all databases
 show databases :					To see all databases
 use <Database_name> : 					To create new database <Database_name> 
 db.createCollection("<Collection_Name>"):		To create a new collection
-db.<Collection_Name>.insertOne({<Key>:<Value>}):				To insert one row of data
-db.<Collection_Name>.insertMany([{<Key>:<Value>},{K2:V2},..,{Kn:Vn}]): 	To insert multiple rows of data
+db.<Collection_Name>.insertOne({<Key>:<Value>}):	To insert one document
+db.<Collection_Name>.insertMany([{<Key>:<Value>},{K2:V2},..,{Kn:Vn}]): 	To insert multiple Documents
 db.<Collection_Name>.find() :			To get all documents/data from collection
 db.<Collection_Name>.find({<Key>:<Value>}) :	To get all documents/data having the value for specific key(1le condition) from collection
 db.<Collection_Name>.findone() :		To get first document/data from collection
@@ -23,27 +23,13 @@ db.<Collection_Name>.find({},{<K1>:1}) : To get mentioned key specific document/
 db.<Collection_Name>.find({},{<K1>:0}) : To get (except)mentioned key specific document/data from collection
 db.<Collection_Name>.find({},{<K1>:1,..,<Kn>:1}) : To get mentioned keys specific documents/data from collection
 db.<Collection_Name>.find({},{<K1>:0,..,<Kn>:0}) : To get (except)mentioned key specific documents/data from collection
+db.<Collection_Name>.updateOne({<K>:<V>},{$set:{<K>:<New_V>}}) : Updating a new value for a key at first occurance in document according to a filter
+db.<Collection_Name>.updateMany({<K>:<V>}),{$set:{<K>:<New_V>}}) : Updating a new value for all keys at every occurance in document according to a filter
+db.<Collection_Name>.deleteOne({<K>:<V>}) : To delete a value for a key at first occurance in document according to a filter
+db.<Collection_Name>.deleteMany({<K>:<V>} : To delete a value for a key at every occurance in document according to a filter
+db.<Collection_Name>.deleteMany({<K1>:<V1>},{<K2>:<V2>}) : To delete a value for a keys at first occurance in document according to a multiple filter
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=========================================================================
+==========================================================================================================================================================================
 
 show databases
 use database_name
@@ -51,9 +37,9 @@ db.createCollection("Employee_1")
 show collections
 db.Employee_1.insertOne({Employeeid:5,Name:'Priya Sharma',Gender:'Female',Salary:45000.0,Department:'IT',Experience:2})
 db.Employee_1.insertMany([{Employeeid:6,Name:'Rahul Patel',Gender:'Male',Salary:65000.0,Department:'Sales',Experience:5},
-{Employeeid:7,Name:'Nisha Gupta',Gender:'Female',Salary:55000.0,Department:'Marketing',Experience:4},
-{Employeeid:8,Name:'Vikram Singh',Gender:'Male',Salary:75000.0,Department:'Finance',Experience:7},
-{Employeeid:9,Name:'Aarti Desai',Gender:'Female',Salary:50000.0,Department:'IT',Experience:3}])
+			  {Employeeid:7,Name:'Nisha Gupta',Gender:'Female',Salary:55000.0,Department:'Marketing',Experience:4},
+			  {Employeeid:8,Name:'Vikram Singh',Gender:'Male',Salary:75000.0,Department:'Finance',Experience:7},
+			  {Employeeid:9,Name:'Aarti Desai',Gender:'Female',Salary:50000.0,Department:'IT',Experience:3}])
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 db.Employee_1.count()
 db.Employee_1.find({Name:'VIkram Singh'})
