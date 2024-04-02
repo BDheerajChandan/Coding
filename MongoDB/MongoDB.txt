@@ -1,3 +1,50 @@
+MongoDB is a document database. It is a NoSQL.
+It is often reffered as non-RDBMS(Non tabular database).
+MongoDB stores data in a type of JSON called BSON(Binary JSON).
+Records in a MongoDB database are called documents.
+Collections in a MonoDB is nothing but a tables in RDBMS.
+Instead of having multiple tables we can keep all related data together. This makes reading your data very fast. You can still have multiple groups of data.
+MongoDB can be installed locally.
+
+MongoDB Query API can be used two ways: CRUD Operations and Aggregation Pipelines
+
+show dbs :						To see all databases
+show databases :					To see all databases
+use <Database_name> : 					To create new database <Database_name> 
+db.createCollection("<Collection_Name>"):		To create a new collection
+db.<Collection_Name>.insertOne({<Key>:<Value>}):				To insert one row of data
+db.<Collection_Name>.insertMany([{<Key>:<Value>},{K2:V2},..,{Kn:Vn}]): 	To insert multiple rows of data
+db.<Collection_Name>.find() :			To get all documents/data from collection
+db.<Collection_Name>.find({<Key>:<Value>}) :	To get all documents/data having the value for specific key(1le condition) from collection
+db.<Collection_Name>.findone() :		To get first document/data from collection
+db.<Collection_Name>.findone({<Key>:<Value>}) :	To get first document/data having the value for specific key(1le condition) from collection
+NOTE : Second parameter in find is known as projection.In Key:Value, Value is 0 there excluding mentioned key docment;value is 1 then including mentioned key docment only.
+db.<Collection_Name>.find({},{<K1>:1}) : To get mentioned key specific document/data from collection
+db.<Collection_Name>.find({},{<K1>:0}) : To get (except)mentioned key specific document/data from collection
+db.<Collection_Name>.find({},{<K1>:1,..,<Kn>:1}) : To get mentioned keys specific documents/data from collection
+db.<Collection_Name>.find({},{<K1>:0,..,<Kn>:0}) : To get (except)mentioned key specific documents/data from collection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================================================
+
 show databases
 use database_name
 db.createCollection("Employee_1")
