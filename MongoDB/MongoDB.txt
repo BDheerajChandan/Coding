@@ -7,5 +7,6 @@ db.Employee_1.insertMany([{Employeeid:6,Name:'Rahul Patel',Gender:'Male',Salary:
 {Employeeid:7,Name:'Nisha Gupta',Gender:'Female',Salary:55000.0,Department:'Marketing',Experience:4},
 {Employeeid:8,Name:'Vikram Singh',Gender:'Male',Salary:75000.0,Department:'Finance',Experience:7},
 {Employeeid:9,Name:'Aarti Desai',Gender:'Female',Salary:50000.0,Department:'IT',Experience:3}])
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 db.Employee_1.count()
 db.Employee_1.find({Name:'VIkram Singh'})
