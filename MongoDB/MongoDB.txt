@@ -28,6 +28,9 @@ db.<Collection_Name>.updateMany({<K>:<V>}),{$set:{<K>:<New_V>}}) : Updating a ne
 db.<Collection_Name>.deleteOne({<K>:<V>}) : To delete a value for a key at first occurance in document according to a filter
 db.<Collection_Name>.deleteMany({<K>:<V>} : To delete a value for a key at every occurance in document according to a filter
 db.<Collection_Name>.deleteMany({<K1>:<V1>},{<K2>:<V2>}) : To delete a value for a keys at first occurance in document according to a multiple filter
+-------------------------------
+MongoDB Query Operators
+--------------------------------
 
 ==========================================================================================================================================================================
 
@@ -48,7 +51,35 @@ db.Employee_1.find();
 db.Employee_1.find({Name:'Aarti Desai'});
 db.Employee_1.findOne();
 db.Employee_1.findOne({Name:'Aarti Desai'});
-db.Employee_1.deleteOne({})
-db.Employee_1.deleteOne({},{})
-db.Employee_1.deleteMany({})
-db.Employee_1.deleteMany({},{})
+db.Employee_1.deleteOne({Name:'temp'}); 
+db.Employee_1.deleteOne({Name:'temp'},{Employeeid:0});
+db.Employee_1.deleteMany({Name:'temp'});
+db.Employee_1.deleteMany({Name:'temp'},{Experience:1});
+db.Employee_1.updateOne({Name:'Priya Sharma'},{$set:{Name:'Priya Singh'}});
+db.Employee_1.find();
+db.Employee_1.updateOne({Name:'Priya Singh'},{$set:{Name:'Priya Sharma'}});
+db.Employee_1.find();
+db.Employee_1.updateOne({},{$set:{Name:'Priya Singh'}});
+db.Employee_1.find();
+db.Employee_1.updateMany({},{$set:{Name:'Priya Singh'}});
+db.Employee_1.find();
+db.Employee_1.updateOne({Employeeid:5},{$set:{Name:'Priya Sharma'}});
+db.Employee_1.updateOne({Employeeid:6},{$set:{Name:'Rahul Patel'}});
+db.Employee_1.updateOne({Employeeid:7},{$set:{Name:'Nisha Gupta'}});
+db.Employee_1.updateOne({Employeeid:8},{$set:{Name:'Vikram Singh'}});
+db.Employee_1.updateOne({Employeeid:9},{$set:{Name:'Aarti Desai'}});
+db.Employee_1.find();
+
+
+
+==========================================================================================================================================================================
+
+show collections;
+db.createCollection("Products");
+show collections;
+db.Employee_1.insertOne({ProductName:"C++",sellerName:"Dennis",ProductImage:"",Quanity:10})
+db.Employee_1.insertMany([{ProductName:"JAVA",sellerName:"SunMicro&JamesGosling",ProductImage:"",Quanity:},
+			  {ProductName:"Python",sellerName:"Mark",ProductImage:"",Quanity:},
+			  {ProductName:"DSA",sellerName:"Dennis",ProductImage:"",Quanity:},
+			  {ProductName:"LabVIEW",sellerName:"NI",ProductImage:"",Quanity:}])
+
