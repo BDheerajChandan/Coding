@@ -220,12 +220,19 @@ select * from employee_3 where DAY(DOB) < 19 AND YEAR(DOB) < 1990 ORDER BY DOB l
 SELECT CURDATE();
 SELECT CURTIME();
 SELECT NOW();
-SELECT DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s');
-SELECT DATE_ADD(CURDATE(), INTERVAL 3 DAY);
-SELECT TIMESTAMPDIFF(DAY, '2022-01-01', CURDATE());
+SELECT DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%s');
+SELECT DATE_ADD(CURDATE(),INTERVAL 3 DAY);
+SELECT TIMESTAMPDIFF(DAY,'2022-01-01',CURDATE());
+SELECT TIMESTAMPDIFF(MONTH,'2022-01-01',CURDATE());
+SELECT TIMESTAMPDIFF(YEAR,'2022-01-01',CURDATE());
 SELECT GETDATE();
-SELECT DATE_FORMAT(NOW(), '%m/%d/%Y %h:%i:%s %p');
-SELECT DATE_FORMAT(NOW(), '%m/%d/%Y %H:%i:%s');
+SELECT DATE_FORMAT(NOW(),'%m/%d/%Y %h:%i:%s %p');
+SELECT DATE_FORMAT(NOW(),'%m/%d/%Y %H:%i:%s');
+SELECT DATE_FORMAT(NOW(),'%a') AS Abbreviated_Weekday,DATE_FORMAT(NOW(),'%b') AS Abbreviated_Month;
+SELECT DATE_FORMAT(NOW(),'%a'),DATE_FORMAT(NOW(),'%b');
+
+
+
 ===================================================================================================================================
 							DELIMITER - IF STATEMENT WITH DECLARED VARIABLE
 ===================================================================================================================================
