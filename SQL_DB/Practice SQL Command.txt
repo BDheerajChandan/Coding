@@ -170,53 +170,46 @@ SELECT emp_name,Salary FROM EMPLOYEE_2 UNION SELECT Name,emp_sal FROM EMPLOYEE_3
 SELECT emp_name,Salary FROM EMPLOYEE_2 WHERE emp_name like 'R%' UNION SELECT Name,emp_sal FROM EMPLOYEE_3 WHERE Name like 'S%';
 SELECT emp_name FROM EMPLOYEE_2 UNION SELECT Name FROM EMPLOYEE_3;
 SELECT count(*),sum(Salary) FROM EMPLOYEE_2;
+ALTER TABLE EMPLOYEE_3 ADD COLUMN DOJ INTEGER;
+UPDATE EMPLOYEE_3 SET DOJ='1999-02-21' WHERE Employeeid=201;
+UPDATE EMPLOYEE_3 SET DOJ='2005-10-08' WHERE Employeeid=202;
+UPDATE EMPLOYEE_3 SET DOJ='2003-05-28' WHERE Employeeid=203;
+UPDATE EMPLOYEE_3 SET DOJ='2010-08-14' WHERE Employeeid=204;
+UPDATE EMPLOYEE_3 SET DOJ='2017-07-15' WHERE Employeeid=205;
+
+SELECT CURDATE(),DOJ FROM EMPLOYEE_3;
+SELECT CURDATE(),DOJ,CONCAT(FLOOR(DATEDIFF(CURDATE(), DOJ) / 365),'-',
+        		    FLOOR((DATEDIFF(CURDATE(), DOJ) % 365) / 30),'-',
+        		    DATEDIFF(CURDATE(), DOJ) % 30) as DateDifference 
+		FROM EMPLOYEE_3;
+
+ALTER TABLE EMPLOYEE_3 ADD COLUMN Experience INTEGER;
+UPDATE EMPLOYEE_3 SET EXPERIENCE=FLOOR(DATEDIFF(CURDATE(),DOJ)/365);
+
+ALTER TABLE EMPLOYEE_3 ADD COLUMN DOB DATE;
+UPDATE EMPLOYEE_3 SET DOB='1975-07-19' WHERE Employeeid=201;
+UPDATE EMPLOYEE_3 SET DOB='1990-11-18' WHERE Employeeid=202;
+UPDATE EMPLOYEE_3 SET DOB='1970-09-21' WHERE Employeeid=203;
+UPDATE EMPLOYEE_3 SET DOB='1977-03-12' WHERE Employeeid=204;
+UPDATE EMPLOYEE_3 SET DOB='1960-12-10' WHERE Employeeid=205;
+ALTER TABLE EMPLOYEE_3 ADD COLUMN AGE INTEGER;
+UPDATE EMPLOYEE_3 SET AGE=FLOOR(DATEDIFF(CURDATE(),DOB)/365);
+SELECT * FROM EMPLOYEE_3;
 
 
-#################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+===================================================================================================================================
+							DATE AND TIME
+===================================================================================================================================
+SELECT CURDATE();
+SELECT CURTIME();
+SELECT NOW();
+SELECT DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s');
+SELECT DATE_ADD(CURDATE(), INTERVAL 3 DAY);
+SELECT TIMESTAMPDIFF(DAY, '2022-01-01', CURDATE());
+SELECT GETDATE();
+SELECT DATE_FORMAT(NOW(), '%m/%d/%Y %h:%i:%s %p');
+SELECT DATE_FORMAT(NOW(), '%m/%d/%Y %H:%i:%s');
 ===================================================================================================================================
 							DELIMITER - IF STATEMENT WITH DECLARED VARIABLE
 ===================================================================================================================================
