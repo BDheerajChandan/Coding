@@ -185,7 +185,6 @@ SELECT CURDATE(),DOJ,CONCAT(FLOOR(DATEDIFF(CURDATE(), DOJ) / 365),'-',
 
 ALTER TABLE EMPLOYEE_3 ADD COLUMN Experience INTEGER;
 UPDATE EMPLOYEE_3 SET EXPERIENCE=FLOOR(DATEDIFF(CURDATE(),DOJ)/365);
-
 ALTER TABLE EMPLOYEE_3 ADD COLUMN DOB DATE;
 UPDATE EMPLOYEE_3 SET DOB='1975-07-19' WHERE Employeeid=201;
 UPDATE EMPLOYEE_3 SET DOB='1990-11-18' WHERE Employeeid=202;
@@ -195,6 +194,23 @@ UPDATE EMPLOYEE_3 SET DOB='1960-12-10' WHERE Employeeid=205;
 ALTER TABLE EMPLOYEE_3 ADD COLUMN AGE INTEGER;
 UPDATE EMPLOYEE_3 SET AGE=FLOOR(DATEDIFF(CURDATE(),DOB)/365);
 SELECT * FROM EMPLOYEE_3;
+SELECT * FROM EMPLOYEE_3 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 ORDER BY DOJ;
+SELECT * FROM EMPLOYEE_3 WHERE AGE>35 AND AGE<50;
+SELECT Name FROM EMPLOYEE_3 WHERE AGE>50;
+SELECT COUNT(*) FROM EMPLOYEE_3 WHERE AGE>50;
+SELECT * from employee_3 where DOB Like '197%';
+SELECT * from employee_3 where DOB Like '197%' and DOB Like '197%';
+SELECT * FROM EMPLOYEE_3 WHERE YEAR(DOB) < 1980 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 WHERE YEAR(DOB) < 1975 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 WHERE MONTH(DOB) < 08 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 20 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 15 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 19 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 19 AND YEAR(DOB) < 1990 ORDER BY DOB;
+SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 19 AND YEAR(DOB) < 1990 ORDER BY DOB limit 1;
+select * from employee_3 where DAY(DOB) < 19 AND YEAR(DOB) < 1990 ORDER BY DOB limit 2;
+
 
 
 ##########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
