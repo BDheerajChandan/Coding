@@ -75,11 +75,47 @@ db.Employee_1.find();
 ==========================================================================================================================================================================
 
 show collections;
+db.Products.drop();
 db.createCollection("Products");
 show collections;
-db.Employee_1.insertOne({ProductName:"C++",sellerName:"Dennis",ProductImage:"",Quanity:10})
-db.Employee_1.insertMany([{ProductName:"JAVA",sellerName:"SunMicro&JamesGosling",ProductImage:"",Quanity:},
-			  {ProductName:"Python",sellerName:"Mark",ProductImage:"",Quanity:},
-			  {ProductName:"DSA",sellerName:"Dennis",ProductImage:"",Quanity:},
-			  {ProductName:"LabVIEW",sellerName:"NI",ProductImage:"",Quanity:}])
+db.Employee_1.insertOne({ProductName:'JAVA',sellerName:'SunMicroJamesGosling',ProductImage:'C:/Users/KIIT/Desktop/PROGRAM LANGUAGES/Coding/MongoDB/Java-Logo.png', Quantity:10});
+db.Products.insertMany([
+    {ProductName:'C++',sellerName:'Dennis',ProductImage:"C:\Users\KIIT\Desktop\PROGRAM LANGUAGES\Coding\MongoDB\C++_img.png",Quanity:17},
+    {ProductName:'Python',sellerName:'Mark',ProductImage:'C:/Users/KIIT/Desktop/PROGRAM LANGUAGES/Coding/MongoDB/Python_img.png',Quantity:17},
+    {ProductName:'C',sellerName:'Dennis',ProductImage:'C:/Users/KIIT/Desktop/PROGRAM LANGUAGES/Coding/MongoDB/DSA_img.png',Quantity:20},
+    {ProductName:'LabVIEW',sellerName:'NI',ProductImage:'C:/Users/KIIT/Desktop/PROGRAM LANGUAGES/Coding/MongoDB/LabVIEW_img.png',Quantity:0}
+]);
+db.Products.find();
+db.Products.find({Quantity:0});
+db.Products.updateOne({sellerName:'NI'},{$set:{ProductImage:''}});
+db.Products.find({ProductImage:''});
+db.Products.updateOne({ProductImage:''},{$set:{ProductImage:'C:/Users/KIIT/Desktop/PROGRAM LANGUAGES/Coding/MongoDB/LabVIEW_img.png'}});
+db.Products.find({sellerName:{$eq:'Dennis'}});
+db.Products.find({Quantity:{$gt:17}});
+db.Products.find({Quantity:{$eq:17}});
+db.Products.find({Quantity:{$lt:17}});
+db.Products.find({Quantity:{$gte:17}});
+db.Products.find({Quantity:{$ne:17}});
+db.Products.find({Quantity:{$lte:17}});
+db.Products.find({Quantity:{$in:[17]}});
+db.Products.find({Quantity:{$in:[0]}});
+db.Products.find({Quantity:{$in:[0,17]}});
+db.Products.find({Quantity:{$in:[0,17,20]}});
+db.Products.find({Quantity:{$nin:[0,17]}});
+db.Products.find({Quantity:{$nin:[17]}});
+db.Products.find({$and:[{Quantity:17},{sellerName:'NI'}]})
+db.Products.find({$or:[{Quantity:17},{sellerName:'NI'}]})
+db.Products.find({$nor:[{Quantity:17},{sellerName:'NI'}]})
+db.Products.find({$and:[{Quantity:17},{Quantity:0}]})
+db.Products.find({$or:[{Quantity:17},{Quantity:15}]})
+db.Products.find({$or:[{Quantity:17},{sellerName:'Dennis'}]})
+db.Products.find({$nor:[{Quantity:17},{sellerName:'Dennis'}]})
+db.Products.find({Quantity:{$not:{$gt:17}}});
+db.Products.find({Quantity:{$not:{$lt:17}}});
+db.Products.find({Quantity:{$not:{$et:17}}});
+db.Products.find({Quantity:{$not:{$lt:17}}});
+db.Products.find({Quantity:{$not:{$ne:17}}});
+db.Products.find({Quantity:{$not:{$eq:17}}});
+db.Products.find({sellerName:{$not:{$ne:'Dennis'}}});
+db.Products.find({sellerName:{$not:{$eq:'Dennis'}}});
 
