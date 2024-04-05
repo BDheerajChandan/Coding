@@ -1,0 +1,185 @@
+stored procedure
+=========================================================================================================================================================================
+1)Create a procedure for adding a row in emp table. Display number of rows added. Handle corresponding exception
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_AddRowCnt;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_AddRowCnt()
+BEGIN
+    DECLARE i_num INT DEFAULT 0;
+    SET i_num = (SELECT COUNT(*) FROM employee_3);
+    INSERT INTO EMPLOYEE_3 VALUES(1000,'temp1',1000,'-----', CURDATE(), 0, CURDATE(), 10);
+    INSERT INTO EMPLOYEE_3 VALUES(1001,'temp2',1000,'-----', CURDATE(), 0, CURDATE(), 10);
+    SELECT COUNT(*) - i_num FROM employee_3;
+END |
+DELIMITER ;
+CALL Dheeraj_AddRowCnt();
+=========================================================================================================================================================================
+2)Create a procedure which takes employee number as parameter and delete the employee record. Procedure must return the empname whose record has be deleted.
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN empid INT)
+BEGIN
+    DECLARE emp_name VARCHAR(20);
+    SELECT Name INTO emp_name FROM EMPLOYEE_3 WHERE Employeeid = empid;
+    DELETE FROM EMPLOYEE_3 WHERE Employeeid = empid;
+    SELECT emp_name;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment(1001);
+
+=========================================================================================================================================================================
+3)Create a procedure which takes department name as paramater and displays all the employee records, no of employee in that department. 
+=========================================================================================================================================================================
+
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN dept VARCHAR(20))
+BEGIN
+     SELECT COUNT(*) AS 'Number of Employees' FROM EMPLOYEE_1 WHERE Department = dept;
+	SELECT Employeeid, Name, Gender, Salary, Department, Experience FROM EMPLOYEE_1 WHERE Department=dept
+     GROUP BY Employeeid, Name, Gender, Salary, Department, Experience;
+     
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment('IT');
+
+=========================================================================================================================================================================
+4)Create a procedure which takes empno as IN parameter and gives OUT entire record of the employee
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN empno INTEGER)
+BEGIN
+    SELECT * FROM EMPLOYEE_1 WHERE Employeeid=empno;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment(5);
+
+==========================================================================================================
+5)create a prcedure which would accept 2 dates as arguments and returns   difference between them in years and months Eg: "3 years 6 months"
+=========================================================================================================================================================================
+
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN date1 DATE, IN date2 DATE)
+BEGIN
+    
+    DECLARE years_months VARCHAR(50);
+    SET years_months = CONCAT(FLOOR(DATEDIFF(date2,date1)/365),' years ',FLOOR((DATEDIFF(date2,date1)%365)/30),' months');
+    SELECT years_months AS 'DateDiff';
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment('2020-02-21', CURDATE());
+
+
+=========================================================================================================================================================================
+D6) Create table with following structures
+
+      - emp_bonus(empno,ename,annual_salary,bonus)
+
+- using cursor program fetch empno,ename,sal,comm from emp table.
+- for each record fetched find annual salary which includes comm
+- compute various percentage of bonus based on annual salary.
+- insert empno,ename,annual_salary,bonus into emp_bonus table
+- display number of rows inserted.
+=========================================================================================================================================================================
+
+
+=========================================================================================================================================================================
+D7)Design a cursor program in which you select empno,ename,job,sal into a collection and display the same for any department number passed as argument to cursor. 
+=========================================================================================================================================================================
+
+=========================================================================================================================================================================
+D8)Write a procedure  to create a cursor displays the name and salary of each employee in the EMPLOYEES table whose salary is less than that specified by a passed-in parameter value.
+=========================================================================================================================================================================
+
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN sal FLOAT)
+BEGIN
+    SELECT Name,emp_sal FROM EMPLOYEE_3 WHERE emp_sal < sal;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment(50000);
+
+=========================================================================================================================================================================
+D9)Write a procedure to display employee id, name, hire date, and the incentive amount they achieved according to their working experiences, 
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN sal FLOAT)
+BEGIN
+    SELECT Employeeid,Name,DOJ,emp_sal FROM EMPLOYEE_3 ORDER BY Experience;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment(50000);
+
+=========================================================================================================================================================================
+10)Write procedure to display the  department with more than five employees.
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN ECntDept INTEGER)
+BEGIN
+    SELECT Department,COUNT(*) AS 'Number of Employees' FROM EMPLOYEE_1 GROUP BY Department HAVING COUNT(*) > ECntDept;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment(1);
+
+==========================================================================================================
+
+stored functions
+=========================================================================================================================================================================
+1)Create a function which takes department name as paramater and return the  no of employee working in that department. 
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN Dept VARCHAR(10))
+BEGIN
+    SELECT COUNT(*) AS 'Number of Employees' FROM EMPLOYEE_1 WHERE Department=Dept;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment('IT');
+CALL Dheeraj_Assignment('Sales');
+CALL Dheeraj_Assignment('Marketing');
+CALL Dheeraj_Assignment('Finance');
+
+=========================================================================================================================================================================
+2)Write function to return the  department no having more than five employees
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN ECntDept INTEGER)
+BEGIN
+    SELECT Department,COUNT(*) AS 'Number of Employees' FROM EMPLOYEE_1 GROUP BY Department HAVING NOT COUNT(*) > ECntDept;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment(1);
+
+=========================================================================================================================================================================
+3)write a function to return the employee who is earning second max salary from a perticular department.
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN dept VARCHAR(20))
+BEGIN
+	SELECT * FROM EMPLOYEE_1 WHERE Department = dept;
+	SELECT Employeeid, Name, Salary FROM EMPLOYEE_1 WHERE Department = dept ORDER BY Salary DESC LIMIT 1 OFFSET 1;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment('IT');
+
+=========================================================================================================================================================================
+4)write a function to return the employee who is having maximum experience from the emp table.
+=========================================================================================================================================================================
+DROP PROCEDURE IF EXISTS Dheeraj_Assignment;
+DELIMITER |
+CREATE PROCEDURE Dheeraj_Assignment(IN dept VARCHAR(20))
+BEGIN
+	SELECT * FROM EMPLOYEE_1;
+	SELECT Name FROM EMPLOYEE_1 ORDER BY Experience DESC LIMIT 1;
+END |
+DELIMITER ;
+CALL Dheeraj_Assignment('IT');
