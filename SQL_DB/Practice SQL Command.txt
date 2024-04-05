@@ -97,6 +97,7 @@ select lower(substr(Name,1,5)) as LowerSubstr_Name from employee_1;
 =================================================================================================================================
 							CREATING A TABLE-2
 =================================================================================================================================
+DROP TABLE IF EXISTS EMPLOYEE_2;
 CREATE TABLE EMPLOYEE_2
 (
 empID INTEGER,
@@ -210,6 +211,23 @@ SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 19 ORDER BY DOB;
 SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 19 AND YEAR(DOB) < 1990 ORDER BY DOB;
 SELECT * FROM EMPLOYEE_3 WHERE DAY(DOB) < 19 AND YEAR(DOB) < 1990 ORDER BY DOB limit 1;
 select * from employee_3 where DAY(DOB) < 19 AND YEAR(DOB) < 1990 ORDER BY DOB limit 2;
+
+
+
+
+DROP PROCEDURE IF EXISTS AddRowCnt;
+DELIMITER |
+CREATE PROCEDURE AddRowCnt()
+BEGIN
+    DECLARE i_num INT DEFAULT 0;
+    SET i_num = (SELECT COUNT(*) FROM employee_3);
+    INSERT INTO EMPLOYEE_3 VALUES(1000,'temp1',1000,'-----', CURDATE(), 0, CURDATE(), 10);
+    INSERT INTO EMPLOYEE_3 VALUES(1001,'temp2',1000,'-----', CURDATE(), 0, CURDATE(), 10);
+    SELECT COUNT(*) - i_num FROM employee_3;
+END |
+DELIMITER ;
+CALL AddRowCnt();
+
 
 
 
