@@ -1,0 +1,22 @@
+=====================================================================================================================
+						Java in Linux command prompt
+=====================================================================================================================
+
+For running the Java file in LINUX:
+Steps to be followed:
+	1. Open Terminal in Linux
+	2. Use commands to run java program :
+		sudo apt install default-jdk
+		sudo apt install openjdk-11-jdk-headless
+		sudo apt install ecj
+		sudo apt install openjdk-8-jdk-headless
+	3. Create a new folder named <FolderName>
+		mkdir <FolderName>
+		cd <FolderName>
+	4. Create a Java file named <Java_File> and write hello world program.
+		touch <Java_File>.java
+		vi <Java_File>.java
+	5. To compile and run java code.
+		javac <Java_File>.java
+		java <Java_File>
+	6. Java code will run succesfully else throw the error
