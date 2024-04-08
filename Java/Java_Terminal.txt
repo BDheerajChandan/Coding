@@ -20,3 +20,16 @@ Steps to be followed:
 		javac <Java_File>.java
 		java <Java_File>
 	6. Java code will run succesfully else throw the error
+
+
+=====================================================================================================================
+						Java in windows command prompt
+=====================================================================================================================
+
+For running the Java file in WINDOWS:
+Steps to be followed:
+	1. Download JDK latest version or version 11 or version 8
+	2. Copy the path of bin from downloaded JDK file
+	3. Go to PC property settings 
+	4. Open Advanced system settings >> Environmental variables
+	5. In System variables, Path >> New >> Paste the copied bin path.
