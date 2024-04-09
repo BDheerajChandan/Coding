@@ -1,7 +1,7 @@
 //Check the number is even or odd
 import java.io.*;
 import java.util.Scanner;
-class EvOdd
+class EvOdd_4
 {
     public static void main(String args[])throws IOException
     {

@@ -4,7 +4,7 @@ Write a program in Java for :
 2. Find sum of digits of a given number
 3. Find reverse of a given number
 4. Check the number is even or odd
-5. Find imple Interest
+5. Find Simple Interest
 6. Print Right triangle star pattern
 7. Pyramid number pattern
 8. To print table of a given number
