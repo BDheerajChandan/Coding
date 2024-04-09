@@ -12,5 +12,5 @@ Write a program in Java for :
 10. Find Simple interest
 11. Sum of values of given array
 12. Find max and min of given array
-13. To print reverse ofa array
-14. Find second largest element ofan array
+13. To print reverse of a array
+14. Find second largest element of an array
