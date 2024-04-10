@@ -38,5 +38,89 @@ Data Types :-
 - 2 types : Primitive and Non-Primitive
 	Primitive : byte, short, int, long, float, double, boolean
 	Non-Primitive : String, Array, class, enum
-		
-- Primitive data types are inbuilt data types and Non-Primitive data types are userdefined data types
+- Primitive data types are inbuilt data types.
+- Non-Primitive data types are userdefined data types and also known as reference data types or composite data type.It is a 'reference variables' or 'object references'.
+- Size in bytes : byte-1 , short-2, int-4, long-8, float-4 , double-8 , char-2 , boolean - 1 (ASCII-8 bits)
+- Declaration of primitive data types : <datatype> <variable>=<value/data>;
+- Declaration of non-primitive data types : 	String <variableName>=new String("<Value>");
+						<datatype> <variableName>[]=new <datatype>[<size>];
+						<classname> <objectName>=new <className>();//<objectName>.<methodName>();
+
+Variable :-
+- Temporary memeory location which holds the data or value.
+- Value can be changed during execution of a program.
+- 3 types : Local,instance,Static
+	Local : Declared within a method or function.Not accessable outside method or function.Scope lost outside method.
+	Instance : Declared within a class and outside the method.
+	Static : 
+
+Operators :-
+Arithmatic : 	+ - / * %
+Relational :	< > <=>= == !
+Logical : 	&& || !
+Bitwise : 	& | ^ ~ << >> >>>   (XOR NOT LeftShift RigthShift URigthShift)
+Ternary : 	?:
+Assinment : 	=
+new :		<ClassName> <ObjectName>=new <ObjectName>();
+. dot :		<ObjectName>.<MethodName>();
+- 2 types : Unary(Operator works with single operand) ; Binary(Operator works with more than one operand)
+	ex- Unary[a+=1 , a*=3] , Binary[a=a+b , a=b*a], 'a' and 'b' are operands
+- Expression = Operands + Operators
+
+Conditionl/Control Statements :-
+- if
+	if(<Condition>)
+	{
+		<Statements>;
+	}
+- if else
+	if(<Condition>)
+	{
+		<True Statements>;
+	}else{
+		<False Statements>;
+	}
+- if else if or if else ladder
+	if(<Condition-1>)
+	{
+		<Statements-1>;
+	}else if(<Condition-2>)
+	{
+		<Statements-2>;
+	}...
+	..
+	else if(<Condition-n>)
+	{
+		<Statements-n>;
+	}else{
+		<Default Statement>
+	}
+Loops : for ,while , do while
+- for 
+	for(intialization;condition;updation)
+	{
+		<Statements>;
+	}
+- while
+	<initialization>;
+	while(<Condition>)
+	{
+		<Statements>;
+		<Updation>;
+	}
+- do while
+	<initialization>;
+	do
+	{
+		<Statements>;
+		<Updation>;
+	}while(<Condition>);
+
+Methods :-
+- 2 types : Userdefined methods and builtin methods
+	Static : Method can be called directly using method name <MethodName>(); or by class name <ClassName>.<MethodName>();
+	NonStatic : Need reference of a class where method is defined.To call the method we need to create a refrence of a class. 
+				<ClassName> <ObjectName>=new <ClassName>(); 
+				<ObjectName>.<MethodName>();
+					example:- 
+		     NonStatic are In-Built methods
