@@ -1,0 +1,42 @@
+=========================================================================================================================================================================
+									JAVA ENVIRONMENT
+=========================================================================================================================================================================
+Introduction to Java :
+- Developed by SUn Microsysems and James Gosling in 1990-1991
+- HLL(High Level Language)
+- OOP(Object Oriented Programming) language
+- Secure, Portable, Robustness
+- Platform indepenent (Can run on any platform in any OS)
+
+Usage of Java :
+Standalone appliations [Java SE(Standard Edition)]
+- Used to create desktop applications 	: javaSE, java, avac, awt
+- Used to create web applications	: javaEE, serlet, jsp, spring, Ejb    	
+- Used to create mobilwe aplications	: javaME, Android
+
+Components of Java :
+- 3 Components of Java : JDK, JVM, JRE
+- JDK=JVM+JRE + Development Tools(compilers and debuggers)
+- JDK(Java Development Kit): To develop and run/execute java applications
+- JVM(Java Virtual Machine): It converts .class file or byte code into machine code.
+- JRE(Java Runtime Environment): It can execute java applications
+- JRE contains the JVM
+- JDK includes the JRE+Development tools(compilers and debuggers)+(JVM and libraries)
+- JDK=JRE+{Set of tool : javac, java}
+- JRE=JVM+{set of libraries}
+
+- Compiler : It compiles code only once
+  Interpreter : It compiles line by line
+
+=========================================================================================================================================================================
+									JAVA PART-1
+=========================================================================================================================================================================
+
+Topics : Data types, Variables, Operators, Conditionl/Control Statements, Methods, Arrays
+
+Data Types :-
+- 2 types : Primitive and Non-Primitive
+	Primitive : byte, short, int, long, float, double, boolean
+	Non-Primitive : String, Array, class, enum
+		
+- Primitive data types are inbuilt data types and Non-Primitive data types are userdefined data types
