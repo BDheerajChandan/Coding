@@ -115,12 +115,123 @@ Loops : for ,while , do while
 		<Statements>;
 		<Updation>;
 	}while(<Condition>);
+- Switch
+	Switch(<choice>)
+	{
+		case <choice1>: <Statement-1>; break;
+		case <choice2>: <Statement-2>; break;
+		..
+		..	
+		case <choicen>: <Statement-n>; break;
+		default : <default Statement>; 
+	}
 
 Methods :-
 - 2 types : Userdefined methods and builtin methods
+	Inbuilt :- Methods already defined by JVM
+			example :- .nextInt() , .nextFloat(), .next() , .length() , .substring()
+	User Defined :- Methods defined by user
 	Static : Method can be called directly using method name <MethodName>(); or by class name <ClassName>.<MethodName>();
+				<MethodName>();
+				<ClassName>.<MethodName>();			
 	NonStatic : Need reference of a class where method is defined.To call the method we need to create a refrence of a class. 
 				<ClassName> <ObjectName>=new <ClassName>(); 
 				<ObjectName>.<MethodName>();
-					example:- 
-		     NonStatic are In-Built methods
+
+
+Array :-
+- Continous memeory location
+- Stores similar type of data (as a container)
+- Size is fixed and cant be changed during runtime
+- Used to store similar/same type of data
+- Individual element can be accessd using index
+- Declaration : 	<Datatype> <ArrayVariable>[]=new <Datatype>[<size>];
+- Initialisation : 	<ArrayVariable>[]={<data1>,<data2>,....<datan>}; or 
+			<Datatype> <ArrayVariable>[]={<data1>,<data2>,....<datan>}; 
+			<ArrayVariable>[0]=<data1>; <Variable>[1]=<data2>;
+- Retrieve : 	for(<datatype> <ArrayVariable>:<ArrayName>)
+		{
+			//<statements> or <ArrayVariable>;
+		}
+
+		for(<datatype> <ArrayVariable>=0;<ArrayVariable> < <ArraySize>;<Updateing ArrayVariable>)
+		{
+			//<statements> or <ArrayVariable>;
+		}
+- Applications: Sorting(Selection , Bubble) , Searching(Binary , Linear) , Deleting , Updating , Storing
+- Returning array by method : 	<access-specifier> <datatype>[] <methodName>()
+				{
+					<datatype> <ArrayVariable>[]={<data1>,<data2>,....<datan>}; 
+					return <ArrayVariable>;
+				}
+=========================================================================================================================================================================
+									JAVA PART-2
+=========================================================================================================================================================================
+
+Topics : Classes, Objects, Static & non static behaviour , Constructors
+
+- Primitive data will lost while coming out of method. Reference can have data even after coming out of method.
+
+Objects :
+- It is an identificiable entity/realworld entity which has its own characteristics and behaviour
+- It is a real world entity
+- It has data & behaviour
+- It is an instance of a class
+- It stores data as an object
+- It has properties(Data) and behaviour(method)
+- Creation : Using a reference , Using a method , Using a constructor
+Classes :
+- It is a collection of an objects
+- It is a template or blue print of an object
+- It is used to create an object
+- It is used to instanciate the object
+- It is a representation of an object
+
+
+
+example: (Object)Phone - (Properties){price, color, RAM, Memory, processor, SN, make}
+		class Phone
+		{
+			price, color, RAM, Memory, processor, SN, make
+		}
+	(Object)Headphone - (Properties){price, color, frequency, model, warranty, weight, make}
+		class Phone
+		{
+			price, color, frequency, model, warranty, weight, make
+		}
+	
+javaObjectProperty file :
+	class <Class/ObjectName>
+	{
+		<Declare Properties>;
+		Read()
+		{
+			<Property inputs>
+		}
+		calculate()
+		{
+			<Using property data for results>
+		}
+		display() // we can return the results to pass it to display() method.
+		{
+			<Disply object's data>;
+			<Display calculated results>;
+		}
+		/*main()
+		{
+			read();
+			calculate();
+			display();
+		}*/
+	}
+javaMain file :
+	class Main
+	{
+		main()
+		{
+			{
+			read();
+			calculate(); // we can store calculated results and pass them to display() method if calculate() method has return type.
+			display();
+		}
+	}
