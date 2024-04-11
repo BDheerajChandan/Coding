@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Electricity_bill_2
+comment1.params=
+comment1.target=void\ readData()
+comment2.params=
+comment2.target=void\ computeBill()
+numComments=3
