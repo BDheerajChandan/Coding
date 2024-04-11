@@ -9,7 +9,7 @@ Write a program in Java for :
 7. Pyramid number pattern
 8. To print table of a given number
 9. Find largrest of given 3 numbers
-10. Find Simple interest
+10. Simple Calculator Using switch...case
 11. Sum of values of given array
 12. Find max and min of given array
 13. To print reverse of a array
