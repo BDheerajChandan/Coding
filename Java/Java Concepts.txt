@@ -229,7 +229,6 @@ javaMain file :
 	{
 		main()
 		{
-			{
 			read();
 			calculate(); // we can store calculated results and pass them to display() method if calculate() method has return type.
 			display();
