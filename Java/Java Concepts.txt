@@ -234,3 +234,90 @@ javaMain file :
 			display();
 		}
 	}
+
+
+Constructors :
+- It  is used to construct value for an object or useed to initialize the value for an object.
+- It is a kind of method or block of code
+- It gets automatically called during object creation.
+	example: <ClassName> <ObjectName>=new <ClassName>(); //Here <ClassName>() is a contructor
+- Rules: Constructor name should be same as a class name
+	 It should not return anything
+- Constructors can be overloaded by different number of parameters with same constructor name
+- Constructors are of two types - 1. Non Parameterised /default parameterised/ no parametrised constructor
+				  2. Parametrised constructor
+class <ClassName_1>
+{
+	Objects; 			// Instance variables;
+	A1()				// Non Parameterised
+	{
+		<initialisation>;	// Initializing data to objects(User intialization or by default)
+	}
+	A1(<Datatype> <Parameters>)	// Parameterised
+	{
+		<initialisation>;	// Initializing data to objects(User intialization or by default)
+	}
+	<MethodName>()
+	{
+		<Print Data>;
+	}
+}
+
+class <ClassName_2>
+{
+	main()
+	{
+		<ClassName_1> <ObjectName_1>=new <ClassName_1>();		// Non parameterised constructor
+		<ObjectName_1>.<MethodName>();
+		<ClassName_1> <ObjectName_2>=new <ClassName_1>(<Datavalues>);	// Passing data to Parameterised constructor
+		<ObjectName_1>.<MethodName>();
+	}
+}
+
+
+Static and Non-Static :
+- Static: It is a keyword
+	  It is applied to a method or block of code
+- NonStatic: It is an instance variable
+
+class <ClassName_1>
+{
+	<Datatype> <Parameter_1>
+	static <Datatype> <Parameter_2>=<Data value>;
+	Objects; 			// Instance variables;
+	A1()				// Non Parameterised
+	{
+		<initialisation>;	// Initializing data to objects(User intialization or by default)
+	}
+	A1(<Datatype> <Parameter_1>)	// Parameterised
+	{
+		<initialisation>;	// Initializing data to objects(User intialization or by default)
+	}
+	<MethodName>()
+	{
+		<Print -Parameter_1,Parameter_2>;
+	}
+}
+
+class <ClassName_2>
+{
+	main()
+	{
+		<ClassName_1> <ObjectName_1>=new <ClassName_1>();		// Non parameterised constructor
+		<ObjectName_1>.<MethodName>();
+		<ClassName_1> <ObjectName_2>=new <ClassName_1>(<DatavalueParameter_1>);	// Passing data to Parameterised constructor
+		<ObjectName_1>.<MethodName>();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
