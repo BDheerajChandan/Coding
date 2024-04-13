@@ -14,14 +14,14 @@ class Account_4
         System.out.println("Enter Account holder name : ");
         accname=sc.next();
         System.out.println("Enter amount : ");
-        amount=sc.nextInt();
+        amount=sc.nextInt();//1000
     }
     public void withdraw()
     {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the withdraw amount");
-        float withdraw_amt=sc.nextInt();
-        amount=amount-withdraw_amt;
+        float withdraw_amt=sc.nextInt();//100
+        amount=amount-withdraw_amt;//900
         System.out.println("After withdrawing amount : "+amount);
     }
     public void interest()

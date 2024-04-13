@@ -7,11 +7,12 @@ class SumArr_11
     {
         Scanner sc=new Scanner(System.in);
         System.out.print("Please enter the size of an array :");
-        int size=sc.nextInt();
+        int size=sc.nextInt();//5
         int a[]=new int[size];
         for(int i=0;i<size;i++)
         {
-            a[i]=sc.nextInt();
+            System.out.print("Enter the "+(i+1)+" Elemet");
+            a[i]=sc.nextInt();// 5 in
         }
         int s=0;
         for(int i=0;i<size;i++)
