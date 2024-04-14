@@ -22,13 +22,16 @@ The third line prints the sentence, 'sen' .
 #include <math.h>
 #include <stdlib.h>
 
-int main() 
+int main()
 {
     char ch;
     char s[100];
     char sen[100];
+    printf("Enter the character : ");
     scanf("%c",&ch);
+    printf("Enter the String (s) : ");
     gets(s);
+    printf("Enter the String sentence (s) : ");
     gets(sen);
     printf("%c\n%s\n%s",ch,sen);
     return 0;
