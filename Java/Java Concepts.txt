@@ -311,13 +311,135 @@ class <ClassName_2>
 }
 
 
+Static method -
+Non static method -
+Static variable -
+Nonstatic variable -
+
+Note : Local Variables cant be declared as static
+
+===============================================================================
+
+this. - this keyword refers curent calling object.It is to differentiate local and instance variable.To referring the current object method(inistance method)
 
 
+class <ClassName_1>
+{
+	<Datatype> <Parameter_1>
+	<Datatype> <Parameter_2>
+	static <Datatype> <Parameter_3>=<Data value>;
+	Objects; 			// Instance variables;
+	A1()				// Non Parameterised
+	{
+		<initialisation>;	// Initializing data to objects(User intialization or by default)
+	}
+	A1(<Datatype> <Parameter_1>)	// Parameterised
+	{
+		this.<Parameter_1>=<Parameter_1>;			//	<initialisation>;// Initializing data to objects(User intialization or by default)
+		this.<Parameter_2>=<Parameter_2>;
+	}
+	<MethodName>()
+	{
+		<Print -Parameter_1,Parameter_2>;
+	}
+}
+class <ClassName_2>
+{
+	main()
+	{
+		<ClassName_1> <ObjectName_1>=new <ClassName_1>();		// Non parameterised constructor
+		<ObjectName_1>.<MethodName>();
+		<ClassName_1> <ObjectName_2>=new <ClassName_1>(<DatavalueParameter_1>);	// Passing data to Parameterised constructor
+		<ObjectName_1>.<MethodName>();
+	}
+}
 
 
+===============================================================================
 
+Array of objects :
+- Array is a collection of similar type of elements.
+- Object is a realworld entity with some characteristic/ property or behaviour.
 
+class <ClassName_1>
+{
+	<Datatype> <Parameter_1>
+	<Datatype> <Parameter_2>=<Data value>;
+	Objects; 			// Instance variables;
+	A1(<Datatype> <Parameter_1>,<Datatype> <Parameter_2>)	// Parameterised
+	{
+		this.<initialisation>;	// Initializing data to objects(User intialization or by default)
+	}
+	<MethodName>()
+	{
+		<Print -Parameter_1,Parameter_2>;
+	}
+}
 
+class <ClassName_2>
+{
+	main()
+	{
+		<ClassName_1> <ObjectName_1>[]=new <ClassName_1>[<size>];
+		for(<VariableInitialisation>;<condition>;<Updation>)
+		{
+			Scanner sc=new Scanner(System.in);
+			<ObjectName_1>[<variable>]=new <ClassName_1>(sc.nextInt(),sc.next());
+			<ObjectName_1>[<variable>].<MethodName>();
+		}
+		// <ObjectName_1>[0]=new <ClassName_1>();
+		// <ObjectName_1>[0].<MethodName>();
+		// <ObjectName_1>[1]=new <ClassName_1>();
+		// <ObjectName_1>[1].<MethodName>();
+	}
+}
 
+=====================================================================
 
+Encapsulation :
+- Wrapping up of a data and method into a single unit.
+- It is a process of combining data and method that operates on data
+- Example:  class and method
+- It is a process of binding the data and method together. It provides properties as private method as public.
+ 
+class <ClassName_1>
+{
+	private <Datatype> <Parameter_1>;
+	private <Datatype> <Parameter_2>;
+	Objects; 			// Instance variables;
+	A1()				// Non Parameterised
+	{
+		<initialisation>;	// Initializing data to objects(User intialization or by default)
+	}
+	<MethodName>()
+	{
+		<Print -Parameter_1,Parameter_2>;
+	}
+}
 
+class <ClassName_2>
+{
+	main()
+	{
+		<ClassName_1> <ObjectName_1>=new <ClassName_1>();		// Non parameterised constructor
+		<ObjectName_1>.<MethodName>();
+		<ObjectName_1><Parameter_1>;				// Cant access
+		<ObjectName_1>.<Parameter_2>;				// Cant access
+	}
+}
+=======================================================================
+
+Inheritance :
+- Itis a process of acquiring properties abd behaviour from one class to another ckllass.
+- Parent class can access properties and behaviour of child class.
+- example :
+	class A
+	{
+		features/properties or behaviour;
+	}
+	--------------------------------------
+	class B extends A // B is sub class and A is super class
+	{
+		features/properties or behaviour of A and B itself;
+	}
+- 4 types of inheritances : Simple/single inheritane , multilevel inheritance , Hierarchical inheritance , Multiple inhertance
