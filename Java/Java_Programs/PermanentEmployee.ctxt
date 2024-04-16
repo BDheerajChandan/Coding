@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=PermanentEmployee
+comment1.params=age\ name
+comment1.target=PermanentEmployee(int,\ java.lang.String)
+numComments=2

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SavingAccount
+comment1.params=acountnumber\ totalbalance\ interestRate
+comment1.target=SavingAccount(int,\ double,\ double)
+comment2.params=
+comment2.target=double\ AddInterest()
+numComments=3
