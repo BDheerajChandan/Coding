@@ -9,4 +9,8 @@ class Person
         this.age=age;
         this.name=name;
     }
+    public void dispPerson()
+    {
+        System.out.println("Age : "+age+"\nName : "+name);
+    }
 }
