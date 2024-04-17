@@ -443,3 +443,62 @@ Inheritance :
 		features/properties or behaviour of A and B itself;
 	}
 - 4 types of inheritances : Simple/single inheritane , multilevel inheritance , Hierarchical inheritance , Multiple inhertance
+
+===================================================================================================================================
+
+Polymorphism :-
+- 'Ploy' means 'Many' and ''morphism' means 'forms'.
+- More than one method having same name with different behaviour.
+- It can be achieved in 2 ways : method overloading and method overiding
+- Static/compile time polymorphism and dynamic/runtime polymorphism
+
+- Method overloading: Method name can be same, number of parameters and types of parameters should be different.
+			We can have >1 method with same name but the number of parameters and types of parameters should be different.
+		class <classname_1>
+		{
+			void <MethodName_1>(<datatype_1> <variable>)
+			{
+			} 
+			void <MethodName_1>(<datatype_2> <variable>)
+			{
+			} 
+			void <MethodName_1>(<datatype_1> <variable>,<datatype_2> <variable>)
+			{
+			}
+			void main()
+			{
+				<MethodName_1>(<Value_datatype_1>;
+				<MethodName_1>(<Value_datatype_2>);
+				<MethodName_1>(<Value_datatype_1>,<Value_datatype_2>);
+			}
+		}
+- Method overridding: The method name can be same and number of parameters and types of parameters also can be same
+			Method name can be same and the number of parameters and the type of parameters also can be same
+			It happens only on inheritance
+		
+		class <classname_1>
+		{
+			void <MethodName_1>(<datatype_1> <variable>)
+			{
+			}  
+		}
+		class <classname_2> extends <classname_1>
+		{
+			void <MethodName_1>(<datatype_1> <variable>)
+			{
+			} 
+		}
+		class <classMain>
+		{
+			void main()
+			{
+				<MethodName_1>(<Value_datatype_1>; // 1st priority is for subclass, not for super class method hence method gets overridden
+				<MethodName_1>(<Value_datatype_1>);// 1st priority is for subclass, not for super class method hence method gets overridden
+				<MethodName_1>(<Value_datatype_1>,<Value_datatype_2>);
+			}
+		}
+Polymorphism: Polymorphism allows objects of different classes to be treated as objects of a common superclass. This enables a single interface to be used for different 		data types or classes, increasing flexibility and code reusability.
+
+Method Overloading: Method overloading occurs when multiple methods in the same class have the same name but different parameters. Overloaded methods must differ in the 		number or types of their parameters. This is a form of static polymorphism, resolved at compile time.
+
+Method Overriding: Method overriding happens when a subclass provides a specific implementation of a method that is already provided by its superclass. The method name, 		parameters, and return type must be exactly the same in both the superclass and subclass. This is a form of dynamic polymorphism, resolved at runtime.
