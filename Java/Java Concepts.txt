@@ -599,3 +599,148 @@ Rules - We cant create an object of abstract class.
 
 final keyword - t can be applied to a method, class or variable. It is applied this it will be a constant value throughout the program and value cant be overidden.
 if applied to class then cant inherit. If applied to method , if applied to variable then
+
+
+========================================================================================================================
+
+Interface : An abstract class gives 0 to 90% abstraction. To get 100% abstraction go with interface.
+	interface myinterface
+	{
+		abstract public void findbillpayment();//public void findbillpayment();
+	}
+	Rules: - It is meant for super class
+	- We can create object for interface and reference can be created.
+	- Interface reference can be created but object cant be created
+
+	So,
+		class emp implements myinterface	// can inherit
+		class emp interface myinterface		// cant inherit
+		{
+			public void findbillpayment()
+			{
+			}
+		}
+
+	example - 
+
+	//menu in MSword,Eclipse
+	interface menu
+	{
+		void new();
+		void open();
+		void save();
+	}
+
+	class MSword implements menu
+	{
+		void new()
+		{
+			//To create new file;
+		}
+		void open()
+		{
+			//To open new file;
+		}
+		void save()
+		{
+			//To save new file;
+		}
+	}
+
+	class Eclipse implements menu
+	{
+		void new()
+		{
+			//To create new file;
+		}
+		void open()
+		{
+			//To open new file;
+		}
+		void save()
+		{
+			//To save new file;
+		}
+	}
+
+	MSword m=new MSword();
+	m.new();
+	m.open();
+	m.save();
+	Eclipse e=new Eclipse();
+	e.new();
+	e.open();
+	e.save();
+
+//similarly same for Stack, queue, LinkedList, ArrayList, vector
+	interface list
+	{
+		void add();
+	}
+
+	class Stack implements list
+	{
+		void add()
+		{
+		}
+	}
+	class queue implements list
+	{
+		void add()
+		{
+		}
+	}
+	class LinkedList implements list
+	{
+		void add()
+		{
+		}
+	}
+	class ArrayList implements list
+	{
+		void add()
+		{
+		}
+	}
+	class vector implements list
+	{
+		void add()
+		{
+		}
+	}
+
+//Oracle, MySQL, MongoDB
+	interface DBconnect
+	{
+		void add();
+	}
+
+	class Oracle implements DBconnect
+	{
+		void add()
+		{
+			System.out.println("Oracle with Java");
+		}
+	}
+	class MySQL implements DBconnect
+	{
+		void add()
+		{
+			System.out.println("MySQL with Java");
+		}
+	}
+	class MongoDB implements DBconnect
+	{
+		void add()
+		{
+			System.out.println("MongoDB with Java");
+		}
+	}
+	//User end will access by getting a reference
+	Oracle o=new Oracle();
+	o.add();
+	MySQL mq=new MySQL();
+	mq.add();
+	MongoDB mg=new MongoDB();
+	mg.add();
+
