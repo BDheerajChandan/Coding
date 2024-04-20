@@ -743,4 +743,16 @@ Interface : An abstract class gives 0 to 90% abstraction. To get 100% abstractio
 	mq.add();
 	MongoDB mg=new MongoDB();
 	mg.add();
+====================================================================================
+Packages :
+- It is a container contains all classes and interfaces related to io(input and output)
 
+java.util - collections			import java.util.*;
+java.io	- File Handling			import java.io.*;
+java.sql - For JDBC			import java.sql.*;
+java.lang - threading and exceptions	import java.lang.*;
+
+java.util is primarily for collections and utility classes.
+java.io is for input/output operations, including file handling.
+java.sql is for database connectivity using JDBC.
+java.lang is for fundamental classes, exceptions, and basic language features.
