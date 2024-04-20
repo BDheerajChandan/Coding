@@ -23,8 +23,9 @@ class FileHandling
 {   
     public static void main(String args[]) throws IOException 
     {
-        String filename="FileExample.txt";
-        String path="C:\\Users\\KIIT\\Desktop\\Java\\";
+        String folderName=new String("FileExample");
+        String filename=new String("FileExample.txt");
+        String path="C:\\Users\\KIIT\\Desktop\\PROGRAM LANGUAGES\\Coding\\Java\\";
         
         File file = new File(path+filename);  // Creating a File object
         System.out.println("***********************************");
@@ -53,14 +54,18 @@ class FileHandling
         Long FileSize=file.length();
         System.out.println("File Size : "+FileSize);
         
-        String folderName=new String("FileExample");
+        
         File folderPath=new File(path+folderName);
         boolean fileMakedir=folderPath.mkdir();
         System.out.println("Directory created? - : "+fileMakedir);
         boolean IsDir=folderPath.isDirectory();
         System.out.println("Is Directory -  "+IsDir);
+        file = new File(path+folderName+"\\.gitkeep");
+        created = file.createNewFile();           // Creating new file
+        System.out.println("\nCreating a gitkeep file in new dir");
         
         String files[]=folderPath.list();
+        System.out.println("***********************************");
         if(files.length==0)
         {
             System.out.println("No Files present"+files.length);
@@ -70,13 +75,14 @@ class FileHandling
                 System.out.println(i);
             }
         }
-        /*int c=0;
+        System.out.println("***********************************");
+        int c=1;
         for(String i:files)
         {
             System.out.println("File "+c+" : "+i);
             c++;
-        }*/
-        
+        }
+        System.out.println("***********************************");
         //////////////////////////////////////////////////////////////////////////////
         FileWriter writer=new FileWriter(file,true);
         try
