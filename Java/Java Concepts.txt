@@ -502,3 +502,100 @@ Polymorphism: Polymorphism allows objects of different classes to be treated as 
 Method Overloading: Method overloading occurs when multiple methods in the same class have the same name but different parameters. Overloaded methods must differ in the 		number or types of their parameters. This is a form of static polymorphism, resolved at compile time.
 
 Method Overriding: Method overriding happens when a subclass provides a specific implementation of a method that is already provided by its superclass. The method name, 		parameters, and return type must be exactly the same in both the superclass and subclass. This is a form of dynamic polymorphism, resolved at runtime.
+
+
+Compiletime/static polymorphism : Which method to be called will be known at compile time itself. It is resolved during runtime. Superclass reference can hold subclass 				object.Mapping to a method will be resolved at runtime.
+
+	class <ClassName_1>
+	{
+		void <MethodName_1>()
+		{
+			//Statements or tasks;
+		}
+	}
+	class <className_2> extends <className_1>
+	{
+		void <MethodName_1>() //Method overriding
+		{
+			//Statements or tasks;
+		}
+	}
+	class <className_3> extends <className_1>
+	{
+		void <MethodName_1>() //Method overriding
+		{
+			//Statements or tasks;
+		}
+	}
+	class <className_4>
+	{
+		void main()
+		{
+			<ClassName_1> <ObjectRef>;
+			<ObjectRef>=new <className_2>(); //Runtime polymorphism
+			<ObjectRef>.<MethodName_1>();
+			<ObjectRef>=new <className_3>(); //Runtime polymorphism
+			<ObjectRef>.<MethodName_1>();
+		}
+	}
+
+Dynamic Polymorphism : Object creation cretated only during user choice.
+	Minimizizing multple object creation
+	Use user choice(Switch case) or by user input(String input)
+	class <ClassName_1>
+	{
+		void <MethodName_1>()
+		{
+			//Statements or tasks;
+		}
+	}
+	class <className_2> extends <className_1>
+	{
+		void <MethodName_1>() //Method overriding
+		{
+			//Statements or tasks;
+		}
+	}
+	class <className_3> extends <className_1>
+	{
+		void <MethodName_1>() //Method overriding
+		{
+			//Statements or tasks;
+		}
+	}
+	class <className_4>
+	{
+		void main()
+		{
+			<ClassName_1> <ObjectRef>;
+			sopln("Enter choice");
+			<datatype> <variable for class name>=sc.next();   // <variable for class name> = <className_2> or <className_3>
+			<ObjectRef>=new <variable for class name>();      // Dynamic polymorphism
+			<ObjectRef>.<MethodName_1>();
+		}
+	}
+
+Threads - class thread has start() and run() methods.
+		start() method look for run() method.
+	class thread runs separately(independently). Parallel execution needs thread.
+=========================================================================================================================
+
+Abstraction :
+- It is a process of hiding the implemenation setails and showig only the functionality to the user.
+- Abstract class has the abstract keyword and has method known as abstract method.
+- A method without implementation is kown as abstract method.
+	abstact class <ClassName>
+	{
+		abstract void <MethodName_1>();
+		abstract void <MethodName_2>();
+		void <MethodName_3>()
+		{
+		}
+	}
+Rules - We cant create an object of abstract class.
+	It is meant for inheritance purpose(It is for super class)
+	If any class extends abstract class it should provide theimplementation of the abstract method ion subclass.
+	The subclass object can be created.
+
+final keyword - t can be applied to a method, class or variable. It is applied this it will be a constant value throughout the program and value cant be overidden.
+if applied to class then cant inherit. If applied to method , if applied to variable then
