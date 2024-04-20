@@ -11,6 +11,7 @@
                     length() : To get/return size of a file,
                     list() : To get/return array of files in directory,
                     mkdir() : To create a new directory
+                    isDirectory() : To check wether it is a directory or not
    */
 
 
@@ -28,7 +29,7 @@ class FileHandling
         File file = new File(path+filename);  // Creating a File object
         System.out.println("***********************************");
         
-        /*System.out.println("Before creating a file");
+        System.out.println("Before creating a file");
         boolean exists = file.exists();                     // Checking if file exists
         System.out.println("File Exists ? - "+exists);
         
@@ -51,17 +52,30 @@ class FileHandling
         System.out.println("File Path : "+FilePath);
         Long FileSize=file.length();
         System.out.println("File Size : "+FileSize);
-        String files[]=file.list();
-        int c=0;
+        
+        String folderName=new String("FileExample");
+        File folderPath=new File(path+folderName);
+        boolean fileMakedir=folderPath.mkdir();
+        System.out.println("Directory created? - : "+fileMakedir);
+        boolean IsDir=folderPath.isDirectory();
+        System.out.println("Is Directory -  "+IsDir);
+        
+        String files[]=folderPath.list();
+        if(files.length==0)
+        {
+            System.out.println("No Files present"+files.length);
+        }else{
+            for(String i:files)
+            {
+                System.out.println(i);
+            }
+        }
+        /*int c=0;
         for(String i:files)
         {
             System.out.println("File "+c+" : "+i);
             c++;
-        }
-        String folderName=new String("FileExample");
-        File folderPath=new File(path+folderName);
-        boolean fileMakedir=folderPath.mkdir();
-        System.out.println("Directory created? - : "+fileMakedir);*/
+        }*/
         
         //////////////////////////////////////////////////////////////////////////////
         FileWriter writer=new FileWriter(file,true);
