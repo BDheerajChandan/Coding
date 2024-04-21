@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=Author
+comment0.target=AuthorS
 comment1.params=Aname\ email\ gender
-comment1.target=Author(java.lang.String,\ java.lang.String,\ char)
+comment1.target=AuthorS(java.lang.String,\ java.lang.String,\ char)
 comment2.params=
 comment2.target=java.lang.String\ getAName()
 comment3.params=

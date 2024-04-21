@@ -1,11 +1,11 @@
 import java.io.*;
 import java.util.*;
-class Book extends Author
+class BookS extends Author
 {
     String Bname;
     double price;
     int quantity;
-    Book(String Aname,String email,char gender,double price,int quantity,String Bname)
+    BookS(String Aname,String email,char gender,double price,int quantity,String Bname)
     {
         super(Aname,email,gender);
         this.Bname=Bname;

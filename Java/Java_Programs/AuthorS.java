@@ -1,12 +1,12 @@
 import java.io.*;
 import java.util.*;
 /////////////////////////////////////////////////////////////
-class Author
+class AuthorS
 {
     String Aname;
     String email;
     char gender;
-    Author(String Aname,String email,char gender)
+    AuthorS(String Aname,String email,char gender)
     {
          this.Aname=Aname;
          this.email=email;
