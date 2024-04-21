@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=PaymentGateway
+comment0.text=3)\ PaymentGatewaySystem\r\n\ \ \ \ a)\ PaymentGateway\ is\ an\ interface\ defining\ a\ method\ processPayment\ to\ process\ payments.\r\n\ \ \ \ b)\ Bank\ is\ an\ abstract\ class\ representing\ a\ generic\ bank,\ implementing\ the\ PaymentGateway\ interface\ and\ providing\ common\ functionalities\ \r\n\ \ \ \ \ \ \ \ like\ name\ and\ account\ number.\r\n\ \ \ \ c)\ SBI\ and\ HDFC\ is\ a\ concrete\ class\ representing\ a\ specific\ bank,\ extending\ the\ Bank\ class.\ It\ implements\ the\ processPayment\ method\ and\ \r\n\ \ \ \ \ \ \ \ provide\ the\ specific\ functionality\ to\ the\ respective\ bank(SBI,HDFC)\r\n\ \ \ \ D)\ The\ main\ method\ in\ the\ BankingPaymentGateway\ class\ demonstrates\ how\ to\ use\ the\ banking\ payment\ gateway\ by\ creating\ an\ instance\ of\ \r\n\ \ \ \ \ \ \ \ SBI\ ,HDFC\ and\ processing\ a\ payment.\r\n
+comment1.params=
+comment1.target=void\ processPayment()
+numComments=2
