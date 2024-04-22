@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=Employee
+comment0.target=Employee_5
 comment1.params=SSN\ FirstName\ LastName
-comment1.target=Employee(int,\ java.lang.String,\ java.lang.String)
+comment1.target=Employee_5(int,\ java.lang.String,\ java.lang.String)
 comment2.params=
 comment2.target=void\ setSSN()
 comment3.params=

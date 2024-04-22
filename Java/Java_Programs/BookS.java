@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-class BookS extends Author
+class BookS extends AuthorS
 {
     String Bname;
     double price;

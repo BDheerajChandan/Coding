@@ -1,11 +1,11 @@
 import java.io.*;
 import java.util.*;
-class Employee
+class Employee_5
 {
     int SSN;
     String FirstName;
     String LastName;
-    Employee(int SSN,String FirstName,String LastName)
+    Employee_5(int SSN,String FirstName,String LastName)
     {
         this.SSN=SSN;
         this.FirstName=FirstName;

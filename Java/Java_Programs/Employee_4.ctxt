@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=Employee_2
+comment0.target=Employee_4
 comment1.params=age\ name
-comment1.target=Employee_2(int,\ java.lang.String)
+comment1.target=Employee_4(int,\ java.lang.String)
 comment2.params=
 comment2.target=void\ MyProfession()
 numComments=3

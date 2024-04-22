@@ -18,9 +18,9 @@ class BaseEmployee implements Employee_3
     {
     }
 }
-class Manager extends BaseEmployee
+class Manager_2 extends BaseEmployee
 {
-    Manager()
+    Manager_2()
     {
     }
     public void calculateSalary()
@@ -30,9 +30,9 @@ class Manager extends BaseEmployee
     {
     }
 }
-class Programmer extends BaseEmployee
+class Programmer_2 extends BaseEmployee
 {
-    Programmer()
+    Programmer_2()
     {
     }
     public void calculateSalary()

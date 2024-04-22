@@ -21,7 +21,7 @@ class BankAccount_3 implements Account_3
     BankAccount_3()
     {
         Scanner sc=new Scanner(System.in);
-        
+        System.out.println("Please enter b ");
     }
     public void deposit()
     {

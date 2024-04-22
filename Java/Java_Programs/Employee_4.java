@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.*;
-class Employee_2 extends Person
+class Employee_4 extends Person
 {
-    Employee_2(int age,String name)
+    Employee_4(int age,String name)
     {
         super(age,name);
     }

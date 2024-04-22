@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 /////////////////////////////////////////////////////////////
-class AuthorS
+class AuthorS extends AuthorBookMain
 {
     String Aname;
     String email;

@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-class HourlyEmployee extends Employee
+class HourlyEmployee extends Employee_5
 {
     double Salary;
     HourlyEmployee(int SSN,String FirstName,String LastName,double Salary)

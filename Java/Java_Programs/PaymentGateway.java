@@ -17,6 +17,7 @@ class Bank implements PaymentGateway
     int acc_num;
     public void processPayment()
     {
+        System.out.println("Payment process");
     }
 }
 class SBI extends Bank

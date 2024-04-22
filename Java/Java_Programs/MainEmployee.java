@@ -8,7 +8,7 @@ class MainEmployee
         String FirstName="";
         String LastName="";
         double Salary=0.0;
-        Employee E=new Employee(SSN,FirstName,LastName);
+        Employee_5 E=new Employee_5(SSN,FirstName,LastName);
         HourlyEmployee HE=new HourlyEmployee(SSN,FirstName,LastName,Salary);
         SalariedEmployee SE=new SalariedEmployee(SSN,FirstName,LastName,Salary);
         
