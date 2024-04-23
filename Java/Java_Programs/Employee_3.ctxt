@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=Employee_3
-comment0.text=2)\ Employee\ Management\ System\r\n\ \ \ \ a)\ create\ Employee\ interface\ defining\ the\ calculateSalary()\ method.\r\n\ \ \ \ b)\ create\ a\ class\ called\ BaseEmployee\ \ implements\ the\ Employee\ interface\ and\ serves\ as\ the\ base\ class\ for\ all\ types\ of\ employees.\r\n\ \ \ \ c)\ Manager\ and\ Programmer\ classes\ inherit\ from\ BaseEmployee\ and\ provide\ their\ own\ implementations\ of\ the\ calculateSalary()\ method\ based\ on\ \r\n\ \ \ \ \ \ \ \ their\ specific\ roles.Both\ Manager\ and\ Programmer\ classes\ have\ constructors\ that\ initialize\ their\ attributes.\r\n\ \ \ \ d)Demonstrate\ the\ usage\ of\ these\ classes\ in\ EmployeeSystem\ class\ \ by\ creating\ instances\ of\ Manager\ and\ Programmer\ objects\ and\ \r\n\ \ \ \ \ \ \ \ displaying\ their\ information\ using\ the\ displayInfo(),finding\ their\ salary\ using\ calculateSalary\ method.\r\n
-comment1.params=
-comment1.target=void\ calculateSalary()
-numComments=2
