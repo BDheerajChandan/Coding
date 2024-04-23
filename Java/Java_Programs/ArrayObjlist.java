@@ -1,4 +1,17 @@
 import java.util.*;
+class SortObj implements Comparator<ArrObj>
+{
+    public int compare(ArrObj a1,ArrObj a2)
+    {
+        if(a1.id>a2.id)
+        {
+            return 1;
+        }else{
+            return -1;
+        }
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////
 class ArrObj
 {
     int id;
@@ -11,9 +24,9 @@ class ArrObj
     }
     public void addEle()
     {
-        ArrObj a1=new ArrObj(1,"Dheeraj");
-        ArrObj a2=new ArrObj(2,"Chandan");
-        ArrObj a3=new ArrObj(3,"Teju");
+        ArrObj a1=new ArrObj(50,"Dheeraj");
+        ArrObj a2=new ArrObj(52,"Chandan");
+        ArrObj a3=new ArrObj(13,"Teju");
         al.add(a1);
         al.add(a2);
         al.add(a3);  
@@ -50,22 +63,24 @@ class ArrObj
         System.out.print("Enter element to get index : ");
         int num=sc.nextInt();
         System.out.println(al.indexOf(num)); // To get index of an element
-    }  
+    } 
+    public void Sorting()
+    {
+        SortObj so=new SortObj();
+        Collections.sort(al,so);
+    }
 }
 /////////////////////////////////////////////////////////////////////////////////////
 public class ArrayObjlist 
 {
     public static void main(String[] args) 
     {
-        ArrObj a1=new ArrObj(1,"Dheeraj");
-        ArrObj a2=new ArrObj(2,"Chandan");
-        ArrObj a3=new ArrObj(3,"Teju");
         ArrObj a=new ArrObj(0,"");
         System.out.println("*******************************");
         System.out.println("ADDING NEW ELEMENT");
         a.addEle();
         a.display();
-        System.out.println("**************************");
+        /*System.out.println("**************************");
         System.out.println("REMOVING AN ELEMENT");
         a.remove();
         a.display();
@@ -85,6 +100,11 @@ public class ArrayObjlist
         System.out.println("GET INDEX POITION OF AN ELEMENT");
         a.Index();
         System.out.println("**************************");
+        a.display();*/
+        System.out.println("**************************");
+        System.out.println("AFTER SORTING BY ID"); 
+        a.Sorting();
         a.display();
+        System.out.println("**************************");
     }
 }
