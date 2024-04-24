@@ -804,3 +804,45 @@ map.keySet(); 		// To get keys from HashMap
 map.values(); 		// To get values from HashMap
 map.remove(key); 	// To remove a key-value pair from HashMap
 
+
+========================================================================================================================================================================
+
+File Handling :
+	Read/Write with string
+	Read/Write with primitive datatype
+	Read/Write with object
+
+
+
+
+
+========================================================================================================================================================================
+
+JDBC -
+After Downloading JDBC connectivity for MySQL connection
+
+In MySQL terminal, Grant Database Permissions:
+	SELECT USER();  -- <UserName>@localhost
+	SELECT User FROM mysql.user;
+	ALTER USER '<UserName>'@'localhost' IDENTIFIED BY '<pwd>';
+	GRANT ALL PRIVILEGES ON <DataBaseName>.* TO '<UserName>'@'localhost';
+
+After granting all permissions for database connectivity using SQl commands
+
+Open Eclipse software and Add jars file into library
+Open Bluej IDE software and add jars file into library
+
+
+
+Write the code to access the database
+	try
+	{
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection <Connceting_Variable>=DriverManager.getConnection("jdbc:mysql://localhost:3306/<DatabaseName>","<username>","<pwd>");
+	}
+	catch(SQLException e)
+        {
+        	e.printStackTrace();
+        }
+
+
