@@ -743,7 +743,7 @@ Interface : An abstract class gives 0 to 90% abstraction. To get 100% abstractio
 	mq.add();
 	MongoDB mg=new MongoDB();
 	mg.add();
-====================================================================================
+========================================================================================================================================================================
 Packages :
 - It is a container contains all classes and interfaces related to io(input and output)
 
@@ -756,3 +756,51 @@ java.util is primarily for collections and utility classes.
 java.io is for input/output operations, including file handling.
 java.sql is for database connectivity using JDBC.
 java.lang is for fundamental classes, exceptions, and basic language features.
+
+
+========================================================================================================================================================================
+
+DSA - ArrayList , LinkedList , Stack , Queue , HashMap , Vector
+
+// ArrayList
+ArrayList<DataType> list = new ArrayList<>(); // Declaration
+list.add(value); 	// To add elements/values to ArrayList
+list.remove(pos); 	// To remove element/value at a specific position from ArrayList
+list.set(pos, value); 	// To update element/value at a specific position in ArrayList
+list.add(pos, value); 	// To insert element/value at a specific position into ArrayList
+
+// LinkedList
+LinkedList<DataType> linkedList = new LinkedList<>(); // Declaration
+linkedList.add(value); 		// To add elements to LinkedList
+linkedList.push(value); 	// To push/add elements to LinkedList (equivalent to addFirst)
+linkedList.pop(); 		// To delete the first element (equivalent to removeFirst)
+linkedList.add(pos, value); 	// To insert element/value at a specific position in LinkedList
+linkedList.remove(pos); 	// To remove element/value at a specific position in LinkedList
+linkedList.set(pos, value); 	// To update element/value at a specific position in LinkedList
+linkedList.addFirst(value); 	// To add element/value at the first position in LinkedList
+linkedList.addLast(value); 	// To add element/value at the last position in LinkedList
+
+// Stack
+Stack<DataType> stack = new Stack<>(); // Declaration
+stack.add(value); 	// To add data/values to stack (equivalent to push)
+stack.push(value); 	// To push data/values to stack
+stack.pop(); 		// To remove/delete the top element (equivalent to remove)
+stack.remove(pos); 	// To remove element from a specific position in Stack (Stack doesn't directly support this)
+stack.set(pos, value); 	// To update value/data at a specific position in Stack (Stack doesn't directly support this)
+
+// Queue
+PriorityQueue<DataType> queue = new PriorityQueue<>(); // Declaration
+queue.add(value); 	// To add data to queue
+queue.poll(); 		// To remove/delete the first element from queue
+queue.remove(value); 	// To remove/delete by value from queue (PriorityQueue doesn't directly support this)
+queue.size(); 		// To get/count items from queue
+
+// HashMap
+HashMap<KeyType, ValueType> map = new HashMap<>(); // Declaration
+map.put(key, value); 	// To keep/add elements in HashMap
+map.entrySet(); 	// To get key-value pairs from HashMap
+map.get(key); 		// To get value associated with a specific key from HashMap
+map.keySet(); 		// To get keys from HashMap
+map.values(); 		// To get values from HashMap
+map.remove(key); 	// To remove a key-value pair from HashMap
+

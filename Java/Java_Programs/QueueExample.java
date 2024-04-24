@@ -18,7 +18,7 @@ class QueueExample
         }
         System.out.println("\tDELETING AN FIRST ELEMENT");
         Integer ele=pq.poll();        // To delete an first element/recently added element
-        System.out.println(ele+"\n");    // To display deleted first element/recently added element
+        System.out.println(ele+"\n");    // To display deleted first element
         for(Integer i:pq)
         {
             System.out.println(i);

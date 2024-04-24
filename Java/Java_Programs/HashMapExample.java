@@ -50,6 +50,9 @@ public class HashMapExample
             }
             eo.display();
         }
+        System.out.println("TO GET <KEY,VALUE>OBJECT FROM HASHMAP");
+        System.out.println("At position 2 in HashMap : "+hm.get(2)+"\nValue : ");
+        hm.get(2).display();
         System.out.println("TO REMOVE <KEY,VALUE>OBJECT FROM HASHMAP");
         int rm=0;
         for(Map.Entry<Integer,EmployeeObj> i: hm.entrySet()) 
