@@ -30,6 +30,11 @@ class Arr
     {
         employees.set(1,100);
     }
+    public void getValue()
+    {
+        int val=employees.get(2);
+        System.out.println("Value at index position 1 : "+val);
+    }
     public void insert()
     {
         employees.add(1,300);
@@ -51,11 +56,15 @@ public class EmployeeArrList
         System.out.println("ADDING NEW ELEMENT");
         a.addEle();
         a.display();
+        System.out.println("**************************"); 
+        System.out.println("GET VALUE AT INDEX POSITION");
+        a.getValue();
+        a.display();
         System.out.println("**************************");
         System.out.println("REMOVING AN ELEMENT");
         a.remove();
         a.display();
-        System.out.println("**************************");      
+        System.out.println("**************************"); 
         System.out.println("ADDING SINGLE ELEMENT");
         a.addOne();
         a.display();
