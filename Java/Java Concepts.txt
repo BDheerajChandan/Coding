@@ -812,7 +812,60 @@ File Handling :
 	Read/Write with primitive datatype
 	Read/Write with object
 
+==========================================================================
+			STRING READ/WRITE TO FILE
+==========================================================================
+File Write
+	FileWriter <referrence_1>=new FileWriter(<path+filename>);
+	<referrence_1>.write(<String>+"\n");
+	<referrence_1>.close();
+File Read
+	FileReader <referrence_1>=new FileReader(<path+filename>);
+	BufferedReader <referrence_2>=new BufferedReader(<referrence_1>);
+	String <Variable>=<referrence_2>.readLine();
+	<referrence_2>.close();
 
+==========================================================================
+			DATA READ/WRITE TO FILE
+==========================================================================
+Data Write :
+	FileOutputStream <reference_1> = new FileOutputStream(<Path+filename>);
+	DataOutputStream <reference_2> = new DataOutputStream(<reference_1>);
+  	<reference_2>.writeInt(<IntegerValue>);
+    	<reference_2>.writeDouble(<DoubleValue>);
+    	<reference_2>.writeBoolean(<BooleanValue>);
+    	<reference_2>.writeLong(<LongValue>);
+    	<reference_2>.writeFloat(<FloatValue>);
+    	<reference_2>.writeChar(<CharacterValue>); 
+	<reference_2>.close();
+	<reference_1>.close();
+
+Data Read :
+	FileInputStream <reference_3> = new FileInputStream(<Path+filename>);
+	DataInputStream <reference_4> = new DataInputStream(<reference_3>);
+	int <IntegerVariable> = <reference_4>.readInt();
+    	double <DoubleVariable> = <reference_4>.readDouble();
+    	boolean <BooleanVariable> = <reference_4>.readBoolean();
+    	long <LongVariable> = <reference_4>.readLong();
+    	float <FloatVariable> = <reference_4>.readFloat();
+    	char <CharVariable> = <reference_4>.readChar(); // Corrected variable name
+	<reference_3>.close();
+	<reference_4>.close();
+==========================================================================
+			OBJECT READ/WRITE TO FILE
+==========================================================================
+Object Write:
+	<ClassName> <ObjectRef>=new <ClassName>(<Data>);
+	FileOutputStream <referrence_1>=new FileOutputStream(<path+filename>);
+	ObjecteOutputStream <referrence_2>=new ObjecteOutputStream(f<referrence_1>);
+	<referrence_2>.writeObject(<ObjectRef>);
+	<referrence_2>.close();
+
+Object Read:
+	FileInputStream <referrence_1>=new FileInputStream(<path+filename>);
+	ObjecteInputStream <referrence_2>=new FileInputStream(<referrence_1>);
+	<ClassName> <ObjectRef>=(<ClassName>)<referrence_2>.readObject();
+	<referrence_2>.close();
 
 
 
@@ -845,4 +898,12 @@ Write the code to access the database
         	e.printStackTrace();
         }
 
+statement
+Statement <reference_1>=<Connceting_Variable>.createStatement();
+ResultSet <reference_2>=<reference_1>.executeQuery(<>);
+String <Queryvariable>="select eid,ename from emp";
+ResultSet <>=<>.executeUpdate(<Queryvariable>);
+
+Procedure
+callable statements
 
