@@ -19,7 +19,7 @@ class ObjPractice_2// implements Serializable
        // System.out.println("****************************");
     }
 }
-public class HashMapPactice
+public class HashMapPactice_1
 {
     public static void main(String args[])
     {
