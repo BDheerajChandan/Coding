@@ -24,8 +24,8 @@ public class FileHandlingObject
         FileOutputStream fo=new FileOutputStream(path+filename);
         ObjectOutputStream oo=new ObjectOutputStream(fo);
         FHObjec fh1=new FHObjec(1,"Dheeraj");
-        FHObjec fh2=new FHObjec(1,"Chandan");
-        FHObjec fh3=new FHObjec(1,"Ramesh");
+        FHObjec fh2=new FHObjec(2,"Chandan");
+        FHObjec fh3=new FHObjec(3,"Ramesh");
         oo.writeObject(fh1);
         oo.writeObject(fh2);
         oo.writeObject(fh3);
