@@ -49,5 +49,7 @@ public class ArrFHObjectPractice_3
             o.display();
             
         }
+        System.out.println("************************");
+        
     }
 }
