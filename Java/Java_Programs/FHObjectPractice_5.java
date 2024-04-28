@@ -9,11 +9,15 @@ class ArrListObj_4 implements Serializable
         this.id=id;
         this.name=name;
     }
-    public void display()
+    public String toString()
+    {
+        return "ID : "+id;
+    }
+    /*public void display()
     {
         System.out.println("ID : "+id);
         System.out.println("Name : "+name);
-    }
+    }*/
 }
 public class FHObjectPractice_5
 {
@@ -32,10 +36,12 @@ public class FHObjectPractice_5
         FileInputStream fi=new FileInputStream(path+filename);
         ObjectInputStream oi=new ObjectInputStream(fi);
         ArrListObj_4 ai1=(ArrListObj_4)oi.readObject();
-        ai1.display();
+        //ai1.display();
+        String str=ai1.toString();
+        System.out.println(str);
         ArrListObj_4 ai2=(ArrListObj_4)oi.readObject();
-        ai2.display();
+        //ai2.display();
         ArrListObj_4 ai3=(ArrListObj_4)oi.readObject();
-        ai3.display();
+        //ai3.display();
     }
 }

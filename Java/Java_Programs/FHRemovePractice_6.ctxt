@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=FHRemovePractice_6
+comment1.params=id\ name
+comment1.target=ArrListObj_6(int,\ java.lang.String)
+comment2.params=
+comment2.target=void\ display()
+comment2.text=public\ String\ toString()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ return\ "ID\ \:\ "+id;\r\n}
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
