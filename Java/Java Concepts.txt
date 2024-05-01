@@ -898,12 +898,35 @@ Write the code to access the database
         	e.printStackTrace();
         }
 
-statement
+==========================================================================
+				Create Statement
+==========================================================================
 Statement <reference_1>=<Connceting_Variable>.createStatement();
 ResultSet <reference_2>=<reference_1>.executeQuery(<>);
+If Select, 
+	ResultSet <reference_2>=<reference_1>.executeQuery();
+else
+	int <CountVariable>=<reference_1>.executeUpdate();
 String <Queryvariable>="select eid,ename from emp";
 ResultSet <>=<>.executeUpdate(<Queryvariable>);
 
-Procedure
-callable statements
+==========================================================================
+				Prepared statement
+==========================================================================
+String <StringQuery_Variable>=<String Query- ?,?>
+PreparedStatement <reference_1>=<Connceting_Variable>.prepareStatement(<StringQuery_Variable>);
+<reference_1>.set<DataType>(<index>,<Value>)
+If Select, 
+	ResultSet <resultSet1> =<reference_1>.executeQuery();
+else
+	int <CountVariable>=<reference_1>.executeUpdate();
+String <StringQuery_Variable2>=<String select Query>
+ResultSet <resultSet2> =<reference_1>.executeQuery(<Queryvariable>);
 
+
+==========================================================================
+Procedure
+==========================================================================
+==========================================================================
+callable statements
+==========================================================================
