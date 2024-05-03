@@ -1,0 +1,50 @@
+Database Mysql with Python
+=============================
+1. We need to get connection with mysql
+2. Get cursor for connection
+3. Execute query using cursor
+4. Fetch results by executed query
+5. Iterate all results
+=======================
+	select 
+=======================
+import mysql.connector
+<ConnectionRefrence>=mc.connect(host='<localhost>', user=<username>', password='<pwd>', database='<DBname>')
+<CursorRefrence>=<ConnectionRefrence>.cursor()
+<QueryVariable>="<SQL query>"
+<CursorRefrence>.execute(<QueryVariable>)
+<ResultRefrence>=<CursorRefrence>.fetchall()
+for <variable> in ResultRefrence:
+    print(variable)
+---------------------------
+import mysql.connector
+<ConnectionRefrence>=mc.connect(host='<localhost>', user=<username>', password='<pwd>', database='<DBname>')
+<CursorRefrence>=<ConnectionRefrence>.cursor()
+<QueryVariable>="<SQL query - %s,%s,%s>"
+<ListWithUserInputs>=[<UserInput_1>,<UserInput_2>,<UserInput_3>]
+<CursorRefrence>.execute(<QueryVariable>,<ListWithUserInputs>)
+<ResultRefrence>=<CursorRefrence>.fetchall()
+for <variable> in ResultRefrence:
+    print(variable)
+
+===============================
+	insert,update,delete
+===============================
+
+
+import mysql.connector
+<ConnectionRefrence>=mc.connect(host='<localhost>', user=<username>', password='<pwd>', database='<DBname>')
+<CursorRefrence>=<ConnectionRefrence>.cursor()
+<QueryVariable>="<SQL query>"
+<CursorRefrence>.execute(<QueryVariable>)
+<ConnectionRefrence>.commit()
+print("Number of changes : ",<CursorRefrence>.rowcount)
+---------------------------
+import mysql.connector
+<ConnectionRefrence>=mc.connect(host='<localhost>', user=<username>', password='<pwd>', database='<DBname>')
+<CursorRefrence>=<ConnectionRefrence>.cursor()
+<QueryVariable>="<SQL query - %s,%s,%s>"
+<ListWithUserInputs>=[<UserInput_1>,<UserInput_2>,<UserInput_3>]
+<CursorRefrence>.execute(<QueryVariable>,<ListWithUserInputs>)
+<ConnectionRefrence>.commit()
+print("Number of changes : ",<CursorRefrence>.rowcount)
