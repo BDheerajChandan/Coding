@@ -6,7 +6,7 @@ public class JDBCPractice_5
     public static void main(String args[])throws IOException,SQLException,ClassNotFoundException
     {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/cdac","root","kiit");
+        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/cdac","dbda","cdacacts");
         Statement stm1=con.createStatement();
         String q1="select Employeeid,Name from employee_1";
         ResultSet res1=stm1.executeQuery(q1);

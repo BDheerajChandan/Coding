@@ -4,7 +4,7 @@ public class SqlJdbc {
     public static void main(String[] args)throws SQLException,ClassNotFoundException
     {
     	Class.forName("com.mysql.jdbc.Driver");
-    	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cdac", "root", "kiit");
+    	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cdac","dbda","cdacacts");
         System.out.println("Connected to database");
         System.out.println("Connection created!!");
         Statement stm=con.createStatement();

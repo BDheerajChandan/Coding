@@ -6,7 +6,7 @@ public class JdbcOperation
 	public static void main(String[] args)throws IOException, SQLException,ClassNotFoundException
 	{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/dbda","root","cdacacts");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/cdac","dbda","cdacacts");
 		
 		System.out.println("PREPARED STATEMENTS");
 		Scanner sc=new Scanner(System.in);
