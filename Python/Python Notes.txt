@@ -1,4 +1,20 @@
 Data Structures
+list[] - Allows duplicate members 
+	 changable
+	 Oredered
+	 Syntax: <ListVariable>=list([<value_1>,<value_2>,,......<value_n>])
+tuple() - Allows duplicate members 
+	  Not changable
+	  Oredered
+	  Syntax: <TupleVariable>=tuple((<value_1>,<value_2>,,......<value_n>))
+set{} - No duplicate members 
+	cannot be changed but can be added, non indexed
+	Unordered
+	Syntax: <SetVariable>=set({<value_1>,<value_2>,,......<value_n>})
+dict{<key>:<value>} - No duplicate members 
+		      Changable indexed
+		      Unordered	
+		      Syntax: <DictVariable>=dict({<key_1>:<value_1>,<key_3>:<value_2>,,......,,<key_n>:<value_n>})
 
 Pandas
 
