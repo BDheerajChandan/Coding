@@ -33,7 +33,7 @@ int main()
     gets(s);
     printf("Enter the String sentence (s) : ");
     gets(sen);
-    printf("%c\n%s\n%s",ch,sen);
+    printf("Entered character : %c\nEntered sentence : %s\n",ch,sen);
     return 0;
 }
 

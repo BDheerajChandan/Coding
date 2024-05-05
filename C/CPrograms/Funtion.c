@@ -19,12 +19,19 @@ int max_of_four(int a, int b, int c, int d)
     max=d;
     return max;
 }
-int main() 
+int main()
 {
     int a, b, c, d;
-    scanf("%d %d %d %d", &a, &b, &c, &d);
+    printf("Please enter the 1st number : ");
+    scanf("%d", &a);
+    printf("Please enter the 2nd number : ");
+    scanf("%d", &b);
+    printf("Please enter the 3rd number : ");
+    scanf("%d", &c);
+    printf("Please enter the 4th number : ");
+    scanf("%d", &d);
     int ans = max_of_four(a, b, c, d);
-    printf("%d", ans);
-    
+    printf("Maximum of four number is : %d", ans);
+
     return 0;
 }

@@ -21,10 +21,20 @@ int main()
 {
 	int n,m;
     float p,q;
-    scanf("%d%d%f%f",&m,&n,&p,&q);
+    printf("Please enter the 1st integer number : ");
+    scanf("%d", &n);
+    printf("Please enter the 2nd integer number : ");
+    scanf("%d", &m);
+    printf("Please enter the 1st float number : ");
+    scanf("%f", &p);
+    printf("Please enter the 2nd float number : ");
+    scanf("%f", &q);
     if((n>=1 && n<=10000)&&(m>=1 && m<=10000)&&(p>=1.0 && p<=10000.0)&&(q>=1.0 && q<=10000.0))
     {
-        printf("%d %d\n%.1f %.1f",(m+n),(m-n),(p+q),(p-q));
+        printf("Sum of two integers : %d\n",(m+n));
+        printf("Difference of two integers : %d\n",(m-n));
+        printf("Sum of two floating numbers : %.1f\n",(p+q));
+        printf("Difference of two floating numbers : %.1f\n",(p-q));
     }
     return 0;
 }
