@@ -1,0 +1,6 @@
+,product_id,product_name,category,price,qty
+0,1,Fan,Electronics,2000.0,0.0
+1,2,Table,Stationary,2400.0,3.0
+2,3,Chair,0,1000.0,6.0
+3,4,Bench,Stationary,0.0,0.0
+4,5,Bed,Stationary,5000.0,4.0
