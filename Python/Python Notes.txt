@@ -16,9 +16,21 @@ dict{<key>:<value>} - No duplicate members
 		      Unordered	
 		      Syntax: <DictVariable>=dict({<key_1>:<value_1>,<key_3>:<value_2>,,......,,<key_n>:<value_n>})
 
-Pandas
 
-Numpy
+
+
+pandas :
+	.read_csv()
+	.DataFrame()
+	.Series()
+	.shape()
+	.reshape()
+	.size()
+
+
+numpy :
+	.array([])
+	.ndim()
 
 
 
