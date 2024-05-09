@@ -23,14 +23,30 @@ pandas :
 	.read_csv()
 	.DataFrame()
 	.Series()
-	.shape()
-	.reshape()
-	.size()
+	.read_Excel()
 
 
 numpy :
 	.array([])
 	.ndim()
+	.shape()
+	.reshape()
+	.size()
+
+matplotlib.pyplot
+	plot
+	bar
+	barh
+	pie
+	scatter
+	legend
+	xlabel
+	ylabel
+	xlim
+	ylim
+	grid
+	axis
+
 
 
 
