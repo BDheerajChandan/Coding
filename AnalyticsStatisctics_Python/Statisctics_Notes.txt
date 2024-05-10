@@ -1,0 +1,23 @@
+Probability:
+Random experiment - An experiment in which the outcome is not known certainity.
+                    That is output of a random experiment cannot be predicted with certainity.
+Sample space - Universal set that consists of all possible outcomes of an experiment and individual outcome are called elementary events.
+Event - A subset of sample space and probability is usually calculated with respect to an event.
+    ex: - Number of cancellation of orders
+          Number of fraud credit cards transaction
+
+3 types: Marginal, Joint and Conditional
+
+Naive Bayes theorem :
+- It is also known as binary classifier or probability classifier
+- Widely used in text categorization
+--> Supervised Algorithm
+--> Bayes theorem
+--> Native assumption (Occurence of features are independent)
+Bayes theorem formula :
+    P(A)
+    P(B)
+    P(A/B)= P(A and B)/P(B) ..(1)
+    P(B/A)= P(A and B)/P(A) 
+    P(A and B)= P(B/A).P(A).. in(1)
+    so, P(A/B)= [P(B/A).P(A)] /P(B) .. Derived equation 
