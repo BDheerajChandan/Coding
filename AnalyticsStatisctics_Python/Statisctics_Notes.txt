@@ -1,3 +1,7 @@
+========================================================================================================================================
+							Bayes theorem
+========================================================================================================================================
+
 Probability:
 Random experiment - An experiment in which the outcome is not known certainity.
                     That is output of a random experiment cannot be predicted with certainity.
@@ -21,3 +25,32 @@ Bayes theorem formula :
     P(B/A)= P(A and B)/P(A) 
     P(A and B)= P(B/A).P(A).. in(1)
     so, P(A/B)= [P(B/A).P(A)] /P(B) .. Derived equation 
+
+=====================================================================================================================================
+					Random variable, Covariance, Correlation
+=====================================================================================================================================
+Parameters of diagnostic analytics
+- Correlation
+- Covariance
+- Outliers
+
+For checking similarities between random variables we use covaraiance and correlation.
+covaraiance indicates the direction of linear relationship between variables.
+correlation indicates strength and direction of linear relationship between 2 variables.
+Correlation is a function of the covaraiance.
+
+Linear relationshipbetween two random variables:
+- Correlation value r-strength
+- sign indicates direction : '+' or '-'
+Different correlation coefficients:
+- Pearson correlation coefficient
+- Spearman's rank correlation 
+
+range:[-1 ... 0 ... +1]
+Pearson correlation (R):    sum[(x-mean(x))*(y-mean(y))]
+			R = ------------------------------------------
+			    sqrt[(sum[(x-mean(x))^2)*((y-mean(y))^2)]]
+
+Spearman's rank correlation (P):         [6*(sum[Rank(x)-Rank(x)])]
+				 P = 1 - ---------------------------         (If any data is similar then consider the average of it)
+                                         N*((N^2)-1)
