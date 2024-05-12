@@ -1,0 +1,36 @@
+ Line, Violin, Heatmap, pair
+
+Matplotlib:
+- import matplotlib.pyplot as plt
+	plt.figure(figsize=[<>,<>]) : 	set figure size
+	plt.legend([,,..,]) 	: 	set plot label names
+	plt.xlabel() 		: 	set name for x axis
+	plt.ylabel() 		: 	set name for y axis
+	plt.xlim() 		: 	set limit for x axis
+	plt.ylim() 		: 	set limit for y axis
+	plt.xticks() 		: 	set range for x axis in plot graph
+	plt.yticks() 		: 	set range for y axis in plot graph
+	plt.title() 		: 	set title for plot graph
+
+seaborn:
+- import seaborn as sns
+- import matplotlib.pyplot as plt
+
+	sns.get_dataset_names()
+	sns.load_dataset('<DataSetName>')
+	sns.set_theme()
+
+	sns.relplot(data=<ExtractedData>,x,y,hue=)
+	sns.lmplot(data, x,y,col,hue)
+	sns.displot(data, x,y,col,kde)
+	sns.distplot(data, x,col,kde)
+	sns.catplot(data,kind,x,y,hue,split)
+	sns.jointplot(data,x,y,hue)
+	sns.pairplot(data,hue)
+	sns.scatterplot()
+	sns.histplot()
+	sns.boxplot()
+	sns.barplot()
+
+	plt.title("Flipper Length vs. Bill Length")
+	plt.show()
