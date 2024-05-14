@@ -40,13 +40,13 @@ correlation indicates strength and direction of linear relationship between 2 va
 Correlation is a function of the covaraiance.
 
 Linear relationshipbetween two random variables:
-- Correlation value r-strength
-- sign indicates direction : '+' or '-'
+	- Correlation value r-strength
+	- sign indicates direction : '+' or '-'
 Different correlation coefficients:
-- Pearson correlation coefficient
-- Spearman's rank correlation 
-
+	- Pearson correlation coefficient
+	- Spearman's rank correlation 
 range:[-1 ... 0 ... +1]
+
 Pearson correlation (R):    sum[(x-mean(x))*(y-mean(y))]
 			R = ------------------------------------------
 			    sqrt[(sum[(x-mean(x))^2)*((y-mean(y))^2)]]
@@ -54,6 +54,47 @@ Pearson correlation (R):    sum[(x-mean(x))*(y-mean(y))]
 Spearman's rank correlation (P):         [6*(sum[Rank(x)-Rank(x)])]
 				 P = 1 - ---------------------------         (If any data is similar then consider the average of it)
                                          N*((N^2)-1)
+
+Covariance : sum((x-mean(x))*(y-mean(y)))/n	  ,Population Covariance
+	     sum((x-mean(x))*(y-mean(y)))/n-1     ,Sample Covariance
+=====================================================================================================================================
+					Statistic measures
+=====================================================================================================================================
+
+<DataSet1>=[d1,d2,d3]
+<DataSet2>=[d1,d2,d3,d4]
+Measures : 
+	1.Central tendency : Mean,Mode and Median
+		Mean - Sum of values/Number of values mean of <DataSet1>=d1+d2+d3/3 and mean of <DataSet2>=d1+d2+d3+d4/4
+  					(d1+d2....+dn)
+				mean = ----------------
+					      n	
+
+		Mode - Most common or repeated value 
+		Median - Sort and pick the middle value median of <DataSet1>=d2 ,median of <DataSet2>=(d2+d3)/2
+				
+					   d(n/2)+d((n/2)+1)
+				median 	= -------------------  , if n is even
+					     	2 
+					= d((n+1)/2) 		, if n is odd 		
+
+	2.Dispersion : Range, Standard Deviation and variance
+		Range - Difference between Min and Max of dataset. 	
+			Range of <DataSet1>=max(<DataSet1>)-min(<DataSet2>) ; 
+			Range of <DataSet2>=max(<DataSet2>)-min(<DataSet2>)
+				Range = max(d)-min(d)
+
+		Standard Deviation- Sqareroot of Sum of square of difference of dataset values and mean of dataset /One less count of number of dataset values.
+			SD=sqrt(sum(square (<DataSet1/2>-mean(<DataSet1/2>)) ))/(N-1))
+				
+				           [ sum(square(d-datapoints-mean(d)))]
+				SD   = sqrt|----------------------------------|
+					   [	        n-1		      ]
+		variance - Sum of square of difference of dataset values and mean of dataset /One less count of number of dataset values or Sqaure of Standard deviation.
+			V =sum(square ( <DataSet1/2> - mean(<DataSet1/2>) ) )/(N-1)
+				          [ sum(square(d-datapoints-mean(d)))]
+				V=SD*SD = |----------------------------------|
+				          [	        n-1		     ]
 
 =====================================================================================================================================
 					
