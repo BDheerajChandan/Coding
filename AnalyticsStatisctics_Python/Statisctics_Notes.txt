@@ -97,5 +97,27 @@ Measures :
 				          [	        n-1		     ]
 
 =====================================================================================================================================
-					
+						Probability distribution					
 =====================================================================================================================================
+
+Random variable : Function that maps every outcome in the sample space to a real number it can be both continous and discrete.
+Discrete random variable - Random variable can assume only finite or countably infinite set of values. Described using PMF(Probability mass function)and Cumulative distribution function(CDF).
+Continous random variable - Random variable can take value from an infinite set of values. Described using PDF(Probabiliyty Distribution function) and CDF(Cumulative distribution function)
+
+Probability distribution :
+1. Discrete distribution: Binomial, Poission, Geometric
+2. Continous distribution: Uniform, Exponential, Normal
+
+Discrete Probability functions:
+Binomial distribution -
+PMF = P(x)= nCx*(p^x)*(q^(n-x))=
+CDF = F(r)=sum((n/x)*(p^x)*(q^(n-x)=
+Poission distribution -
+PMF = P(X=x)=(e^(-lambda))*(lambda^x)/x!
+Geometric distribution -
+PDF= f(x)=[1/sqrt(2*pi*square(sigma))]*e^(-[square(x-rho)]/(2*square(sigma)))
+varaince
+
+Normal Distribution 
+mean(x)=(1/n)*sum(x,i-n)
+varaince=(1/n)*sum(x-mean(x),i-n)^2
