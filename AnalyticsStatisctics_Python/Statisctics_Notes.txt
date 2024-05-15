@@ -121,3 +121,23 @@ varaince
 Normal Distribution 
 mean(x)=(1/n)*sum(x,i-n)
 varaince=(1/n)*sum(x-mean(x),i-n)^2
+
+==================
+ Distributions
+==================
+
+Discrete distribution - Binomial, Poissons, Geometric
+Continous distribution - Uniform , Exponential, Normal
+For Discrete random variable : PMF and CDF
+For Continous random variable : PDF and CDF
+Binomial
+	PMF
+	CDF
+Poission
+	PMF
+Normal DistributionND
+	PDF
+	
+PMF - sns.histplot(beml_gain,kde=False,discrete=True) , 
+PDF - sns.ecdfplot(beml_gain,kde=True) , 
+CDF - sns.ecdfplot(beml_gain)
