@@ -163,7 +163,7 @@ Consists of 2 complementary statements:
 	Null hypothesis(Ho)
 	Alternate hypothesis(Ha)
 Types of hypothesis testing:
-	Parametric - ZTest,TTest,ANOVA
+	Parametric - ZTest,TTest,ANOVA(Analysis of Variance)
 	Non Parametric - ChiSquare
 Notation :
 	rho - Population mean
@@ -178,3 +178,7 @@ TTest : 3 types- 1Sample, 2Sample, PairedSample
 1Sample - 1 population mean is given and StdDev is not given
 2Sample - Test difference between given 2 population means and StdDev is not given
 PairedSample - Before and After estimation
+
+ANOVA(analysis ofvariance) - 
+1 way ANOVA - [ Ho : rho1=rho2=rho3 ],[Ha : rho1!=rho2!=rho3 ]
+ChiSquare - x^2=sum[((Oi-Ei)^2)/Ei]
