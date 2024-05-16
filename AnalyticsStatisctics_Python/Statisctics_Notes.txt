@@ -146,3 +146,35 @@ PMF - sns.histplot(beml_gain,kde=False,discrete=True) ,
 PDF - sns.ecdfplot(beml_gain,kde=True) , 
 CDF - sns.ecdfplot(beml_gain)
 --------------------------------------------------------
+
+=====================================================================================================================================
+						Hypothesis testing					
+=====================================================================================================================================
+
+
+Infrential Statistics - Process of estimating population parameters(Characters of population : Mean,Median, StdDev etc.. ).
+error in estimation of population parameters that is based on sample statistics.
+CLL(Central limit theorem)
+
+Hypothesis testing 
+It is example of infrential statistics.Hypothesis is a claim.
+It is either accepted or rejected
+Consists of 2 complementary statements:
+	Null hypothesis(Ho)
+	Alternate hypothesis(Ha)
+Types of hypothesis testing:
+	Parametric - ZTest,TTest,ANOVA
+	Non Parametric - ChiSquare
+Notation :
+	rho - Population mean
+	sigma - Population  StdDev
+	X- sample mean
+	S- sample StdDev
+	n- sample size
+
+ZTest : Z=(X-rho)/(sigma/sqrt(n))
+TTest : 3 types- 1Sample, 2Sample, PairedSample
+	population is given but StdDev is not given
+1Sample - 1 population mean is given and StdDev is not given
+2Sample - Test difference between given 2 population means and StdDev is not given
+PairedSample - Before and After estimation
