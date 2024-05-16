@@ -213,3 +213,5 @@ Entropy-
 E(s)-  -sum(Pilog(Pi)) where Pi-proportion value
 E(s1)- (-VS1/s)log2(VS1/s)
 E(s2)- (-VS2/s)log2(VS2/s)
+
+(Infrential Gain)IG=E(s)-E(s1)-E(s2)
