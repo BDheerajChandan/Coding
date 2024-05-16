@@ -182,3 +182,34 @@ PairedSample - Before and After estimation
 ANOVA(analysis ofvariance) - 
 1 way ANOVA - [ Ho : rho1=rho2=rho3 ],[Ha : rho1!=rho2!=rho3 ]
 ChiSquare - x^2=sum[((Oi-Ei)^2)/Ei]
+
+
+=====================================================================================================================================
+						Prediction modelling
+=====================================================================================================================================
+
+Models,Induction and prediction
+Supervised(Supervised learning models) segmentation : Classification and Regression
+
+Model is a simplified representation of reality created to serve a purpose
+predictive model is a formula for estimating the unknown value of interest known as the target.
+
+data mining deal with historical data,models - built and tested using events from the past.
+Model induction: Creation of model from data
+Induction algorith or learner : Procedure that creates the model from the data
+
+Classification segmentation : Decision tree and Logistic regression
+Classification problems with binary outcome['+':1 ,'-':0] are called binary classification.P(Y=1)=(e^z)/(1+(e^z))=1/(1+(e^-z))
+		z= B0+B1X1+B2X2++BmXm
+Classification problems with multiple outcome are called multinomial classification.
+Techniques - Logistic regression, Classification trees, Discriminant analysis,Neural network,SVM(Support vector machine)
+
+Classification using Decision trees:
+Selecting Information attributes
+Visualizing the segmentation
+Trees as a set of rules
+
+Entropy-
+E(s)-  -sum(Pilog(Pi)) where Pi-proportion value
+E(s1)- (-VS1/s)log2(VS1/s)
+E(s2)- (-VS2/s)log2(VS2/s)
