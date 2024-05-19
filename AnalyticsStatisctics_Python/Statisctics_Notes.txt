@@ -151,10 +151,28 @@ CDF - sns.ecdfplot(beml_gain)
 						Hypothesis testing					
 =====================================================================================================================================
 
+- It is an example of Infrential statistics,
+- It is a claim
+- The test is to retain or reject a null hypothesis
+- 2 complementary statements :
+	Null Hypothesis - An existing belief
+	Alternate Hypothesis - It is intended to establish a new evidance.
+- 2 tests :
+	parametric test : It is describe by population parameters.Example- Ztest,Ttest(1Sample, 2 Sample,PairedSample and ENOVA)
+	NonParametric : It use data to comment on calim .Example(Chi sqaure)
+
+Steps to perform hypothesis testing :
+	1. Define Null and Alternate hypothesis.It is described by populatuion parameters.
+	2. Identify the test statistics for validating the null hypothesis.
+	3. declare the criteria for retaining and rejecting the null hypothesis.Significance value.
+	4. Find Pvalue (conditional probability) which is observed to the test statistics where null hypothesis is true.
+	5. Decide whether the claim has to be accepted or rejected.
+
+
 
 Infrential Statistics - Process of estimating population parameters(Characters of population : Mean,Median, StdDev etc.. ).
 error in estimation of population parameters that is based on sample statistics.
-CLL(Central limit theorem)
+CLL(Central limit theorem) - 
 
 Hypothesis testing 
 It is example of infrential statistics.Hypothesis is a claim.
