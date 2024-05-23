@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=SalariedEmployee
+comment1.params=SSN\ FirstName\ LastName\ Salary
+comment1.target=SalariedEmployee(int,\ java.lang.String,\ java.lang.String,\ double)
+comment2.params=
+comment2.target=void\ setSalary()
+comment3.params=
+comment3.target=void\ computeGrossPay()
+comment4.params=
+comment4.target=void\ computeNetPay()
+comment5.params=
+comment5.target=void\ getSalary()
+comment6.params=
+comment6.target=void\ print()
+numComments=7

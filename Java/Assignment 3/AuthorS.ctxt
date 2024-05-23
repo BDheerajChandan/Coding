@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=AuthorS
+comment1.params=Aname\ email\ gender
+comment1.target=AuthorS(java.lang.String,\ java.lang.String,\ char)
+comment2.params=
+comment2.target=java.lang.String\ getAName()
+comment3.params=
+comment3.target=java.lang.String\ getEmail()
+comment4.params=
+comment4.target=void\ setEmail()
+comment5.params=
+comment5.target=char\ getGender()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
