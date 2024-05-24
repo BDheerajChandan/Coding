@@ -1,3 +1,12 @@
+Summary of Commands
+i	 Enter insert mode.
+esc	 Exit insert mode.
+:w	 Save the file.
+:q	 Quit vim or vi.
+:wq	 Save the file and quit.
+:q!	 Quit without saving changes.
+===========================================================
+
 
 Before writing shell script we need to write : #!/bin/bash which tells that we are using bash shell for shell scripting.
 
