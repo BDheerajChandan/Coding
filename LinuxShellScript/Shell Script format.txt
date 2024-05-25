@@ -153,3 +153,23 @@ case $c in
 *)
 echo "Invalid choice";;
 esac
+
+===========================================================
+<functionName>()
+{
+	#Statements $1 $2.....$n # say, echo $1+$2+...$n
+}
+res=$(<functionName> $value1 $value2 ....$valuen
+echo $e=res
+--------------------------------------------
+#!/bin/bash
+circle() 
+{
+    echo "scale=2; 3.14 * $1 * $1" | bc
+}
+n=10
+area=$(circle $n)
+echo "The area of the circle is $area"
+--------------------------------------------
+
+===========================================================
