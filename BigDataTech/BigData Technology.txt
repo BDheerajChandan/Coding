@@ -1,0 +1,31 @@
+=============================================
+Big Data content
+=============================================
+Big Data Concept
+Characteristics of Big Data
+	Volume,Velocity, Variety,Veracity,Value
+History of BigData
+Big Data processing
+	Batch Processing
+	Streaming processing
+Types of Data
+	Structured
+	Semi Structured
+	Un Structured
+Databases
+	RDBMS - ACID,SQL
+	NOSQL - BASE,CAP 
+ETL vs ELT
+Data Warehouse - OLAP vs OLTP
+	Data cleansing
+	Data modeling
+Data Engineering life cycle
+Big Data frameworks
+	Hadoop
+	hive
+	Spark
+Big data programming
+	Python,Java,sacla
+Big data jobs/career opportunities
+
+=============================================
