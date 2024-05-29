@@ -910,8 +910,16 @@ else
 String <Queryvariable>="select eid,ename from emp";
 ResultSet <>=<>.executeUpdate(<Queryvariable>);
 
+
+
+
+Connection connection = DriverManager.getConnection(url, user, password);
+Statement statement = connection.createStatement();
+ResultSet resultSet = statement.executeQuery("SELECT eid, ename FROM emp");
+
+
 ==========================================================================
-				Prepared statement
+				Prepared statement - For Select
 ==========================================================================
 String <StringQuery_Variable>=<String Query- ?,?>
 PreparedStatement <reference_1>=<Connceting_Variable>.prepareStatement(<StringQuery_Variable>);
@@ -924,9 +932,77 @@ String <StringQuery_Variable2>=<String select Query>
 ResultSet <resultSet2> =<reference_1>.executeQuery(<Queryvariable>);
 
 
+
+Connection connection = DriverManager.getConnection(url, user, password);
+PreparedStatement preparedStatement = connection.prepareStatement("SELECT eid, ename FROM emp WHERE eid = ?");
+preparedStatement.setInt(1, 1001);
+ResultSet resultSet = preparedStatement.executeQuery();
+
+
+
 ==========================================================================
-Procedure
+	Procedure - For changes in DB(Alter,delete,update,...)
 ==========================================================================
+String <StringQuery_Variable>=<String Query- ?,?>
+PreparedStatement <reference_1>=<Connceting_Variable>.prepareStatement(<StringQuery_Variable>);
+<reference_1>.set<DataType>(<index>,<Value>)
+If Select, 
+	ResultSet <resultSet1> =<reference_1>.executeQuery();
+else
+	int <CountVariable>=<reference_1>.executeUpdate();
+String <StringQuery_Variable2>=<String select Query>
+ResultSet <resultSet2> =<reference_1>.executeQuery(<Queryvariable>);
+
+
+Connection connection = DriverManager.getConnection(url, user, password);
+PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM emp WHERE eid = ?");
+preparedStatement.setInt(1, 1001);
+int rowCount = preparedStatement.executeUpdate();
+
+
 ==========================================================================
-callable statements
+			callable statements
 ==========================================================================
+Connection <Connceting_Variable>= DriverManager.getConnection(url, user, password);
+	String <StringQuery_Variable>=<String Query- ?,?>
+	CallableStatement <reference_1>=<Connceting_Variable>.prepareCall(<StringQuery_Variable>);
+	<reference_1>.set<DataType>(<index>,<Value>)
+	If Select, 
+		ResultSet <resultSet1> =<reference_1>.executeQuery();
+	else
+		int <CountVariable>=<reference_1>.executeUpdate();
+	String <StringQuery_Variable2>=<String select Query>
+	ResultSet <resultSet2> =<reference_1>.executeQuery(<Queryvariable>);
+
+
+Connection connection = DriverManager.getConnection(url, user, password);
+CallableStatement callableStatement = connection.prepareCall("{CALL your_stored_procedure(?, ?)}");
+callableStatement.setInt(1, parameter1);
+callableStatement.setString(2, parameter2);
+callableStatement.execute();
+
+
+-------------------------------------------------------------------
+
+Note : When using a prepared statement, you typically set parameters using methods like setInt(), setString(), etc., 
+whereas with callable statements, you pass inputs directly as arguments when calling the stored procedure.
+==========================================================================
+				Threading
+==========================================================================
+
+Multitasking - 
+	It performs multiple tasks simultaneously.
+	It can be achieved using multithreading (Each thread handles a different task).
+Concepts of Multitasking :
+	Threads
+	Concurrency
+	Synchronization
+	Inter-thread Communication
+
+Multi Threading - 
+	Feature that allows concurrent execution of two or more threads.
+	Enabling multiple tasks to run simultaneously within a single program.
+Concepts of Multithreading:
+	Threads
+	Thread Lifecycle
+	Creating Threads
