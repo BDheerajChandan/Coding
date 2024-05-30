@@ -201,6 +201,24 @@ ANOVA(analysis ofvariance) -
 1 way ANOVA - [ Ho : rho1=rho2=rho3 ],[Ha : rho1!=rho2!=rho3 ]
 ChiSquare - x^2=sum[((Oi-Ei)^2)/Ei]
 
+- It is an example of Infrential statistics,
+- It is a claim
+- The test is to retain or reject a null hypothesis
+- 2 complementary statements :
+	Null Hypothesis - An existing belief
+	Alternate Hypothesis - It is to establish a new evidance.
+- 2 tests :
+	parametric test : It is describe by population parameters.Example- Ztest,Ttest(1Sample, 2 Sample,PairedSample and ENOVA)
+	NonParametric : It use data to comment on calim .Example(Chi sqaure)
+
+Steps:
+	1. Define Null and Alternate hypothesis.It is described by populatuion parameters.
+	2. Identify the test statistics for validating the null hypothesis.
+	3. declare the criteria for retaining and rejecting the null hypothesis.Significance value.
+	4. Find Pvalue (conditional probability) which is observed to the test statistics where null hypothesis is true.
+	5. Decide whether the claim has to be accepted or rejected.
+
+
 
 =====================================================================================================================================
 						Prediction modelling
