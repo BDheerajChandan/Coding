@@ -1,0 +1,32 @@
+a	b	c	d	e
+__________________________________
+1	6	11	10	60
+2	7	22	20	70
+3	8	33	30	80
+4	9	33	40	90
+5	10	55	50	100
+
+=========================================================================================================================================================================
+									Excel Functions
+=========================================================================================================================================================================
+MAX(B2:B6)			- To find maximum value of a given range(Array[:])
+MIN(B2:F6)			- To find minimum value of a given range(Array[:])
+AVERAGE(B2:B6)			- To find average value of a given range(Array[:])
+COUNT(C2:C6,E2:E4)		- To find total count of a given range(Array[:]) or cells
+COUNTIF(C2:C6,">7")		- - To find total count of a given range(Array[:]) based on criteria or condition
+----------------------------------------------------------------------------------------------------------------------------------
+SUM(B2:B6)			- To find total sum of elements of a given range(array[:])
+SUM(B2:B6)-AVERAGE(B2:B6)	- To find difference values between total sum and average
+PRODUCT(B2:B6)			- To find product of all elements
+SUM(B2:B6)/COUNT(B2:B6)		- To find average value of a given range(Array[:]) by cosidering total Sum and count
+POWER(2,3)			- To find to value of base to the power
+EXP(0)				- To find exponent of the value
+----------------------------------------------------------------------------------------------------------------------------------
+VLOOKUP(B3,B2:F6,1,FALSE) 	- To find a value in a column along the vertical axis. It searches for a value in the first column of the table and 
+				  returns a value from the same row in the specified column.
+HLOOKUP(E2,B2:F6,3,FALSE) 	- To find a value in a row along the horizontal axis. It searches for a value in the first row of the table and returns 
+				  a value from the same column in the specified row.
+INDEX(B2:F6,MATCH(B2,B2:B6,0),2)- To find VLOOKUP(Verticle Lookup) by the INDEX and MATCH functions.
+INDEX(B2:F6,1,2)		- To get the value of a cell in a specified row and column within a given range or array.
+MATCH(B2,B2:B6,0)		- It searches for a specified item in a range of cells and returns the relative position of that item within the range.
+----------------------------------------------------------------------------------------------------------------------------------
