@@ -1,0 +1,39 @@
+
+Problem Statement 1:
+
+Create a Java program to demonstrate method overriding. Define a superclass Animal with a method makeSound(), and two subclasses Dog and Cat that override this method to produce different sounds. In the main method, create instances of Dog and Cat and call their makeSound() methods.
+
+Solution:
+
+
+Problem Statement 2:
+
+Create a Java program to model different shapes such as Circle, Rectangle, and Triangle. Each shape should have a method calculateArea() to calculate its area. Implement method overriding to provide specific implementations of calculateArea() for each shape. In the main method, create instances of each shape and print their areas.
+
+
+Problem Statement 3:
+
+Create a Java program to model different types of employees - Employee, Manager, and Engineer. Each type of employee has a different calculateSalary() method. Implement method overriding to calculate the salary of each type of employee based on their specific salary calculation rules. In the main method, create instances of each type of employee and print their salaries.
+
+
+
+Problem Statement:4
+
+Design a vehicle rental system that allows customers to rent vehicles such as cars, motorcycles, and bicycles. Implement the system using inheritance and method overriding to handle specific functionalities for each type of vehicle.
+
+The Vehicle class is the superclass, representing a generic vehicle with properties like vehicle number and availability status. It provides methods for renting and returning vehicles.
+Subclasses Car, Motorcycle, and Bicycle inherit from the Vehicle class and override the toString() method to include specific details about each type of vehicle.
+Each subclass can also override the rent() and returnVehicle() methods if specific behaviors are required for renting or returning that type of vehicle.
+In the Main class, instances of each type of vehicle are created and their details are displayed. They are then rented and returned, demonstrating method overriding and inheritance in action.
+
+
+
+Problem Statement:
+
+Design a simple banking system that includes functionality for managing accounts, including savings and checking accounts. Implement the system using inheritance and method overriding to handle specific functionalities for each type of account.
+
+
+The Account class is the superclass, representing a generic bank account with properties like account number and balance. It provides methods for depositing, withdrawing, calculateInterest and displaying account details.
+Subclasses SavingsAccount and CheckingAccount inherit from the Account class and override methods like withdraw() and display() to include specific behaviors for each type of account.
+Each subclass can override the calculateInterest()  to find the interest functionalities specific to that type of account.
+In the Main class, instances of each type of account are created and transactions like deposits, withdrawals, and interest calculations are performed, demonstrating method overriding and inheritance in action.
