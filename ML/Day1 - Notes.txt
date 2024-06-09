@@ -1,0 +1,428 @@
+problem:-
+==========
+Given:-
+=======
+
+a=[10,20,30,40]
+b=[1,2,3,4]
+Expected:-
+c = [11,22,33,44]
+
+solution1:-
+c=[] 
+for index in range(len(a)): # 
+  c.append(a[index] + b[index]) # allocate the memory & assigns the value
+print(c) 
+
+solution2:-
+c=[]
+for v1,v2 in zip(a,b):
+  c.append(v1,v2)
+print(c)
+
+solution3:-
+c=[v1+v2 for v1,v2 in zip(a,b)] # most
+print(c)
+
+solution4:-
+import numpy as np
+a = np.array([10,20,30,40])
+b = np.array([1,2,3,4])
+c=a+b
+print(c)
+
+
+========================================================================================================================================================================
+										Linear Algebra:-
+========================================================================================================================================================================
+
+ 1) numpy
+ 2) numpy is "C" module  
+ 3) why C ? 	- free walk arrays
+      		- contigiously allocated  
+
+https://www.laurentluce.com/posts/python-list-implementation/
+
+
+
+Stats:-
+-------------
+
+>> values 0 to 1
+>> values -1 to 1
+>> UniVariant Analysis - sum(), avg(), max(), min(), median(), mode(), mean(), sort(), search() 
+>> Bi-Variant Analysis - corr(), covar(), std(), var(), diff(), common(), duplicates()      
+>> joint prob
+>> Distribution - normal/prob/cummulative 
+>> skew() & kurtness()
+
+Maths:-
+-------------
+>> trignometry
+>> calculus
+
+Python:-
+-------------
+pandas   - data analysis/ETL
+matplotlib - bar/pie/histo/line 
+seaborn  - heatmap/boxplot/pairplot
+scipy   - low - fft
+sci-kit  - models
+      - preprocessing
+      - eval metrics
+statsmodel - 
+Deep Learning:-
+PyTorch
+
+======================================================================================
+
+Python:-
+-------------
+
+Program Life Cycle(PLC) 
+	sample.py----> Compiler ----> sample.PYC ----> PVM -----> Output
+
+               Python Byte Codes
+               pre-compiled python
+
+Object Oriented 
+	class/object/datamember/methods/create object/message passing
+		Python Data structure : Im-Mutable [int float str tuple, bool, NoneType]
+					Mutable [list set dict]
+
+  
+
+
+
+
+
+How can we modify Im-Mutable data ?  			-  OUTPLACE
+How can we modify Mutable  data ?  			-  INPLACE 
+can we apply shallow copy on Im-Mutable data ? 		- Yes
+can we apply deep copy on Im-Mutable data ?  		- No
+can we perform Inplace operations on Im-Mutable data ? 	- Im-possible
+
+Note:
+	Shallow copy can be applied to mutable & im-mutable data structures
+	Deep copy can be applied to mutable & mutable data structures
+
+
+
+
+
+Marriage:-
+
+-----------
+
+ >> rule1 - scalar + scalar
+ >> rule2 - type(op1) + type(op2)
+	ex1:-
+		a=10
+		b=20
+		res=a+b
+		print(res)
+	ex2:-
+		a=10
+		b="20"
+		res=a+b
+		print(res)
+		res = a + int(b) 
+	ex3:-
+		a=10
+		b="india"
+		res=a+b
+		print(res) 
+		res = str(a) + b
+		print(res)
+	ex4:-
+		a = [10,20,30]
+		b = [40,50,60]
+		res=a+b
+		print(res) 
+	ex5:- 	
+		# resultant should be a LIST
+		a=[10,20,30]
+		b=(40,50,60)
+		res=a+b
+		print(res)
+		res=a + list(b)
+		print(res)
+
+	Ex6:-
+		# resultant should be a LIST
+		a=[10,20,30]
+		b=40
+		res=a+b	
+		print(res) 
+		res = a + [b] # trick
+		print(res)
+	Ex7:-
+		#resultant should be a STRING
+		a = ["hello", "World", "of"]
+		b = "unix"
+		res=a+b
+		print(res)
+		res = " ".join(a)+" "+b
+		print(res)
+--------------------------------------------------------------------------------
+
+str-class:-
+-----------
+indexing 	- 	subset(scalar operations) - a[0]/a[-1]
+slicing 	- 	subset(vector) ; a[start:stop:step]
+reverse a string - a[::-1]
+search      	- if "hello" in sent
+split      	- convert scalar to vector /Bag Of Words
+join       	- convert vector to scalar
+
+
+if-else
+for-iterator/foreach loops
+
+
+
+tuple-class:-
+-------------
+# star prefixed mother - zero/more
+# non-star-prefixed child -only one value
+a,b,c = 10,20,30 # unpacking
+*a,b,c = 10,20,30,40,50,60
+a,*b,c = 10,20,30,40,50,60
+a,b,*c = 10,20,30,40,50,60
+*a,b,c = 10,20,30
+*a,b,c = 10,20
+
+list-class:-
+------------
+ append() - inplace
+ extend() - inplace
+ pop()  - inplace
+ remove() - inplace
+ sort()  - inplace
+ reverse()- inplace
+
+FaQ:-
+	what is the diff b/w
+	alst = [40,10,30,20,50]
+	alst.sort()  # inplace sort
+	blst=sorted(alst) ? # outplace sort 	
+		- shallow copy & deep copy 
+		- inplace operations & outplace operations
+		- custom sort with lambda
+alst = ["ravi-blr-50",
+	"guru-chn-75",	
+	"manu-mum-70",
+	"hari-hyd-74",
+	"arun-blr-88",
+	"ramu-chn-65"
+    ]
+alst.sort()  # sorted based on first field
+print(alst)
+
+alst.sort(key = lambda x : int(x.split("-")[-1]))  # sorted based on marks
+print(alst)
+
+alst.sort(key = lambda x : x.split("-")[1])  # sorted based on city
+print(alst)
+
+Solve this now:-
+	data = "Q1=50,Q2=56,Q3=45,Q4=20"
+Sort the data
+	Expected output
+		Q4=20
+		Q3=45
+		Q1=50
+		Q2=56
+
+Duration : 5 mins
+Time   : 2.15 to 2.20
+   0 1  2 3 4
+	arr=[50,10,30,20,40]
+	for(i=0;i<n;i++)
+	{              
+		for(j=i+1;j<n;j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				temp=arr[i]
+				arr[i]=arr[j]
+				arr[j]=temp
+			}
+		}
+	}
+
+data = "Q1=50,Q2=56,Q3=45,Q4=20"
+Sort the data
+Expected output
+	Q4=20
+	Q3=45
+	Q1=50
+	Q2=56
+
+res = data.split(",")
+print(res) #['Q1=50', 'Q2=56', 'Q3=45', 'Q4=20']
+for(i=0;i<n;i++)
+{
+	for(j=i+1;j<n;j++)
+	{
+		if(res[i]>res[j])
+		{
+			int(res[i].split("=")[-1]) > int(res[j].split("=")[-1])
+		}
+	}
+}
+----------------------
+{            
+	temp=res[i]
+	res[i]=res[j]
+  	res[j]=temp
+}
+----------------------
+
+data = ["john-67",
+	"ravi-123",
+	"manu-75",
+	"hari-56"
+	"arun-40"
+	"yash-30"
+]
+data.sort(key = lambda x : x.split("-")[1])
+print("\n".join(data))
+data = ["north-del-160,230,320",
+	"south-blr-40,50,60",
+	"east-kol-70,830,90",
+	"west-mum-10,60,90,80"
+]
+data.sort(key = lambda x :sum(map(int,x.split("-")[-1].split(","))))
+print(data)
+
+
+-------------------------------------------------------------------------------------
+
+set-class:-
+-----------
+>> collection of Im-Mutables values 
+>> bi-variant analysis - union,intersection,diff,symdiff,superset,subset
+a = {10,20,30,10,10,10,40,50}
+len(a)
+A) 5
+B) 8 
+C) error
+D) 4
+
+a = {[10,20],[30,40],[50,60]}
+len(a)
+A) 3
+B) 6
+C) 1
+D) Error 
+			  KEY : VALUE
+	Phone Book 	= name : phone
+	dict   		= word : meaning
+	menu   		= product : price
+	DNS server 	= IP : hostname
+
+
+forward lookup - faster
+	will give you the key can you get the value = ?    yes
+        	                      how much time = ?  1 min
+
+reverse lookup - damn slow
+	will give you the value can you get the KEY = ?    yes
+		                      how much time = ?  1 min
+
+dict-class:-
+------------
+a={"alpha" : 10,
+   "beta" : 20,
+   "delta" : 30,
+   "gamma" : 40,
+   "ALPHA" : 78,
+   "Alpha" : 66
+}
+res = dict(zip(a.values(), a.keys())))
+print(res)
+
+
+name="arvindan"
+Expected:-
+a = 1
+r = 21
+v = 23
+i = 14
+n = 10
+d = 4
+a = 1
+n = 10
+Total = ?
+
+solution:-
+res1 = [chr(i) for i in range(ord("a"),ord("z")+1)]
+res2 = [ i for i in range(1,27)]
+final = dict(zip(res1,res2))
+name="arvindan"
+for letter in name:
+	print(letter , final[letter])
+
+
+
+Nested dict:-
+-------------
+a=((10,20),(30,40),(50,60)) # who am i - tuple within tuples
+b=([10,20],[30,40],[50,60]) # list within tuple
+c=[(10,20),(30,40),(50,60)] # tuple within a list
+d=[[10,20],[30,40],[50,60]] # list within a list / nested list / matrix
+a={"a":[10,20],
+   "b":[30,40],
+}       # list within dict
+a={                      # nested dict
+  "amit" : {"loc":"blr",
+	     "mem" : [10,20,30,35,45,43]
+           },
+  "basu" : {"loc":"mum", 
+	    "mem" : [40,50,60]
+	   }
+
+ }
+
+how to print blr ?  - 				= a["amit"]["loc"]
+last memb of amit ? -  				= a["amit"]["mem"][-1]
+how to print sum(mem) of basu- 40+50+60 = ?  	= sum(a["basu"]["mem"])
+append 70 after 60               		= a["basu"]["mem"].append(70)
+replace "amit" with "hari"           		= im-possible
+
+======================================================================================
+files:-
+-------
+
+functions:-
+
+-----------
+
+Modules:-
+
+---------
+
+packages:-
+
+-----------
+
+classes:-
+
+---------
+
+Exception Handling:
+
+-------------------
+
+================================================================================================================================================================
+Python Jargons:-
+
+================
+
+1) Python Byte Code (.PYC)
+2) class/object/datamember/methods/create object/message passing
+3) Mutable & Im-Mutable
+4) Inplace & Outplace 
+5) Shallow copy & deep copy
+6) call by reference & call by value

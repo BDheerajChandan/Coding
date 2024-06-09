@@ -1,0 +1,176 @@
+================================================================================================================================================================
+								Day 1 Tasks
+================================================================================================================================================================
+
+Task1:-
+=======
+NAME | DEPT  
+----------
+ravi | sales
+manu | purch
+hari | accts
+
+Expected:-
+
+NAME |sales purch accts
+-------------------------
+ravi |1       0      0
+manu |0       1      0
+hari |0       0      1
+
+NAME | DEPT  
+------------
+ravi | 1
+manu | 2
+hari | 3
+
+
+NAME | DEPT  
+------------
+ravi | 0.1
+manu | 0.2
+hari | 0.3
+
+
+----------------------------------------------------------------------
+Task2:-
+========
+convert "name" column to upper case
+
+NAME   | DEPT  
+------------------
+ravi   | sales
+manu   | purch
+hari   | accts
+ranjan | finance
+
+Expected:-
+NAME   | DEPT  
+------------------
+RavI   | sales
+ManU   | purch
+HarI   | accts
+RanjaN | finance
+
+
+----------------------------------------------------------------------
+Task3:-
+========
+FULLNAME
+---------
+a-b-c 
+x-y-z
+p-q-r
+
+Expected:-
+FULLNAME | first mid last
+------------------------------
+a-b-c    |   a    b    c
+x-y-z    |   x    y    z
+p-q-r    |   p    q    r
+
+
+----------------------------------------------------------------------
+
+Task4:-
+========
+
+data.csv:- data.csv to data.par .data.fea ,data.json
+Convert the CSV file into a 	parquet format file 
+		              	feather format file
+		                json format file
+
+
+----------------------------------------------------------------------
+
+Task5:-
+=======
+Benchmark this & df.read_Csv()/read_feather()/read_parquet()
+alst = list(range(1,999999))
+newlst = []
+
+# code-1
+for elem in alst:
+	newlst.append(elem*elem)
+
+#code-2
+newlst = list(map(lambda x : x*x, alst))
+
+#code-3
+newlst = [e*e for e in alst]
+
+----------------------------------------------------------------------
+Task6:-
+=======
+
+NAME | GOT | EXP
+-----------------
+t1  |  10  |  20
+t2  |  10  |  10
+t3  |  15  |  20
+t4  |  12  |  12
+t5  |  30  |  30
+t6  |  32  |  32
+t7  |  20  |  20
+t8  |  *   |  Null
+t9  |  10  |  Null
+t10 |  11  |  11
+t11 |  hai |  20
+t12 |  ?   |  30
+t13 |  0   |  0
+t14 |  25  |  20
+t15 |  0   |  ?
+
+Prepare the data frame for the above data & clean the data 
+>>match the data types
+
+----------------------------------------------------------------------
+
+Task7:-
+=======
+data.txt:-
+'''
+how is this name=ravi and then later marks [10 20 30]
+name = manu hello world of marks=[40 50 60] then also data
+data is find name= hari marks= [70 80 90] from then that
+this is how data name = guru of then this marks = [25 35 45]
+'''
+
+Expected1:-
+
+NAME  |  MARKS
+-----------------
+ravi  | [10,20,30]
+manu  | [40,50,60]
+hari  | [70,80,90]
+guru  | [25,35,45]
+
+NAME  |   MARKS    |  TOTAL  |  AVG
+-----------------------------------
+ravi  | [10,20,30] |   ?     |  ?
+manu  | [40,50,60] |   ?     |  ?
+hari  | [70,80,90] |   ?     |  ?
+guru  | [25,35,45] |   ?     |  ?
+
+
+----------------------------------------------------------------------
+
+Task8:-
+=======
+
+alst = [
+    "hari-blr-math-50,sci-56,soc-84",
+    "john-chn-math-60,sci-64,soc-54",
+    "ramu-hyd-math-80,sci-56,soc-75",
+    "elan-mum-math-30,sci-43,soc-54",    
+    ]
+
+Expected1:-
+	hari total ? best subject soc
+	john total ? best subject sci
+	ramu total ? best subject math
+	elan total ? best subject soc
+
+	Best student in math dept = ?
+	Best student in sci dept = ?
+	Best student in soc dept = ?
