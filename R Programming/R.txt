@@ -1,0 +1,29 @@
+=================
+R Programming
+=================
+- For R Programming we need to install Rstudio and R
+- It is a programming language.
+- It is used for statistical computing 
+- It is used for graphical presentation to analyze and visualize data.
+- It is commonly used to analyze and visualize data.
+
+Steps: 
+------
+1. Download and install RStudio and R from [ https://cran.rstudio.com/ ]
+2. Launch RStudio 
+3. Setup the Workspace panes
+4. Write "Hello World" or print("Hello World")
+5. Click on Run button available on top(Run the current line or selection)
+6. Save it as <File_Name>.r
+7. Alwaya open with RStudio
+
+=============
+R Coding
+=============
+"Hello WOrld"
+5+5
+print("Hi")
+print(5+5)
+plot(1:10)
+
+
