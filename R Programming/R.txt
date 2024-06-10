@@ -7,6 +7,35 @@ R Programming
 - It is used for graphical presentation to analyze and visualize data.
 - It is commonly used to analyze and visualize data.
 
+
+Why to use :
+------------
+- It is open source and free
+- It has large community support
+- It has many packages(library functions)
+- Good resource for data analysis, data visulaization, Data Science, ML(Machine Learning)
+- Provides statistical analysis[like: statistical tests, classification, Clustering and data reduction]
+- Easy to plot pie charts, Histogram, Box plot, Scatter plot, etc.. .
+
+
+R Basics
+=========
+
+- Single line comments can be given by '#'
+- Multiline comment by insert '#' for each line 
+
+--------------------------------------------
+# WAP in R to print "Hello Wdrld"
+print("Hello World")
+--------------------------------------------
+# WAP in R to print first 10 natural numbers
+# Using for loop
+for(<variable> in 1:10)
+{
+	print(<variable>)
+}
+
+
 Steps: 
 ------
 1. Download and install RStudio and R from [ https://cran.rstudio.com/ ]
@@ -17,6 +46,7 @@ Steps:
 6. Save it as <File_Name>.r
 7. Alwaya open with RStudio
 
+-------------------------------------------------------------------------------------------
 =============
 R Coding
 =============
