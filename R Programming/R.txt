@@ -96,3 +96,237 @@ plot(1:10)
 =======================================================================================================================================================================
 									Data Types
 =======================================================================================================================================================================
+
+- Variables stores different types of data.
+- There are 5 different datatypes : 
+	numeric : 10.5 ,5
+	integer : 1L, 55L (Where, 'L' declares as an integer)
+	complex : 9+3i (Where, 'i' indicates as an imaginary part)
+	character (String) : "k", "Hello World" ,"FLASE", "11.5"
+	logical (Boolean) : TRUE , FALSE
+- To check type of data we can use class() function
+	<VariableName_1> <- <Value_1>
+	<VariableName_2> = <Value_1>
+	class(<VariableName_1>)
+	class(<VariableName_2>)
+
+Numbers
+-------
+- 3 number types : 
+	numeric : <VariableName_1> <- 10.9 ;Contains any number with or without a decimal.
+	integer : <VariableName_1> <- 10L ;Numeric data without decimals.We use the letter 'L' after the integer value.
+	complex : <VariableName_1> <- 2+3i ; A value having an imaginary number.
+
+- Type conversions can be happened by using the functions : 
+	as.numeric() -  Convert to numeric
+	as.integer() - Convert to integer
+	as.complex() - Convert to complex
+
+
+R Math
+-------
+- print(10+3)
+  a<-10
+  b=30
+  Sum_res<- a+b
+  Diff_res<- a-b
+  paste("Sum result : ",Sum_res)
+  paste("Difference result : ",Diff_res)
+
+- min() : function used to find the lowest number in a set. min(<value1>,<value2>,...,<valuen>)
+- max() : function used to find the highest number in a set. max(<value1>,<value2>,...,<valuen>)
+- sqrt() : It returns the square root of a number. sqrt(<value_1>)
+- abs() : It returns the absolute (positive) value of a number. abs(-<value_1>)
+- ceiling() : It rounds a number upwards to its nearest integer. ceiling(<value_1>)
+- floor() : It rounds a number downwards to its nearest integer. floor(<value_1>)
+
+
+
+Strings
+--------
+- It is used for storing text.
+- It is surrounded by either single('') or double("") quotation marks.
+- Assinging a string value : <Variable_1> <- "<value_1"
+- Assinging a multiline string value : <Variable_2> <- "....
+							....
+							.... "
+- R adds a "\n" at the end of each line break which is called an escape character.
+- cat() : It is used when if you want the line breaks to be inserted at the same position.
+- nchar() : It is used to find the number of characters in a string
+- grepl() : It is to check if a character or a sequence of characters are present in a string. To check existance of a string in a string
+- paste() : To concatenate two or more string values.
+
+- R Escape Characters : It is a backslash '\' followed by the character you want to insert.
+	s<- "<value_1> \"<value_2>\" <value_3>"
+	print(s)
+
+	Code  |  Result
+	--------------------------
+	\\    |  Backslash
+	\n    |  New Line
+	\r    |  Carriage Return
+	\t    |  Tab
+	\b    |  Backspace
+
+
+Booleans
+---------
+- In R we get one of two answers either TRUE or FALSE.
+- We can use relational operators.
+	10 > 9    # TRUE because 10 is greater than 9
+	10 == 9   # FALSE because 10 is not equal to 9
+	10 < 9    # FALSE because 10 is greater than 9
+
+
+=====================================================================================================================================================================
+											Operators
+=====================================================================================================================================================================
+- It is used to perform operations on variables and values.
+- R has 5 types of operators :-
+	Arithmetic operators : 	+ 
+			  	-
+				* 
+				/ 
+				^ 
+				%% 
+				%/%
+	Assignment operators : 	<- 
+				<<- 
+				-> 
+				->>
+				=
+	Comparison operators : 	== 
+				!=
+				< 
+				> 
+				<= 
+				>=
+	Logical operators : 	& 
+				&& 
+				| 
+				|| 
+				!
+	Miscellaneous operators : 	: 
+					%in% 
+					%*%
+
+
+=====================================================================================================================================================================
+									Conditional Statements
+=====================================================================================================================================================================
+- If statement
+
+if(condition)
+{
+	# statements
+}
+
+<VariableName_1> <- <Value_1>
+<VariableName_2>  <- <Value_2>
+if (<VariableName_1> > <VariableName_2>) 
+{
+	print("<VariableName_1> is greater than <VariableName_2>")
+}
+
+
+- If Else statement
+if(condition)
+{
+	# TRUE statements
+}else{
+	# FALSE statements
+}
+
+- Else If statement
+if(condition_1)
+{
+	# statements
+}else if(condition_2)
+{
+	# statements
+}..else if(condition_n)
+{
+	# statements
+}else{
+	# statements
+}
+
+- Nested if statement : if statement is in another if statement
+if(condition_1)
+{
+	# TRUE statements
+	if(condition_2)
+	{
+		# TRUE statements
+	}else{
+		# FALSE statements
+	}
+}else{
+	# FALSE statements
+	if(condition_3)
+	{
+		# TRUE statements
+	}else{
+		# FALSE statements
+	}
+}
+
+- AND(&) is a logical and operator
+- OR(|) is a logical or operator
+- NOT(!) is a logical not operator
+
+
+=====================================================================================================================================================================
+										LOOPS
+=====================================================================================================================================================================
+
+- Loops can execute a block of code which executes a statement within a block until the condition is met.
+- Loops can execute a block of code as long as a specified condition is reached.
+- R has two loop : while and for loops
+
+while loop
+-----------
+- It can execute a set of statements as long as a condition is TRUE.
+-
+	Initialization
+	while(condition)
+	{
+		# Statements
+		Updation
+	}
+
+for loop
+-----------
+- It can execute a set of statements as long as a condition is TRUE.
+-
+	for (<Varible> in <range_1:range_n>)
+	{
+		# Statements
+	}
+
+	Initialization <Varible_1> 
+	for (<Varible_2> in <Varible_1>)
+	{
+		# Statements
+	}
+
+	dice <- 1:6
+	for(x in dice) 
+	{
+		print(x)
+	}
+
+
+- Break : It is a statement where we can stop the loop before it has looped through all the items.
+- Next : It is a statement where we can skip an iteration without terminating the loop.
+
+- Placing a loop inside another loop. This is called a nested loop.
+	adj <- list("red", "big", "tasty")	
+	fruits <- list("apple", "banana", "cherry")
+  	for (x in adj) 
+	{
+    		for (y in fruits) 
+		{
+ 			print(paste(x, y))
+  		}
+	}
