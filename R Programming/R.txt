@@ -1,6 +1,10 @@
-=================
+
+=======================================================================================================================================================================
+									R Introduction
+=======================================================================================================================================================================
+
 R Programming
-=================
+--------------
 - For R Programming we need to install Rstudio and R
 - It is a programming language.
 - It is used for statistical computing 
@@ -19,7 +23,7 @@ Why to use :
 
 
 R Basics
-=========
+----------
 
 - Single line comments can be given by '#'
 - Multiline comment by insert '#' for each line 
@@ -46,14 +50,49 @@ Steps:
 6. Save it as <File_Name>.r
 7. Alwaya open with RStudio
 
--------------------------------------------------------------------------------------------
-=============
 R Coding
-=============
+----------
 "Hello WOrld"
 5+5
 print("Hi")
 print(5+5)
 plot(1:10)
 
+=======================================================================================================================================================================
+									Variables
+=======================================================================================================================================================================
+- Variables are the temperory memory location where values are stored and that can be changed during execution of a program.
+- Containers for storing data values.
+- To assign a value we use '<-' or '='
+	<VariableName_1> <- <Value_1>
+	<VariableName_2> <- <Value_2>
+	<VariableName_3> = <Value_3>
+	<VariableName_4> = <Value_4>
 
+- To get values use print() function
+	print(VariableName_1)
+	print(VariableName_2)
+	print(VariableName_3)
+	print(VariableName_4)
+
+- For concatenating/join two or more elements we can use ',' or paste() function.
+	<VariableName_1> <- <Value_1>
+	<VariableName_2> = <Value_2>
+	paste(<VariableName_1>,<VariableName_2>)
+	paste(<VariableName_1>,<VariableName_2>,...,<VariableName_n>)
+
+- We can assign a value to multiple variables(Assigning >1 variable with same value)
+	<VariableName_1> <- <VariableName_2> <- <VariableName_3> <- 10
+	<VariableName_4> = <VariableName_5> = <VariableName_6> = "Dheeraj"
+
+- Limitations and Rules :
+	1. Must start with a letter and can have combination of letters(a-z;A-Z), digits(0-9), periods(.), underscore(_). 
+	2. If starts with period(.), it cannot be followed by a digit.
+	3. Cannot starts with a number or underscore
+	4. Varible names are case sensitive
+	5. Reserved or special words cannot be used
+
+
+=======================================================================================================================================================================
+									Data Types
+=======================================================================================================================================================================
