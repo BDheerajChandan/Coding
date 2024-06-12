@@ -330,3 +330,113 @@ for loop
  			print(paste(x, y))
   		}
 	}
+
+========================================================
+			R Functions
+========================================================
+
+
+Without arguments :
+-----------------
+- A function is a block of code which only runs when it is called.
+- It reduce complexity of code
+- A function can return data as a result.
+- <FunctionRefrence> <- <FunctionName>()
+  {
+	# Statements
+  }
+  <FunctionRefrence>()
+
+
+With arguments :
+-----------------
+- We can pass data into a function which is known as parameters.
+	<FunctionRefrence> <- <FunctionName>(<VariableName_1>)
+  	{
+		# Statements
+  	}
+  	<FunctionRefrence>(<Value_1>)
+  	<FunctionRefrence>(<Value_2>)
+  	..
+  	..
+  	<FunctionRefrence>(<Value_n>)
+- <FunctionRefrence> <- <FunctionName>(<VariableName_1>,<VariableName_2>)
+  {
+	# Statements
+  }
+  <FunctionRefrence>(<Value_1>,<Value_2>)
+
+- <FunctionRefrence> <- <FunctionName>(<VariableName_1>=<Value_1>,<VariableName_2>=<Value_2>)
+  {
+	# Statements
+  }
+  <FunctionRefrence>(<Value_3>)
+
+- <FunctionRefrence> <- <FunctionName>(<VariableName_1>=<Value_1>)
+  {
+	# Statements
+  }
+  <FunctionRefrence>(<Value_2>)
+  <FunctionRefrence>()
+
+- <FunctionRefrence> <- <FunctionName>(<VariableName_1>)
+  {
+	# Return Statement
+  }
+  <FunctionRefrence>(<Value_1>)
+  print(<FunctionRefrence>(<Value_2>))
+
+- The terms "parameter" and "argument" means the same where information that are passed into a function.
+- Parameter : It is listed inside the paranthesis in the function definition.
+- Argument : It is the value that is sent to the function when it is called.
+
+Nested Functions
+-----------------
+- Writing a function in another function.
+- In R two ways to create a nested function : 
+	1. Call a function within another function.
+	2. Write a function within a function.
+- <FunctionRefrence> <- <FunctionName>(<VariableName_1>)
+  {
+	# Return Statements
+  }
+  <FunctionRefrence>(<FunctionRefrence>(<Value_2>),<FunctionRefrence>(<Value_3>))
+
+- <FunctionRefrence_1> <- <FunctionName>(<VariableName_1>)
+  {
+  	<FunctionRefrence_2> <- <FunctionName>(<VariableName_2>)
+	{
+		# Return Statements
+  	}
+  	return (<FunctionRefrence_2>)
+  }
+  output <- <FunctionRefrence_1>(3) # To call the Outer_func
+  output(5)
+
+Recursion Functions
+--------------------
+- It is a function which calls itself.Function calls same function.
+- # Recurssion program for sum of natural numbers
+  <FunctionRefrence> <- <FunctionName>(<VariableName_1>)
+  {
+	# Return Statements: <Value_1>+<FunctionRefrence>(<Value_1>-1)
+  }
+  <FunctionRefrence>(<FunctionRefrence>(<Value_2>)
+
+- Global variables : It is a Variables that are created outside of a function are known as global variables.
+	<VariableName_1> <- <Value_1> # Global variable
+	<FunctionRefrence> <- <FunctionName>(<VariableName_1>)
+  	{
+		# Return Statements
+  	}
+	<FunctionRefrence>(<VariableName_1>)
+- To create a global variable inside a function we can use the global assignment operator '<<-'
+	<VariableName_1> <- <Value_1> # Global variable
+	<FunctionRefrence> <- <FunctionName>()
+  	{
+		<VariableName_1> <<- <Value_2> # Global variable
+		# Return Statements
+  	}
+	<FunctionRefrence>()
+	print(<VariableName_1>)
+	
