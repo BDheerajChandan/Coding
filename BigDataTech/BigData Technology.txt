@@ -29,3 +29,31 @@ Big data programming
 Big data jobs/career opportunities
 
 =============================================
+
+========================================================================================================================================================================
+									BIG DATA - Introduction 
+========================================================================================================================================================================
+
+- It is also called software utility. 
+- Big Data refers to a technology designed to analyze, process, and extract information from large and complex datasets.
+- It is a technology designed to analyze, process, and extract information from a large dataset and complex structure.
+- Earlier data was manged by general programming languages and basic SQL and these were not enough to handle huge data so they introduced bigdata with hadoop which takes   care of all the client and large organization's requirements and needs.
+- Along with BigData many other technologies like DL(Deep Learning), ML(Machine Learning), AI(Artificial Intelligence) and IoT(Internet of Things) that are massively in   use by professionals.
+
+- Types of Big Data technologies :
+	Big Data Technology is classified into two types -
+		- Operational Big Data Technology : It includes basic day to day data that people uses it to get process. 
+						    Example: transactions, social media platforms. 				
+						    Data is usually needs for analysis using software based on big data technology.
+						    Operations can be Online ticket booking system, Online trading or shopping, Online data on social media sites, 						    	employees' data in MNCs
+		- Analytical Big Data Technology : It refers to an improved version of Big Data Technologies. 
+						   It is much complicated when compared to operational Big Data	technology.
+						   It is used when performance criteria are in use, real-time business decisions are made based on reports created by 						   analyzing this data. 
+				                   It is important for business decisions.
+			          		   Examples: Stock market data, Weather forecasting data and the time series analysis, Medical health records , space 							mission databases.
+
+- Categorizing the leading big data technologies into the following four sections: 
+	- Data Storage
+	- Data Mining
+	- Data Analytics
+	- Data Visualization
