@@ -440,3 +440,64 @@ Recursion Functions
 	<FunctionRefrence>()
 	print(<VariableName_1>)
 	
+
+
+=======================================================================================================================================================================
+									R Data Structures
+=======================================================================================================================================================================
+
+Vectors :
+---------
+
+- List of items that are of the same type.
+- To combine list of items to a vector we use c() function and items separated by comas.
+- Example : <Vector_variable_Name> <- c(<value_1>,<value_2>,...,<value_n>)
+	say, letters <- c("Dheeraj","Chandan","Ramesh")
+	     numbers <- c(13, 3, 5, 7, 20, 2)
+- values can be string or a numerical values.
+
+- Create a vector with numerical integer values : <VectorVariable> <- <value1>:<value2>
+	Say, numbers <- 1:10
+
+- To create a step size we use seq() :
+	numbers <- seq(from=0,to=100,by=20)
+
+- Create a vector with numerical decimal values : <VectorVariable> <- <value1>:<value2>
+	Say, numbers <- 1.5:6.3
+  	Here, a sequence where the last element is not used
+
+- Create a vector with boolean values : <VectorVariable> <- c(<Boolvalue1>,<Boolvalue2>...<Boolvaluen>)
+	say, bool_value <- c(TRUE,FALSE,...,TRUE)
+
+- To find length of a vector we use length() function : length(<VectorVariable>)
+	say, length(bool_value)
+
+- To sort a vector items alphabatically or numerically we use sort() function : sort(<VectorVariable>)
+	say, sort(numbers), sort(letters)
+
+- To access first vector element we use indexing within '[]'
+	example : <VectorVariable>[<index1>]
+	say, numbers[1]
+
+- To access multiple vector element we use indexes separated by comas within '[]'
+	example : <VectorVariable>[c(<index1>,<index2>)]
+	say, numbers[c(1,3)]
+
+- To access vector elements except first element we use -ve indexing within '[]'
+	example : <VectorVariable>[-<index1>]
+	say, letters[c(-1)]
+
+- To replace a value use indexing and assign a value : 
+	<VectorVariable>[<index1>] <- <NewValue>
+	letters[1] <- "Sunil"
+
+- To repeat a vector we use rep() function : 
+	To repeat each value
+		<VectorVariable> <-rep(c(<value1>,<value2>,...,<valuen>),each=<count>)
+		RepVal <- rep(c(1,2,3),each=3)
+	To repeat the sequence of vectors
+		<VectorVariable> <- rep(c(<value1>,<value2>,...,<valuen>),each=<count>)
+		RepVal <- rep(c(1,2,3),times=3)
+	To repeat each value independently
+		<VectorVariable> <- rep(c(<value1>,<value2>,...,<valuen>),each=<count>)
+		RepVal <- rep(c(1,2,3),times=c(5,2,1))
