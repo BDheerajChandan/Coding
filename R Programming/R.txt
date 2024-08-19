@@ -501,3 +501,65 @@ Vectors :
 	To repeat each value independently
 		<VectorVariable> <- rep(c(<value1>,<value2>,...,<valuen>),each=<count>)
 		RepVal <- rep(c(1,2,3),times=c(5,2,1))
+
+
+
+Lists
+-----
+- It can contain many different data types inside it.
+- Collection of data which is ordered and changeable.
+- We use list() function for creating a list.
+	<listVariable> <- list(<value1>,<value2>...,<valuen>)
+	thislist <- list("apple", "banana", "cherry")
+
+- To access the element in a list we use indexing :
+	<listVariable>[<index>]
+	thislist[1]
+
+- To change the value in a list we use indexing and assign :
+	<listVariable>[<index>] <- <NewValue>
+	thislist[1]="grapes"
+
+- To get length of a list we use length() function : 
+	length(thislist)
+	
+- To check existence of an item in a list we use %in% : 
+	<Value> %in% <listVariable>
+	"apple" in thislist
+	
+- To add items items into list we use append() function:
+	<listVariable> <- list(<value1>,<value2>)
+	append(<listVariable>,<NewValue>)
+	append(thislist,"Jack fruit")
+
+  To add element after the specific index
+	append(<listVariable>,<NewValue>,after=<index>)
+	append(thislist,"Strwberry",after=2)
+
+- To remove items from a list we use negative indexing :
+	<listVariable>[-<index>]
+	thislist[-1]
+
+- To get range of indexes we specify range by using : operator 
+	<listVariable> <- list(<value1>,<value2>,<value3>,...,<valuen>)
+	(thislist)[2:5]
+
+- Loops through lists :
+	for (<variable> in <listVariable>)
+	{
+		print(<variable>)
+	}
+	for(i in thislist)
+	{
+		print(i)
+	}
+
+- To join two lists :
+	<listVariable_1> <- list(<value1>,<value2>...,<valuen>)
+	<listVariable_2> <- list(<value1>,<value2>...,<valuen>)
+	<listVariable_3> <- c(<listVariable_1>,<listVariable_2>)
+	IntList <-  c(1,2,3)
+	Strlist <- c("a","bc")
+	JoinList <- c(IntList,Strlist)
+
+
