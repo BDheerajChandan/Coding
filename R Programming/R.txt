@@ -638,3 +638,95 @@ thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 
 	To adding as columns :
 	<NewMatrixVariable> <- cbind(<MatrixVariable_1>,<MatrixVariable_2>)
 
+
+
+Arrays
+--------
+
+- Arrays have more than two dimensions.
+- To create an array we use array() function.
+- In array() function we can speciy the dimension by using dim parameter.
+	  <MultiDArrayVariable> <- array(<ArrayVariable>,dim=c  (<dimension1>,<dimension2,<dimension3>))
+	   say, thisarray <- c(1:24)
+		multiarray <- array(thisarray, dim = c(4, 3, 2))
+- To access array item by referring to the index position. We use [] brackects
+	multiarray <- array(thisarray, dim = c(4, 3, 2))
+	multiarray[2, 3, 2]
+- To access all items from 1st row from matrix one : <MultiDArrayVariable>[c(1),,1]
+- To access all items from 1st column from matrix one : <MultiDArrayVariable>[,c(1),1]
+- A comma (,) before c() means that we want to access the column.
+- A comma (,) after c() means that we want to access the row.
+- To check existence of an item/value in matix : <value> %in% <MultiDArrayVariable>
+- To count number of rows and columns we use dim() function : dim(<MultiDArrayVariable>)
+- To find dimension of an array we use length() function : length(<MultiDArrayVariable>)
+- To access elements by an array :
+	for(<variable> in <ArrayVariable>)
+	{
+		print(<variable>)
+	}
+	for(i in multiarray)
+	{
+		print(i)
+	}
+
+
+DataFrames
+-----------
+
+- Data is displayed in table format
+- First column can be character, second and third can be numeric or logical.
+- To create a dataframe we use data.frame() function
+	<DataFrameVraiable> <- data.frame(<Variable1>=c(<value1>,<value2>,<value3>),
+					  <Variable2>=c(<value1>,<value2>,<value3>),
+					  <Variable3>=c(<value1>,<value2>,<value3>))
+
+	Data_Frame <- data.frame (
+			Training = c("Strength", "Stamina", "Other"),
+			Pulse = c(100, 150, 120),
+			Duration = c(60, 30, 45)
+			)
+- To get summary of the data frame we use summary(function): summary(<DataFrameVraiable>)
+- To access items we can use [] ,[[]] or $ for columns from a data frame :
+	Data_Frame[1] , Data_Frame[["Training"]], Data_Frame$Training
+
+- To add rows we use the rbind() function : 
+	New_row_DF <- rbind(Data_Frame, c("Strength", 110, 110))
+
+- To add columns we use the cbind() function : 
+	New_col_DF <- cbind(Data_Frame, Steps = c(1000, 6000, 2000))
+
+- To remove rows and columns in a dataframe we use negative indexing  with c() : Data_Frame_New <- Data_Frame[-c(1), -c(1)]
+
+- To get amount of rows and columns : dim(Data_Frame)
+- To find the number of columns we use ncol() function : ncol(Data_Frame)
+- To find the number of rows we use nrow() function : nrow(Data_Frame)
+- To find the length of dataframe we use length() function : length(Data_Frame)
+
+- Combining DataFrames : 
+	<DataFrameVraiable_1> <- data.frame(<Variable1>=c(<value1>,<value2>,<value3>),
+					  <Variable2>=c(<value1>,<value2>,<value3>),
+					  <Variable3>=c(<value1>,<value2>,<value3>))
+	<DataFrameVraiable_2> <- data.frame(<Variable1>=c(<value1>,<value2>,<value3>),
+					  <Variable2>=c(<value1>,<value2>,<value3>),
+					  <Variable3>=c(<value1>,<value2>,<value3>))
+	To combine dataframe vertically	
+	<NewDataFrame_3> <- rbind(<DataFrameVraiable_1>,<DataFrameVraiable_2>)
+	To combine dataframe horizontally	
+	<NewDataFrame_3> <- cbind(<DataFrameVraiable_1>,<DataFrameVraiable_2>)
+
+
+Factors
+--------
+
+- Used to categorize data.
+- To categorize data we can use factor() function:
+	Genre_data <- factor(c(<value1>,<value2>,...,<valuen>))
+- To only print the levels, use the levels() function : levels(Genre_data)
+- To find factor length we use length() function : length(Genre_data)
+- To access factors we use indexing in [] brackets : Genre_data[3]
+- To change value at specified index use indexing and assign : 
+	music_genre[3] <- "Pop"
+- levels : 
+	music_genre <- factor(c("Jazz", "Rock", "Classic", "Classic", "Pop", "Jazz", "Rock", "Jazz"), levels = c("Classic", "Jazz", "Pop","Rock", "Opera"))
+	music_genre[3] <- "Opera"
+	music_genre[3]
