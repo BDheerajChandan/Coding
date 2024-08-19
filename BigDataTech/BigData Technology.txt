@@ -57,3 +57,35 @@ Big data jobs/career opportunities
 	- Data Mining
 	- Data Analytics
 	- Data Visualization
+
+
+
+
+
+
+HADOOP : It is an open source framework designed to handle large amount of data which ranges between peta to exa bytes.
+	 It handles.process 4 types of data - Structured, semi Structured and Unstructured data.
+	 Components : HDFS, YARN, MapReduce
+		HDFS - 	Hadoop Distributed File System. 
+			Provides high-throughput access to application data. 
+			Stores data across multiple nodes to ensure reliability and availability.
+		YARN - 	Yet Another Resource Negotiator. 
+			Manages and schedules resource in cluster.
+		MapReduce - Process the large datasets with parallel, distributed algorithm.
+			    It Divides tasks into smaller sub-tasks, distributes them across nodes, and then gives the results.
+
+HDFS architecture : It has master/slave architecture.
+		    NameNode (Job Tracker)  : 	It is a master node. 
+						It manages file system, namespace.It has control access. It regulates client access to files.
+						It keeps track of all the files and directories in the HDFS, and manages the metadata.
+		    DataNode (Task Tracker) :   It is a slave node. 
+						It manages a storage attached to each node.
+						It stores and retrieves blocks when instructed by the NameNode.					      
+						Periodically it reports the status of nodes to the NameNode.
+		    Secondary namenode : 	It is not a backup of a namenode. 
+						Periodically it merges namespace image with edit log to prevent the edit log from becoming too large.
+
+
+YARN : 	It is a resource management layer of Hadoop
+	It allows multiple data processing engines to handle data. It is stored in a single platform.
+	Provind
