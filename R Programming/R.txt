@@ -563,3 +563,78 @@ Lists
 	JoinList <- c(IntList,Strlist)
 
 
+
+
+Matrices
+---------
+- Two dimensional data set with columns and rows
+- Column is a vertical representation of data, 
+- Row is a horizontal representation of data.
+
+- We use matrix() function for creating a matrix.
+	<matrixVariable> <- matrix(c(<value1>,<value2>...,<valuen>),nrow=<value>,ncol=<value>)
+	thismatrix <- matrix(c(1,2,3,4,5,6), nrow = 3, ncol = 2)
+thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
+
+- To access the element in a matrix we use indexing :
+	<matrixVariable>[<Rowindex>,<ColIndex>]
+	thismatrix[1,2]
+
+  To access all element in a matrix in a row we use indexing :
+	<matrixVariable>[<Rowindex>,]
+	thismatrix[2,]
+  To access all element in a matrix in a column we use indexing :
+	<matrixVariable>[,<Colindex>]
+	thismatrix[,2]
+  To access more than one row :
+	<matrixVariable>[c(<Rowindex_1>,<Rowindex_1>),]
+	thismatrix[c(1,2),]
+  To access more than one column :
+	<matrixVariable>[,c(<Rowindex_1>,<Rowindex_1>)]
+	thismatrix[, c(1,2)]
+
+- To add additional column in a matrix we use cbind() :
+	<NewMatrixVariable> <- cbind(<MatrixVariable>,c(<NewColumn1>,<NewColumn2>,<NewColumn3>))
+	newmatrix <- cbind(thismatrix, c("strawberry", "blueberry", "raspberry"))
+
+  To add additional rows in a matrix we use cbind() :
+	<NewMatrixVariable> <- rbind(<MatrixVariable>,c(<NewColumn1>,<NewColumn2>,<NewColumn3>))
+	newmatrix <- cbind(thismatrix, c("strawberry", "blueberry", "raspberry"))
+
+- To remove rows and columns in a matrix weuse negative indexing:
+	<MatrixVariable> <- <MatrixVariable>[-c(1),-c(1)]
+		thismatrix <- thismatrix[-c(1), -c(1)]
+
+- To check existence of an item in a list we use %in% : 
+	<Value> %in% <MatrixVariable>
+	"apple" in thismatrix
+
+- To check number of rows and columns we use dim() function : dim(thismatrix)
+
+- To get length of a matrix we use length() function : length(thismatrix)
+
+- Loops through matrix :
+	for (<Row_variable> in 1:nrow(<MatrixVariable>))
+	{
+		for (<Col_variable> in 1:ncol(<MatrixVariable>))
+		{
+			print(<MatrixVariable>[<Row_variable>,<Col_variable>])
+		}
+	}
+
+	for (rows in 1:nrow(thismatrix)) 
+	{
+		for (columns in 1:ncol(thismatrix)) 
+		{
+			print(thismatrix[rows, columns])
+		}
+	}
+
+- To combine two matrices :
+	<matrixVariable_1> <- matrix(c(<value1>,<value2>...,<valuen>),nrow=<value>,ncol=<value>)
+	<matrixVariable_2> <- matrix(c(<value1>,<value2>...,<valuen>),nrow=<value>,ncol=<value>)
+	To adding as rows :
+		<NewMatrixVariable> <- rbind(<MatrixVariable_1>,<MatrixVariable_2>)
+	To adding as columns :
+	<NewMatrixVariable> <- cbind(<MatrixVariable_1>,<MatrixVariable_2>)
+
