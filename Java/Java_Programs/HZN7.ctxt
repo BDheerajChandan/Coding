@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=HZN7
+comment0.text=Program\ to\ check\ whether\ a\ number\ is\ a\ Harshad\ number\ or\ not.\ Harshad\ \r\nNumber\ is\ an\ integer\ that\ is\ divisible\ by\ the\ sum\ of\ its\ digits.\r\nInput\:\ 1729\r\nOutput\:\ Harshad\ Number
+comment1.params=
+comment1.target=void\ main()
+numComments=2
