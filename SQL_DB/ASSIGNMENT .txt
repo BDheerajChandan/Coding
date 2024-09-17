@@ -1,0 +1,389 @@
+                                 SECTION-1
+
+
+1) create database dac_dbt;
+2) use dac_dbt;
+
+
+3) 
+a)create table dept(deptcode varchar(15), deptname varchar(60), budget integer);
+b)create table grade(gradecode varchar(15), gradelevel varchar(30), gradedescription
+varchar(60), basic integer);
+c) create table desig(desigcode varchar(15), designame varchar(15));
+d) create table emp(empcode varchar(15), empname varchar(60), deptcode
+varchar(15),birthdate date not null, joindate date not null, sex char(1) check (sex in
+('M', 'F', 'T')),desigcode varchar(15), supcode varchar(15), gradecode
+varchar(15),gradelevel varchar(30), basicpay integer);
+e) create table salary(empcode varchar(15), salmonth date not null, basic integer,
+allow integer, deduct integer);
+f) create table history(empcode varchar(15), changedate date not null, desigcode
+varchar(15), gradecode varchar(15), gradelevel varchar(30), basicpay integer);
+
+
+
+4)
+a) ALTER TABLE dept
+ADD CONSTRAINT PK_dept PRIMARY KEY (deptcode);
+b) ALTER TABLE desig
+ADD CONSTRAINT PK_desig PRIMARY KEY (desigcode);
+c) ALTER TABLE emp
+ADD CONSTRAINT PK_emp PRIMARY KEY (empcode);
+d) ALTER TABLE salary
+ADD CONSTRAINT PK_salary PRIMARY KEY (empcode, salmonth);
+e) ALTER TABLE history
+ADD CONSTRAINT PK_history PRIMARY KEY (empcode, changedate, desigcode, gradecode, gradelevel);
+f) ALTER TABLE grade
+ADD CONSTRAINT PK_grade PRIMARY KEY (gradecode, gradelevel);
+
+
+
+5)
+a) ALTER TABLE emp
+ADD CONSTRAINT FK_emp_dept FOREIGN KEY (deptcode) REFERENCES dept(deptcode);
+b) ALTER TABLE emp
+ADD CONSTRAINT FK_emp_desig FOREIGN KEY (desigcode) REFERENCES desig(desigcode);
+c) ALTER TABLE emp
+ADD CONSTRAINT FK_emp_supervisor FOREIGN KEY (supcode) REFERENCES emp(empcode);
+d) ALTER TABLE emp
+ADD CONSTRAINT FK_emp_grade FOREIGN KEY (gradecode, gradelevel) REFERENCES grade(gradecode, gradelevel);
+e) ALTER TABLE history
+ADD CONSTRAINT FK_history_emp FOREIGN KEY (empcode) REFERENCES emp(empcode);
+f) ALTER TABLE history
+ADD CONSTRAINT FK_history_desig FOREIGN KEY (desigcode) REFERENCES desig(desigcode);
+g) ALTER TABLE history
+ADD CONSTRAINT FK_history_grade FOREIGN KEY (gradecode, gradelevel) REFERENCES grade(gradecode, gradelevel);
+h) ALTER TABLE salary
+ADD CONSTRAINT FK_salary_emp FOREIGN KEY (empcode) REFERENCES emp(empcode);
+
+
+
+
+6)
+a)
+insert into dept values('ACCT', 'Accounts', 19);
+insert into dept values('PRCH', 'Purchase', 25);
+insert into dept values('SALE', 'Sales', 39);
+insert into dept values('STOR', 'Stores', 33);
+insert into dept values('FACL', 'Facilities', 42);
+insert into dept values('PERS', 'Personal', 12);
+
+
+
+
+
+b)
+INSERT INTO grade (gradecode, gradelevel, gradedescription, basic) 
+VALUES 
+('GC1', 'GL1', 'GC-GL-1', 25000),
+('GC4', 'GL1', 'GC-4-GL-1', 21000),
+('GC4', 'GL4', 'GC-4-GL-4', 15000),
+('GC6', 'GL1', 'GC-6-GL-1', 13000),
+('GC6', 'GL2', 'GC-6-GL-2', 11000),
+('GC12', 'GL1', 'GC-12-GL-1', 9000),
+('GC12', 'GL2', 'GC-12-GL-2', 8500),
+('GC12', 'GL3', 'GC-12-GL-3', 8000),
+('GC15', 'GL1', 'GC-15-GL-1', 7000),
+('GC15', 'GL2', 'GC-15-GL-2', 6500),
+('GC15', 'GL3', 'GC-15-GL-3', 6000),
+('GC20', 'GL1', 'GC-20-GL-1', 3500),
+('GC20', 'GL2', 'GC-20-GL-2', 3000),
+('GC20', 'GL3', 'GC-20-GL-3', 2500),
+('GC20', 'GL4', 'GC-20-GL-4', 2000);
+
+
+
+
+
+c)
+insert into desig values('CLRK', 'Clerk');
+insert into desig values('SLMN', 'Sales Man');
+insert into desig values('MNGR', 'Manager');
+insert into desig values('SPRV', 'Supervisor');
+insert into desig values('PRES', 'Personal');
+
+
+
+
+
+
+d)
+INSERT INTO emp(empcode, empname, deptcode, birthdate, joindate, sex, desigcode, supcode, gradecode, gradelevel, basicpay) 
+VALUES 
+('7839', 'Reddy', 'ACCT', '1959-12-12', '1981-07-17', 'M', 'PRES', NULL, 'GC1', 'GL1', 32000),
+('7566', 'Jain', 'PRCH', '1955-01-24', '1981-04-02', 'F', 'MNGR', '7839', 'GC6', 'GL2', 12400),
+('7698', 'Murthy', 'SALE', '1960-09-16', '1981-05-01', 'F', 'MNGR', '7839', 'GC6', 'GL1', 14700),
+('7782', 'Menon', 'ACCT', '1967-08-30', '1981-06-09', 'M', 'MNGR', '7839', 'GC6', 'GL2', 12400),
+('7902', 'Naik', 'PRCH', '1958-02-20', '1981-12-03', 'M', 'MNGR', '7839', 'GC6', 'GL2', 11800),
+('7654', 'Gupta', 'SALE', '1957-01-22', '1981-09-28', 'M', 'SLMN', '7698', 'GC6', 'GL2', 12600),
+('7521', 'Wilson', 'STOR', '1956-03-18', '1981-02-22', 'M', 'MNGR', '7698', 'GC6', 'GL2', 12200),
+('7844', 'Singh', 'SALE', '1956-09-09', '1981-09-08', 'F', 'SLMN', '7698', 'GC6', 'GL1', 14300),
+('7900', 'Shroff', 'SALE', '1956-06-28', '1981-12-03', 'M', 'CLRK', '7698', 'GC6', 'GL2', 12000),
+('7788', 'Khan', 'PRCH', '1957-02-03', '1982-12-09', 'M', 'SPRV', '7566', 'GC6', 'GL2', 11900),
+('7499', 'Roy', 'SALE', '1957-09-27', '1981-02-20', 'M', 'SLMN', '7698', 'GC6', 'GL1', 14200),
+('7934', 'Kaul', 'ACCT', '1957-05-02', '1982-01-23', 'M', 'CLRK', '7782', 'GC6', 'GL2', 11950),
+('7369', 'Shah', 'PRCH', '1960-05-25', '1983-12-17', 'M', 'CLRK', '7902', 'GC6', 'GL2', 12200),
+('7876', 'Patil', 'PRCH', '1965-09-02', '1990-12-17', 'M', 'CLRK', '7788', 'GC6', 'GL2', 12300),
+('7999', 'Sinha', 'SALE', '1970-04-11', '1992-02-20', 'M', 'SLMN', '7782', 'GC6', 'GL1', 14600),
+('7939', 'Rai', 'PRCH', '1988-08-10', '2012-12-06', 'M', 'CLRK', '7782', 'GC6', 'GL2', 11800),
+('7192', 'John', 'ACCT', '1968-11-05', '1994-12-03', 'M', 'CLRK', '7902', 'GC6', 'GL2', 12300),
+('9902', 'Ahmad', 'SALE', '1970-02-16', '1992-04-17', 'M', 'SLMN', '7698', 'GC6', 'GL1', 14200),
+('7802', 'Sanghvi', 'STOR', '1980-05-06', '1993-01-01', 'M', 'MNGR', '7566', 'GC6', 'GL2', 12400),
+('6569', 'Tiwari', 'STOR', '1989-08-19', '2010-08-21', 'M', 'MNGR', '7782', 'GC6', 'GL2', 12400);
+
+
+
+e)
+insert into salary(empcode,salmonth,basic,allow,deduct)
+ values('7839','2011-12-01', 30000, 3000, 1200),
+('7839', '2012-01-01', 32000, 3200, 1250),
+('7839', '2012-02-01', 32000, 3200, 1250),
+('7566', '2011-12-01', 12000, 600, 400),
+('7566', '2012-01-01', 12400, 1240, 550),
+('7566', '2012-02-01', 12400, 1240, 550),
+('7698', '2011-12-01', 13900, 800, 500),
+('7698', '2012-01-01', 14700, 1470, 650),
+('7698', '2012-02-01', 14700, 1470, 650),
+('7782', '2011-12-01', 11800, 600, 500),
+('7782', '2012-01-01', 12400, 1240, 550),
+('7782', '2012-02-01', 12400, 1240, 550),
+('7902', '2011-12-01', 11200, 600, 450),
+('7902', '2012-01-01', 11800, 1180, 550),
+('7902', '2012-02-01', 11800, 1180, 550),
+('7654', '2011-12-01', 11900, 700, 500),
+('7654', '2012-01-01', 12600, 1260, 550),
+('7654', '2012-02-01', 12600, 1260, 550),
+('7521', '2011-12-01', 11400, 800, 500),
+('7521', '2012-01-01', 12200, 1220, 550),
+('7521', '2012-02-01', 12200, 1220, 550),
+('7844', '2011-12-01', 13400, 900, 600),
+('7844', '2012-01-01', 14300, 1430, 650),
+('7844', '2012-02-01', 14300, 1430, 650),
+('7900', '2011-12-01', 11500, 500, 300),
+('7900', '2012-01-01', 12000, 1200, 550),
+('7900', '2012-02-01', 12000, 1200, 550),
+('7788', '2011-12-01', 11300, 600, 450),
+('7788', '2012-01-01', 11900, 1190, 550),
+('7788', '2012-02-01', 11900, 1190, 550),
+('7499', '2011-12-01', 13400, 800, 550),
+('7499', '2012-01-01', 14200, 1420, 650),
+('7499', '2012-02-01', 14200, 1420, 650),
+('7934', '2011-12-01', 11450, 500, 250),
+('7934', '2012-01-01', 11950, 1195, 550),
+('7934', '2012-02-01', 11950, 1195, 550),
+('7369', '2011-12-01', 11600, 600, 450),
+('7369', '2012-01-01', 12200, 1220, 550),
+('7369', '2012-02-01', 12200, 1220, 550),
+('7876', '2011-12-01', 11700, 600, 500),
+('7876', '2012-01-01', 12300, 1230, 550),
+('7876', '2012-02-01', 12300, 1230, 550),
+('7999', '2011-12-01', 13950, 650, 600),
+('7999', '2012-01-01', 14600, 1460, 650),
+('7999', '2012-02-01', 14600, 1460, 650),
+('7939', '2011-12-01', 11100, 700, 400),
+('7939', '2012-01-01', 11800, 1180, 550),
+('7939', '2012-02-01', 11800, 1180, 550),
+('7192', '2011-12-01', 11700, 600, 500),
+('7192', '2012-01-01', 12300, 1230, 550),
+('7192', '2012-02-01', 12300, 1230, 550),
+('9902', '2011-12-01', 13400, 800, 500),
+('9902', '2012-01-01', 14200, 1420, 650),
+('9902', '2012-02-01', 14200, 1420, 650),
+('7802', '2011-12-01', 11900, 500, 300),
+('7802', '2012-01-01', 12400, 1240, 550),
+('7802', '2012-02-01', 12400, 1240, 550),
+('6569', '2011-12-01', 11800, 600, 400),
+('6569', '2012-01-01', 12400, 1240, 550);
+
+
+
+f)
+insert into history
+(empcode,changedate,desigcode,gradecode,gradelevel,basicpay) values ( '7839',
+'1981-09-17', 'CLRK', 'GC15','GL1', 7000),
+( '7839', '1985-12-31', 'SLMN', 'GC12','GL3', 8000),
+( '7839', '1988-12-31', 'SPRV', 'GC12','GL2', 8500),
+( '7839', '1990-12-31', 'MNGR', 'GC12','GL1', 9000),
+( '7839', '1994-12-31', 'CLRK', 'GC6', 'GL2', 11000),
+( '7839', '1998-12-31', 'SLMN', 'GC6', 'GL1', 13000),
+( '7839', '2001-12-31', 'SPRV', 'GC4', 'GL4', 15000),
+( '7839', '2006-12-31', 'MNGR', 'GC4', 'GL1', 21000),
+( '7839', '2011-12-31', 'PRES', 'GC1', 'GL1', 25000),
+( '7566', '1981-04-02', 'CLRK', 'GC12','GL3', 8000),
+( '7566', '1991-12-31', 'SLMN', 'GC12','GL2', 8500),
+( '7566', '2001-12-31', 'SPRV', 'GC12','GL1', 9000),
+( '7566', '2011-12-31', 'MNGR', 'GC6', 'GL2', 11000),
+( '7698', '1981-05-01', 'CLRK', 'GC12','GL3', 8000),
+( '7698', '1991-05-01', 'SLMN', 'GC12','GL2', 8500),
+( '7698', '2001-05-01', 'MNGR', 'GC12','GL1', 9000),
+( '7698', '2006-05-01', 'SPRV', 'GC6', 'GL2', 11000),
+( '7698', '2011-05-01', 'MNGR', 'GC6', 'GL1', 13000),
+( '7782', '1981-06-09', 'CLRK', 'GC12','GL3', 8000),
+( '7782', '1991-06-09', 'SLMN', 'GC12','GL2', 8500),
+( '7782', '2001-06-09', 'SPRV', 'GC12','GL1', 9000),
+( '7782', '2011-06-09', 'MNGR', 'GC6', 'GL2', 11000),
+( '7902', '1981-12-03', 'CLRK', 'GC12','GL3', 8000),
+( '7902', '1991-12-03', 'SLMN', 'GC12','GL2', 8500),
+( '7902', '2001-12-03', 'SPRV', 'GC12','GL1', 9000),
+( '7902', '2011-12-03', 'MNGR', 'GC6', 'GL2', 11000),
+( '7654', '1981-09-28', 'SLMN', 'GC12','GL3', 8000),
+( '7654', '1991-09-28', 'SLMN', 'GC12','GL2', 8500),
+( '7654', '2001-09-28', 'SLMN', 'GC12','GL1', 9000),
+( '7654', '2011-09-28', 'SLMN', 'GC6', 'GL2', 11000),
+( '7521', '1981-02-22', 'CLRK', 'GC12','GL3', 8000),
+( '7521', '1991-02-22', 'SLMN', 'GC12','GL2', 8500),
+( '7521', '2001-02-22', 'SPRV', 'GC12','GL1', 9000),
+( '7521', '2011-02-22', 'MNGR', 'GC6', 'GL2', 11000),
+( '7844', '1981-09-08', 'SLMN', 'GC12','GL3', 8000),
+( '7844', '1991-09-08', 'SLMN', 'GC12','GL2', 8500),
+( '7844', '2001-09-08', 'SLMN', 'GC12','GL1', 9000),
+( '7844', '2006-09-08', 'SLMN', 'GC6', 'GL2', 11000),
+( '7844', '2011-09-08', 'SLMN', 'GC6', 'GL1', 13000),
+( '7900', '1981-12-03', 'SLMN', 'GC12','GL3', 8000),
+( '7900', '1991-12-03', 'SLMN', 'GC12','GL2', 8500),
+( '7900', '2001-12-03', 'CLRK', 'GC12','GL1', 9000),
+( '7900', '2011-12-03', 'CLRK', 'GC6', 'GL2', 11000),
+( '7788', '1982-12-09', 'SLMN', 'GC12','GL3', 8000),
+( '7788', '1992-12-09', 'CLRK', 'GC12','GL2', 8500),
+( '7788', '2002-12-09', 'MNGR', 'GC12','GL1', 9000),
+( '7788', '2012-12-09', 'SPRV', 'GC6', 'GL2', 11000),
+( '7499', '1981-02-20', 'SLMN', 'GC12','GL3', 8000),
+( '7499', '1991-02-20', 'SLMN', 'GC12','GL2', 8500),
+( '7499', '2001-02-20', 'SLMN', 'GC12','GL1', 9000),
+( '7499', '2006-02-20', 'SLMN', 'GC6', 'GL2', 11000),
+( '7499', '2011-02-20', 'SLMN', 'GC6', 'GL1', 13000),
+( '7934', '1982-01-23', 'SLMN', 'GC12','GL3', 8000),
+( '7934', '1992-01-23', 'SLMN', 'GC12','GL2', 8500),
+( '7934', '2002-01-23', 'CLRK', 'GC12','GL1', 9000),
+( '7934', '2012-01-23', 'CLRK', 'GC6', 'GL2', 11000),
+( '7369', '1983-12-17', 'SLMN', 'GC12','GL3', 8000),
+( '7369', '1993-12-17', 'SLMN', 'GC12','GL2', 8500),
+( '7369', '2003-12-17', 'CLRK', 'GC12','GL1', 9000),
+( '7369', '2006-12-17', 'CLRK', 'GC6', 'GL2', 11000);
+
+
+
+                              SECTION-2
+
+
+
+
+1.select empname,empcode,desigcode from emp;
+2.select deptname,budget from dept;
+3.select emp.empname,emp.empcode,dept.deptname from emp join dept ON emp.deptcode = dept.deptcode;
+4. select empname,empcode from emp where supcode is null;
+5. select empcode,empname from emp where supcode = (SELECT empcode FROM emp WHERE supcode IS NULL);
+6. select empcode,empname from emp where joindate =(select MIN(joindate) from emp);
+7.select empname,empcode,birthdate from emp where birthdate=(select min(birthdate) from emp);
+8.select deptcode,desigcode from emp where desigcode='MNGR';
+9.select empcode,empname,deptcode from emp where desigcode='MNGR';
+10.select emp.empname,dept.deptname FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE dept.deptcode = "ACCT" OR dept.deptcode = "PRCH" OR dept.deptcode = "PERS";
+11.select emp.empname,dept.deptname FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE dept.deptcode = "ACCT" OR dept.deptcode = "PERS";
+12.select emp.empname,dept.deptname FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE dept.deptcode = "ACCT" AND dept.deptcode = "PERS";
+ 13.select emp.empname,dept.deptname FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE dept.deptcode = "ACCT" AND NOT dept.deptcode = "PERS";
+14. select empname,empcode,birthdate from emp where birthdate=(select max(birthdate) from emp);
+15.select * from emp where basicpay <> 12400;
+16.SELECT  emp.empname,salary.basic FROM emp LEFT JOIN salary ON emp.empcode = salary.empcode WHERE salary.basic BETWEEN 11000 AND 12000;
+17.select  emp.empname,salary.basic FROM emp LEFT JOIN salary ON emp.empcode = salary.empcode WHERE salary.basic NOT BETWEEN 11000 AND 12000;
+18.select * from salary where allow between 1000 and 1500 and salmonth between '2012-01-01' AND '2012-01-31';
+19. select * from emp where empname like '%i' or empname like '%y';
+20. select * from emp where timestampdiff(year,joindate,now()) >=25;
+21.select  empname FROM emp WHERE TIMESTAMPDIFF(YEAR,joindate,CURDATE()) BETWEEN 20 AND 30;
+22.select empcode, empname, basicpay, basicpay * 0.5 AS half_basicpay
+ FROM emp;
+23.select (basic+allow-deduct) AS Latest_home_take ,empcode FROM salary;
+24.select  empname,dept.deptcode AS Department_Code,(basic+allow-deduct) AS latest_home_pay FROM salary LEFT JOIN emp ON salary.empcode = emp.empcode LEFT JOIN dept ON dept.deptcode = emp.deptcode WHERE emp.deptcode = "ACCT";
+25.select empname,timestampdiff(year,birthdate,now()) as age from emp;
+26.select emp.empname,dept.deptcode FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE dept.deptname LIKE "Accounts" ORDER BY TIMESTAMPDIFF(YEAR,birthdate,CURDATE()),emp.empname ;
+27.select * FROM emp WHERE supcode = "7839";
+28.SELECT supcode,COUNT(empname) AS no_of_emps FROM emp GROUP BY supcode;
+29.SELECT supcode,COUNT(empcode) AS no_of_employees  FROM emp GROUP BY supcode HAVING no_of_employees > 3 ;
+30.SELECT gradecode,MAX(basic) AS max_sal , MIN(basic) AS min_sal FROM grade GROUP BY gradecode;
+31.SELECT supcode,empname,empcode,desigcode FROM emp WHERE desigcode LIKE "SPRV";
+32.SELECT supcode , COUNT(empname) AS no_of_emps FROM emp GROUP BY supcode HAVING no_of_emps > 3;
+33.SELECT EMPNAME,TIMESTAMPDIFF(YEAR,joindate,CURDATE()) AS experience_in_yrs FROM emp HAVING experience_in_yrs < 15;
+34.SELECT EMPNAME,TIMESTAMPDIFF(YEAR,joindate,CURDATE()) AS experience_in_yrs ,ROUND(TIMESTAMPDIFF(YEAR,joindate,CURDATE())/15,0) AS no_of_promotions FROM emp HAVING experience_in_yrs > 40;
+35.
+36.SELECT dept.deptcode,SUM(basicpay) AS total_salary_withdrawn,dept.budget FROM emp  LEFT JOIN dept ON emp.deptcode = dept.deptcode GROUP BY deptcode;
+37.SELECT UPPER(empname) AS Names_in_uppercase FROM emp;
+38.SELECT basicpay,empname FROM emp WHERE basicpay > (SELECT basicpay FROM emp WHERE empname LIKE "Jain");
+39.SELECT basicpay,empname FROM emp WHERE basicpay > 12000;
+40.SELECT basicpay,empname FROM emp WHERE basicpay > (SELECT AVG(basicpay) FROM emp) ORDER BY basicpay;
+41.SELECT basicpay,empname FROM emp WHERE basicpay = (SELECT MAX(basicpay) FROM emp);
+42.SELECT basicpay,empname FROM emp WHERE basicpay <> (SELECT MAX(basicpay) FROM emp);
+43.SELECT MAX(basicpay) AS max_salary ,deptcode FROM emp GROUP BY deptcode;
+44.SELECT basicpay,deptcode FROM emp  ORDER BY basicpay DESC LIMIT 1 OFFSET 1 ;
+45.SELECT basicpay,deptcode FROM emp  ORDER BY basicpay DESC LIMIT 1 OFFSET 4 ;
+46.SELECT emp.sex AS gender ,MAX(basicpay) AS max_Sal,dept.deptname AS department_name FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE  emp.sex LIKE  'F' GROUP BY emp.sex,dept.deptname ORDER BY MAX(basicpay) DESC LIMIT 1;
+47.SELECT MAX(basicpay) AS max_Sal, dept.deptname,emp.sex FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE emp.sex = 'F' GROUP BY dept.deptname ORDER BY max_Sal DESC LIMIT 1;
+48.SELECT emp.empname AS employee_name,MAX(emp.basicpay) AS max_sal,dept.deptname AS Department_name ,emp.desigcode AS designation,emp.sex AS Gender FROM emp LEFT JOIN dept ON emp.deptcode = dept.deptcode WHERE emp.desigcode = "MNGR" AND emp.sex = 'F';
+49.SELECT empname AS employee_name ,MAX(basicpay) AS max_Sal FROM emp WHERE SEX = "M" AND basicpay > (SELECT MAX(BASICPAY) FROM emp WHERE sex = "F");
+ 50.SELECT AVG(basicpay) AS avg_sal_emps,AVG(BASIC) AS avg_Sal_company,emp.deptcode FROM emp LEFT JOIN salary ON emp.empcode = salary.empcode WHERE basicpay > (SELECT AVG(BASIC) AS avg_Sal_company FROM salary) ;
+51.SELECT basicpay AS salary  ,DEPTCODE  FROM emp WHERE basicpay < (SELECT AVG(basicpay) FROM emp) AND deptcode = "ACCT" ;
+
+							  SECTION- 3
+							  
+							  
+							  
+1. create view employee_age as
+    -> select empcode,empname,birthdate,
+    -> timestampdiff(year,birthdate,now()) as age
+    -> from emp;
+
+2. create view employee_exp as
+    -> select empcode,empname,joindate,
+    -> timestampdiff(year,joindate,now()) as experience_years
+    -> from emp;
+
+3. create view employee_pay as
+    -> select empcode,basic,allow,deduct,
+    -> (basic + allow - deduct) as pay_for_currentmonth
+    -> from salary where month(current_date())=month(now());
+
+4. create view  supervisor_age_comp_emp  as                                                                                
+    -> select empname, timestampdiff(year,birthdate,curdate()) as emp_ages 
+    -> from emp where timestampdiffF(year,birthdate,curdate()) > (select      timestampdiff(year,birthdate,curdate()) as age from emp WHERE  desigcode = "SPRV");
+
+5. create view department_emp as
+    -> select deptcode,COUNT(empcode) as total_employees
+    -> from emp
+    -> group by deptcode;
+
+6. create view organization_emp as
+    -> select COUNT(empcode) as total_employees
+    -> from emp;
+7. create view perc_emp as
+    -> select deptcode,COUNT(empcode) as total_employees,
+    -> (COUNT(empcode) / (SELECT COUNT(*) FROM emp)) * 100 as percentage_emp
+    -> from emp
+    -> group by deptcode;
+
+ 
+
+                                SECTION-4
+
+
+1) CREATE INDEX emp_index ON emp(birthdate);
+2) CREATE UNIQUE INDEX dept_index ON dept(deptname);
+3) CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    age INT,
+    gender VARCHAR(10)
+);
+
+CREATE INDEX id_index ON students(id);
+4) DROP INDEX emp_index ON emp;
+5) SHOW INDEXES FROM dept;
+6) CREATE TEMPORARY TABLE student (
+    id INT,
+    name VARCHAR(255),
+    age INT,
+    gender VARCHAR(10)
+);
+7) It depends on specific Sql environment.
+8) CREATE TEMPORARY TABLE test (
+    id INT,
+    name VARCHAR(255)
+);
+9) DROP TEMPORARY TABLE test;
+									

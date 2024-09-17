@@ -1,0 +1,149 @@
+									core java-Multithreading
+
+
+Multithreading in Java is a process of executing multiple threads simultaneously.
+
+Thread
+A thread is a lightweight sub-process, 
+the smallest unit of processing.
+ 
+Multiprocessing and multithreading, both are used to achieve multitasking.
+
+threads use a shared memory area.
+
+Java Multithreading is mostly used in games, animation, etc.
+
+you can perform multiple operations at the same time.
+so it saves time.
+
+Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+Multitasking
+
+Multitasking is a process of executing multiple tasks simultaneously. We use multitasking to utilize the CPU. Multitasking can be achieved in two ways: 
+
+Process-based Multitasking (Multiprocessing)
+Thread-based Multitasking (Multithreading)
+
+Process-based Multitasking (Multiprocessing)
+
+Each process has an address in memory. In other words, each process allocates a separate memory area.
+A process is heavyweight.
+Cost of communication between the process is high.
+Switching from one process to another requires some time for saving and loading registers, memory maps, updating lists, etc.
+
+Thread-based Multitasking (Multithreading)
+
+Threads share the same address space.
+A thread is lightweight.
+Cost of communication between the thread is low.
+the smallest unit of processing. It is a separate path of execution
+
+
+Life cycle of a Thread (Thread States)
+
+In Java, a thread always exists in any one of the following states. These states are:
+
+New
+Active-it moves from the new state to the active state, runnable,running
+Blocked / Waiting
+Timed Waiting
+Terminated
+
+
+
+
+
+
+Java Threads | How to create a thread in Java
+There are two ways to create a thread:
+
+By extending Thread class
+
+
+class Multi extends Thread
+{  
+public void run()
+{  
+
+try{Thread.sleep(500);}catch(InterruptedException e){System.out.println(e);}    
+System.out.println("thread is running...");  
+}  
+
+public static void main(String args[])
+{  
+Multi t1=new Multi();  
+
+t1.start();  
+
+ }  
+}  
+
+
+
+
+By implementing Runnable interface.
+
+
+
+class Multi3 implements Runnable{  
+public void run(){  
+System.out.println("thread is running...");  
+}  
+  
+public static void main(String args[]){  
+Multi3 m1=new Multi3();  
+Thread t1 =new Thread(m1);   // Using the constructor Thread(Runnable r)  
+t1.start();  
+ }  
+}  
+
+
+t1.getName());  
+th1.getPriority()); 
+th1.setPriority(6); 
+
+
+How to perform single task by multiple threads in Java?
+
+class TestMultitasking1 extends Thread{  
+ public void run(){  
+   System.out.println("task one");  
+ }  
+ public static void main(String args[])
+{  
+  TestMultitasking1 t1=new TestMultitasking1();  
+  TestMultitasking1 t2=new TestMultitasking1();  
+
+ 
+  t1.start();  
+  t2.start();  
+  
+ }  
+}  
+
+Program of performing two tasks by two threads
+
+class Simple1 extends Thread{  
+ public void run(){
+try{Thread.sleep(500);}catch(InterruptedException e){System.out.println(e);}      
+   System.out.println("task one");  
+ }  
+}  
+  
+class Simple2 extends Thread{  
+ public void run(){ 
+try{Thread.sleep(500);}catch(InterruptedException e){System.out.println(e);}     
+   System.out.println("task two");  
+ }  
+}  
+  
+ class TestMultitasking3{  
+ public static void main(String args[]){  
+  Simple1 t1=new Simple1();  
+  Simple2 t2=new Simple2();  
+  
+  t1.start();  
+  t2.start();  
+----------------------
+
