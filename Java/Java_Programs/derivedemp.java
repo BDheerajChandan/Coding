@@ -1,0 +1,6 @@
+/
+	emp.calculatehra();
+	emp.calculategross();
+	}
+	}
+	
