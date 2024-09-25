@@ -1,0 +1,34 @@
+Java 
+=====
+
+1. Soruce(.java) to byte code(.class) via compile
+2. JDK, JRE, JVM
+3. Variables & constants, Operators, Data types, Data inputs, casting
+Control statements(if, switch), loops
+6. Strings(original) and functions (format, endswith, startswith, length, indexOf, replace(target,replacement), toLowerCare, toUpperCase, trim)
+7. Escape sequences
+8. Arrays(String.valueOf, Arrays.equals, Arrays.toString, length, insert, print, removeAt, indexOf)
+4. Util (Date, Scanner, Arrays(toString))
+5. Awt (Point, setlocation, distance) 
+6. Lang (Math(pow,ceil,floor,max,min,round,random))
+7. text(NumberFormat (getCurreencyInstance, (getPercentInstance, ,format,(getCurreencyInstance().format()))
+
+break and continue
+try catch finally
+
+Thread (run, start, sleep, isAlive)
+Runnable
+
+OOPs
+DSA
+   ArrayList - add, remove,indexOf, contains, size, toArray
+   LinkedList - addFirst, addLast, removeFirst, removeLast, contains, indexOf, size, toArray
+
+File handilng
+
+JDBC
+
+
+
+=============================================================
+

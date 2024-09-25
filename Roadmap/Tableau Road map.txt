@@ -1,0 +1,26 @@
+Tableau
+============
+Load data
+Rows Columns
+Marks - Tooltip, Size, color, label, details
+filters - top, show filter, aggregate measure, Slider , right option, Pivot table
+Tableau to PPT - visualization copy image paste, export 
+chart typpes and show me- dual axis, synchrnise axis
+gantt chart
+line chart - time date, time componets
+Geo chart
+bubble chart
+Area chart
+dual axis, merge chart
+Calculated field - Calculations, LOD expressions, Table calculations
+	case, when , else, then, end , or , and
+	datediff, countd, sum, avg=sum/countd, max, mín, 	index()
+Measure is continous
+edit colors,m
+proprty number format
+
+
+parameters- top
+joins - inner, left, right, full
+
+data joining and data blending

@@ -1,0 +1,1647 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0425.1340                               -->
+<workbook original-version='18.1' source-build='2024.1.2 (20241.24.0425.1340)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Table 3 (Final_Marks_PGDBDA_March2024)' inline='true' name='federated.0z9xl821v4cdt21f9rap70hjmbw8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Final_Marks_PGDBDA_March2024' name='excel-direct.0u6f2f91y60xmw1g4wadg0rgsx2d'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='C:/Users/KIIT/Desktop/Personal _2/GitHub/Coding/ML/Dataset FIles/Result_Datasets/Final_Marks_PGDBDA_March2024.xlsx' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0u6f2f91y60xmw1g4wadg0rgsx2d' name='Table 3' table='[&apos;Table 3$&apos;]' type='table'>
+          <columns gridOrigin='A1:AN70:no:A1:AN70:2' lost='0' outcome='1' processed='1836'>
+            <column datatype='integer' name='PRN' ordinal='0' />
+            <column datatype='string' name='Name' ordinal='1' />
+            <column datatype='integer' name='Data Collection and DBMS Theory/40' ordinal='2' />
+            <column datatype='integer' name='Data Collection and DBMS Lab/60' ordinal='3' />
+            <column datatype='integer' name='Data Collection and DBMS Total/100' ordinal='4' />
+            <column datatype='string' name='Data Collection and DBMS Status' ordinal='5' />
+            <column datatype='integer' name='Object Oriented Programming with Java 8 Theory/40' ordinal='6' />
+            <column datatype='integer' name='Object Oriented Programming with Java 8 Lab/60' ordinal='7' />
+            <column datatype='integer' name='Object Oriented Programming with Java 8 Total/100' ordinal='8' />
+            <column datatype='string' name='Object Oriented Programming with Java 8 Status' ordinal='9' />
+            <column datatype='integer' name='Python &amp; R Programming Theory/40' ordinal='10' />
+            <column datatype='integer' name='Python &amp; R Programming Lab/60' ordinal='11' />
+            <column datatype='integer' name='Python &amp; R Programming Total/100' ordinal='12' />
+            <column datatype='string' name='Python &amp; R Programming Status' ordinal='13' />
+            <column datatype='integer' name='Advance Analytics using Statistics Theory/40' ordinal='14' />
+            <column datatype='integer' name='Advance Analytics using Statistics Lab/60' ordinal='15' />
+            <column datatype='integer' name='Advance Analytics using Statistics Total/100' ordinal='16' />
+            <column datatype='string' name='Advance Analytics using Statistics Status' ordinal='17' />
+            <column datatype='integer' name='Data Visualization - Analysis and Reporting Theory/40' ordinal='18' />
+            <column datatype='integer' name='Data Visualization - Analysis and Reporting Lab/60' ordinal='19' />
+            <column datatype='integer' name='Data Visualization - Analysis and Reporting Total/100' ordinal='20' />
+            <column datatype='string' name='Data Visualization - Analysis and Reporting Status' ordinal='21' />
+            <column datatype='integer' name='Big Data Technologies Theory/40' ordinal='22' />
+            <column datatype='integer' name='Big Data Technologies Lab/60' ordinal='23' />
+            <column datatype='integer' name='Big Data Technologies Total/100' ordinal='24' />
+            <column datatype='string' name='Big Data Technologies Status' ordinal='25' />
+            <column datatype='integer' name='Linux Programming and Cloud Computing Theory/40' ordinal='26' />
+            <column datatype='integer' name='Linux Programming and Cloud Computing Lab/60' ordinal='27' />
+            <column datatype='integer' name='Linux Programming and Cloud Computing Total/100' ordinal='28' />
+            <column datatype='string' name='Linux Programming and Cloud Computing Status' ordinal='29' />
+            <column datatype='integer' name='Practical Machine Learning Theory/40' ordinal='30' />
+            <column datatype='integer' name='Practical Machine Learning Lab/60' ordinal='31' />
+            <column datatype='integer' name='Practical Machine Learning Total/100' ordinal='32' />
+            <column datatype='string' name='Practical Machine Learning Status' ordinal='33' />
+            <column datatype='integer' name='Total/800' ordinal='34' />
+            <column datatype='integer' name='%' ordinal='35' />
+            <column datatype='string' name='Grade' ordinal='36' />
+            <column datatype='string' name='Result' ordinal='37' />
+            <column datatype='string' name='Apti &amp; EC Grade' ordinal='38' />
+            <column datatype='real' name='Project Grade' ordinal='39' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.0u6f2f91y60xmw1g4wadg0rgsx2d' name='Table 3' table='[&apos;Table 3$&apos;]' type='table'>
+          <columns gridOrigin='A1:AN70:no:A1:AN70:2' lost='0' outcome='1' processed='1836'>
+            <column datatype='integer' name='PRN' ordinal='0' />
+            <column datatype='string' name='Name' ordinal='1' />
+            <column datatype='integer' name='Data Collection and DBMS Theory/40' ordinal='2' />
+            <column datatype='integer' name='Data Collection and DBMS Lab/60' ordinal='3' />
+            <column datatype='integer' name='Data Collection and DBMS Total/100' ordinal='4' />
+            <column datatype='string' name='Data Collection and DBMS Status' ordinal='5' />
+            <column datatype='integer' name='Object Oriented Programming with Java 8 Theory/40' ordinal='6' />
+            <column datatype='integer' name='Object Oriented Programming with Java 8 Lab/60' ordinal='7' />
+            <column datatype='integer' name='Object Oriented Programming with Java 8 Total/100' ordinal='8' />
+            <column datatype='string' name='Object Oriented Programming with Java 8 Status' ordinal='9' />
+            <column datatype='integer' name='Python &amp; R Programming Theory/40' ordinal='10' />
+            <column datatype='integer' name='Python &amp; R Programming Lab/60' ordinal='11' />
+            <column datatype='integer' name='Python &amp; R Programming Total/100' ordinal='12' />
+            <column datatype='string' name='Python &amp; R Programming Status' ordinal='13' />
+            <column datatype='integer' name='Advance Analytics using Statistics Theory/40' ordinal='14' />
+            <column datatype='integer' name='Advance Analytics using Statistics Lab/60' ordinal='15' />
+            <column datatype='integer' name='Advance Analytics using Statistics Total/100' ordinal='16' />
+            <column datatype='string' name='Advance Analytics using Statistics Status' ordinal='17' />
+            <column datatype='integer' name='Data Visualization - Analysis and Reporting Theory/40' ordinal='18' />
+            <column datatype='integer' name='Data Visualization - Analysis and Reporting Lab/60' ordinal='19' />
+            <column datatype='integer' name='Data Visualization - Analysis and Reporting Total/100' ordinal='20' />
+            <column datatype='string' name='Data Visualization - Analysis and Reporting Status' ordinal='21' />
+            <column datatype='integer' name='Big Data Technologies Theory/40' ordinal='22' />
+            <column datatype='integer' name='Big Data Technologies Lab/60' ordinal='23' />
+            <column datatype='integer' name='Big Data Technologies Total/100' ordinal='24' />
+            <column datatype='string' name='Big Data Technologies Status' ordinal='25' />
+            <column datatype='integer' name='Linux Programming and Cloud Computing Theory/40' ordinal='26' />
+            <column datatype='integer' name='Linux Programming and Cloud Computing Lab/60' ordinal='27' />
+            <column datatype='integer' name='Linux Programming and Cloud Computing Total/100' ordinal='28' />
+            <column datatype='string' name='Linux Programming and Cloud Computing Status' ordinal='29' />
+            <column datatype='integer' name='Practical Machine Learning Theory/40' ordinal='30' />
+            <column datatype='integer' name='Practical Machine Learning Lab/60' ordinal='31' />
+            <column datatype='integer' name='Practical Machine Learning Total/100' ordinal='32' />
+            <column datatype='string' name='Practical Machine Learning Status' ordinal='33' />
+            <column datatype='integer' name='Total/800' ordinal='34' />
+            <column datatype='integer' name='%' ordinal='35' />
+            <column datatype='string' name='Grade' ordinal='36' />
+            <column datatype='string' name='Result' ordinal='37' />
+            <column datatype='string' name='Apti &amp; EC Grade' ordinal='38' />
+            <column datatype='real' name='Project Grade' ordinal='39' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AN70:no:A1:AN70:2&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>1836</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRN</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PRN]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>PRN</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Collection and DBMS Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Data Collection and DBMS Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Collection and DBMS Theory/40</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Collection and DBMS Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Data Collection and DBMS Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Collection and DBMS Lab/60</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Collection and DBMS Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Data Collection and DBMS Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Collection and DBMS Total/100</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Collection and DBMS Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Data Collection and DBMS Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Collection and DBMS Status</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Object Oriented Programming with Java 8 Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Object Oriented Programming with Java 8 Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Object Oriented Programming with Java 8 Theory/40</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Object Oriented Programming with Java 8 Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Object Oriented Programming with Java 8 Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Object Oriented Programming with Java 8 Lab/60</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Object Oriented Programming with Java 8 Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Object Oriented Programming with Java 8 Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Object Oriented Programming with Java 8 Total/100</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Object Oriented Programming with Java 8 Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Object Oriented Programming with Java 8 Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Object Oriented Programming with Java 8 Status</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Python &amp; R Programming Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Python &amp; R Programming Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Python &amp; R Programming Theory/40</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Python &amp; R Programming Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Python &amp; R Programming Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Python &amp; R Programming Lab/60</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Python &amp; R Programming Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Python &amp; R Programming Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Python &amp; R Programming Total/100</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Python &amp; R Programming Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Python &amp; R Programming Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Python &amp; R Programming Status</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Advance Analytics using Statistics Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Advance Analytics using Statistics Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Advance Analytics using Statistics Theory/40</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Advance Analytics using Statistics Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Advance Analytics using Statistics Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Advance Analytics using Statistics Lab/60</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Advance Analytics using Statistics Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Advance Analytics using Statistics Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Advance Analytics using Statistics Total/100</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Advance Analytics using Statistics Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Advance Analytics using Statistics Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Advance Analytics using Statistics Status</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Visualization - Analysis and Reporting Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Data Visualization - Analysis and Reporting Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Visualization - Analysis and Reporting Theory/40</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Visualization - Analysis and Reporting Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Data Visualization - Analysis and Reporting Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Visualization - Analysis and Reporting Lab/60</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Visualization - Analysis and Reporting Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Data Visualization - Analysis and Reporting Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Visualization - Analysis and Reporting Total/100</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data Visualization - Analysis and Reporting Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Data Visualization - Analysis and Reporting Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Data Visualization - Analysis and Reporting Status</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Big Data Technologies Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Big Data Technologies Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Big Data Technologies Theory/40</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Big Data Technologies Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Big Data Technologies Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Big Data Technologies Lab/60</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Big Data Technologies Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Big Data Technologies Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Big Data Technologies Total/100</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Big Data Technologies Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Big Data Technologies Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Big Data Technologies Status</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Linux Programming and Cloud Computing Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Linux Programming and Cloud Computing Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Linux Programming and Cloud Computing Theory/40</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Linux Programming and Cloud Computing Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Linux Programming and Cloud Computing Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Linux Programming and Cloud Computing Lab/60</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Linux Programming and Cloud Computing Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Linux Programming and Cloud Computing Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Linux Programming and Cloud Computing Total/100</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Linux Programming and Cloud Computing Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Linux Programming and Cloud Computing Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Linux Programming and Cloud Computing Status</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Practical Machine Learning Theory/40</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Practical Machine Learning Theory/40]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Practical Machine Learning Theory/40</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Practical Machine Learning Lab/60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Practical Machine Learning Lab/60]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Practical Machine Learning Lab/60</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Practical Machine Learning Total/100</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Practical Machine Learning Total/100]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Practical Machine Learning Total/100</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Practical Machine Learning Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Practical Machine Learning Status]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Practical Machine Learning Status</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total/800</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total/800]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Total/800</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>%</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[%]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>%</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Grade</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Grade]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Grade</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Result</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Result]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Result</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Apti &amp; EC Grade</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Apti &amp; EC Grade]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Apti &amp; EC Grade</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Project Grade</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Project Grade]</local-name>
+            <parent-name>[Table 3]</parent-name>
+            <remote-alias>Project Grade</remote-alias>
+            <ordinal>39</ordinal>
+            <hidden>true</hidden>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' hidden='true' name='[Project Grade]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Table 3' datatype='table' name='[__tableau_internal_object_id__].[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/KIIT/AppData/Local/Temp/TableauTemp/#TableauTemp_1oi7an10qrj67g17okb4q040vudf.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='09/23/2024 02:09:16 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>PRN</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PRN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PRN</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>68</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>68</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Collection and DBMS Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Data Collection and DBMS Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Collection and DBMS Theory/40</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Collection and DBMS Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Data Collection and DBMS Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Collection and DBMS Lab/60</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Collection and DBMS Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Data Collection and DBMS Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Collection and DBMS Total/100</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Collection and DBMS Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Data Collection and DBMS Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Collection and DBMS Status</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Object Oriented Programming with Java 8 Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Object Oriented Programming with Java 8 Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Object Oriented Programming with Java 8 Theory/40</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Object Oriented Programming with Java 8 Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Object Oriented Programming with Java 8 Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Object Oriented Programming with Java 8 Lab/60</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Object Oriented Programming with Java 8 Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Object Oriented Programming with Java 8 Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Object Oriented Programming with Java 8 Total/100</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Object Oriented Programming with Java 8 Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Object Oriented Programming with Java 8 Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Object Oriented Programming with Java 8 Status</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Python &amp; R Programming Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Python &amp; R Programming Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Python &amp; R Programming Theory/40</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Python &amp; R Programming Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Python &amp; R Programming Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Python &amp; R Programming Lab/60</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Python &amp; R Programming Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Python &amp; R Programming Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Python &amp; R Programming Total/100</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Python &amp; R Programming Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Python &amp; R Programming Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Python &amp; R Programming Status</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Advance Analytics using Statistics Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Advance Analytics using Statistics Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Advance Analytics using Statistics Theory/40</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Advance Analytics using Statistics Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Advance Analytics using Statistics Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Advance Analytics using Statistics Lab/60</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Advance Analytics using Statistics Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Advance Analytics using Statistics Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Advance Analytics using Statistics Total/100</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Advance Analytics using Statistics Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Advance Analytics using Statistics Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Advance Analytics using Statistics Status</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Visualization - Analysis and Reporting Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Data Visualization - Analysis and Reporting Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Visualization - Analysis and Reporting Theory/40</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Visualization - Analysis and Reporting Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Data Visualization - Analysis and Reporting Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Visualization - Analysis and Reporting Lab/60</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Visualization - Analysis and Reporting Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Data Visualization - Analysis and Reporting Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Visualization - Analysis and Reporting Total/100</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Data Visualization - Analysis and Reporting Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Data Visualization - Analysis and Reporting Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Data Visualization - Analysis and Reporting Status</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Big Data Technologies Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Big Data Technologies Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Big Data Technologies Theory/40</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Big Data Technologies Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Big Data Technologies Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Big Data Technologies Lab/60</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Big Data Technologies Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Big Data Technologies Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Big Data Technologies Total/100</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Big Data Technologies Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Big Data Technologies Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Big Data Technologies Status</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Linux Programming and Cloud Computing Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Linux Programming and Cloud Computing Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Linux Programming and Cloud Computing Theory/40</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Linux Programming and Cloud Computing Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Linux Programming and Cloud Computing Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Linux Programming and Cloud Computing Lab/60</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Linux Programming and Cloud Computing Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Linux Programming and Cloud Computing Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Linux Programming and Cloud Computing Total/100</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Linux Programming and Cloud Computing Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Linux Programming and Cloud Computing Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Linux Programming and Cloud Computing Status</remote-alias>
+              <ordinal>29</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Practical Machine Learning Theory/40</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Practical Machine Learning Theory/40]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Practical Machine Learning Theory/40</remote-alias>
+              <ordinal>30</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Practical Machine Learning Lab/60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Practical Machine Learning Lab/60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Practical Machine Learning Lab/60</remote-alias>
+              <ordinal>31</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Practical Machine Learning Total/100</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Practical Machine Learning Total/100]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Practical Machine Learning Total/100</remote-alias>
+              <ordinal>32</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Practical Machine Learning Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Practical Machine Learning Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Practical Machine Learning Status</remote-alias>
+              <ordinal>33</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total/800</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total/800]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total/800</remote-alias>
+              <ordinal>34</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>%</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[%]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>%</remote-alias>
+              <ordinal>35</ordinal>
+              <family>Table 3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Grade</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Grade]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Grade</remote-alias>
+              <ordinal>36</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Result</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Result]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Result</remote-alias>
+              <ordinal>37</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Apti &amp; EC Grade</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Apti &amp; EC Grade]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Apti &amp; EC Grade</remote-alias>
+              <ordinal>38</ordinal>
+              <family>Table 3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Table 3' id='Table 3_10CD0CA8748A41CA8ECD89E6F0FB7AD1'>
+            <properties context=''>
+              <relation connection='excel-direct.0u6f2f91y60xmw1g4wadg0rgsx2d' name='Table 3' table='[&apos;Table 3$&apos;]' type='table'>
+                <columns gridOrigin='A1:AN70:no:A1:AN70:2' lost='0' outcome='1' processed='1836'>
+                  <column datatype='integer' name='PRN' ordinal='0' />
+                  <column datatype='string' name='Name' ordinal='1' />
+                  <column datatype='integer' name='Data Collection and DBMS Theory/40' ordinal='2' />
+                  <column datatype='integer' name='Data Collection and DBMS Lab/60' ordinal='3' />
+                  <column datatype='integer' name='Data Collection and DBMS Total/100' ordinal='4' />
+                  <column datatype='string' name='Data Collection and DBMS Status' ordinal='5' />
+                  <column datatype='integer' name='Object Oriented Programming with Java 8 Theory/40' ordinal='6' />
+                  <column datatype='integer' name='Object Oriented Programming with Java 8 Lab/60' ordinal='7' />
+                  <column datatype='integer' name='Object Oriented Programming with Java 8 Total/100' ordinal='8' />
+                  <column datatype='string' name='Object Oriented Programming with Java 8 Status' ordinal='9' />
+                  <column datatype='integer' name='Python &amp; R Programming Theory/40' ordinal='10' />
+                  <column datatype='integer' name='Python &amp; R Programming Lab/60' ordinal='11' />
+                  <column datatype='integer' name='Python &amp; R Programming Total/100' ordinal='12' />
+                  <column datatype='string' name='Python &amp; R Programming Status' ordinal='13' />
+                  <column datatype='integer' name='Advance Analytics using Statistics Theory/40' ordinal='14' />
+                  <column datatype='integer' name='Advance Analytics using Statistics Lab/60' ordinal='15' />
+                  <column datatype='integer' name='Advance Analytics using Statistics Total/100' ordinal='16' />
+                  <column datatype='string' name='Advance Analytics using Statistics Status' ordinal='17' />
+                  <column datatype='integer' name='Data Visualization - Analysis and Reporting Theory/40' ordinal='18' />
+                  <column datatype='integer' name='Data Visualization - Analysis and Reporting Lab/60' ordinal='19' />
+                  <column datatype='integer' name='Data Visualization - Analysis and Reporting Total/100' ordinal='20' />
+                  <column datatype='string' name='Data Visualization - Analysis and Reporting Status' ordinal='21' />
+                  <column datatype='integer' name='Big Data Technologies Theory/40' ordinal='22' />
+                  <column datatype='integer' name='Big Data Technologies Lab/60' ordinal='23' />
+                  <column datatype='integer' name='Big Data Technologies Total/100' ordinal='24' />
+                  <column datatype='string' name='Big Data Technologies Status' ordinal='25' />
+                  <column datatype='integer' name='Linux Programming and Cloud Computing Theory/40' ordinal='26' />
+                  <column datatype='integer' name='Linux Programming and Cloud Computing Lab/60' ordinal='27' />
+                  <column datatype='integer' name='Linux Programming and Cloud Computing Total/100' ordinal='28' />
+                  <column datatype='string' name='Linux Programming and Cloud Computing Status' ordinal='29' />
+                  <column datatype='integer' name='Practical Machine Learning Theory/40' ordinal='30' />
+                  <column datatype='integer' name='Practical Machine Learning Lab/60' ordinal='31' />
+                  <column datatype='integer' name='Practical Machine Learning Total/100' ordinal='32' />
+                  <column datatype='string' name='Practical Machine Learning Status' ordinal='33' />
+                  <column datatype='integer' name='Total/800' ordinal='34' />
+                  <column datatype='integer' name='%' ordinal='35' />
+                  <column datatype='string' name='Grade' ordinal='36' />
+                  <column datatype='string' name='Result' ordinal='37' />
+                  <column datatype='string' name='Apti &amp; EC Grade' ordinal='38' />
+                  <column datatype='real' name='Project Grade' ordinal='39' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 5 , PG-DBDA Final Result , March-April 2024</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Table 3 (Final_Marks_PGDBDA_March2024)' name='federated.0z9xl821v4cdt21f9rap70hjmbw8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0z9xl821v4cdt21f9rap70hjmbw8'>
+            <column datatype='integer' name='[%]' role='measure' type='quantitative' />
+            <column caption='[Name]==&quot;B DHEERAJ CHANDAN&quot;' datatype='boolean' name='[Calculation_1408782323254366208]' role='dimension' type='nominal' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='[Name]==&quot;B DHEERAJ CHANDAN&quot;' />
+            </column>
+            <column datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Total/800]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1408782323254366208]' derivation='None' name='[none:Calculation_1408782323254366208:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[%]' derivation='Sum' name='[sum:%:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total/800]' derivation='Sum' name='[sum:Total/800:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Name:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Name:nk]' member='&quot;ARYAMAN MISHRA&quot;' />
+              <groupfilter function='member' level='[none:Name:nk]' member='&quot;B DHEERAJ CHANDAN&quot;' />
+              <groupfilter function='member' level='[none:Name:nk]' member='&quot;MANCHI TEJASAI&quot;' />
+              <groupfilter function='member' level='[none:Name:nk]' member='&quot;NARENDRA TRIPATHI&quot;' />
+              <groupfilter function='member' level='[none:Name:nk]' member='&quot;PRANJAL CHAVAN&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:%:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Name:nk]' value='216' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Calculation_1408782323254366208:nk]' />
+              <text column='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:%:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:Total/800:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Calculation_1408782323254366208:nk]' />
+              <text column='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:%:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:%:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Calculation_1408782323254366208:nk]' />
+              <text column='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:%:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Name:nk]</rows>
+        <cols>([federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:Total/800:qk] + [federated.0z9xl821v4cdt21f9rap70hjmbw8].[sum:%:qk])</cols>
+      </table>
+      <simple-id uuid='{DE7A3261-5225-4534-9BAF-7CF4A0C71332}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='1' param='[federated.0z9xl821v4cdt21f9rap70hjmbw8].[none:Calculation_1408782323254366208:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C6853991-66A5-4A3D-94B3-E1C6CA766553}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

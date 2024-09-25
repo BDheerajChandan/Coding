@@ -1,0 +1,17 @@
+Python
+=======
+variables, operators
+data types , string
+if, while, for , case
+list, tuple, dict , set
+unpacking
+class
+functions 
+args, kwargs
+try except finally
+OOPs 
+Modules
+GUI
+SQL
+Packages : util,convertors, random, math, os, pathlib, openpyxl,sklesarn, pandas,numpy, dumpfile, sqlite3, tkinter
+
