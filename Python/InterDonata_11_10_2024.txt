@@ -1,0 +1,75 @@
+class Animal
+{
+	  public void Sound()
+	{
+			sopln("Make sound")
+	}
+}
+
+class Dog extends Animal
+{
+	public void Sound()
+	{	
+		sopln("Bow !!");
+	}
+}
+class Cat extends Animal
+{
+	public void Sound()
+	{	
+		sopln("Meoww !!");
+	}
+}
+
+
+
+
+Class Main
+{
+ public static void main(String args[])
+{
+Dog d=new Dog();
+Cat c=new Cat();
+
+d.sound(); // bow !!
+c.sound();  // Mewo !!
+
+}
+}
+
+===================================
+
+// String Rev
+
+import java.lang.String;
+class RevStr
+{
+public static void main(String args)
+{
+	String s="Dheeraj Chandan";
+	String revs=new StringBuilder(s).reverse().to String();
+	sopln("Before : "+s); // 
+	sopln("After : "+revs);
+}
+}
+
+=======================================
+
+
+Array declartion
+
+
+int a[]={1,2,3,4,5};
+for(int i:a)
+{
+	sopl(i);
+}
+==========================================
+
+select * from employee_1 where id=105 ;
+select * from employee_1 order by name asc;
+
+
+
+
+
