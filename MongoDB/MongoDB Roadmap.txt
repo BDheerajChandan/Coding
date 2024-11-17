@@ -1,0 +1,27 @@
+MongoDB
+========
+
+show,
+creteCollection,
+dropDatabase, 
+use, 
+insertOne(), 
+insertMany(),  
+updateOne(),
+updateMany(),
+deleteOne(),
+deleteMany(),
+find(),
+find().sort("":-1 or 1), 
+find().limit(3)
+find({},{:}),
+set, 
+
+Operator : ne,lt,lte,gt,gte,eq, 
+	   in, nin
+	   and, or, nor, 
+aggregate : 
+
+
+.explain()
+.createIndex()
