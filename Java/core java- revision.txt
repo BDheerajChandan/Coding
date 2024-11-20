@@ -1,0 +1,214 @@
+				core java- revision
+
+1) jdbc
+2) file handling
+3) arraylist or Hashmap
+4) oops abstraction,interface
+
+jdbc - employee table
+empno,name,sal,job
+
+1) load driver and create connection
+2) select all the record from the table
+3) select with where class- search
+4) update- get the eno, sal from user update to the table
+5) delete - get the eno from user , delete from the table
+
+---------------------------------------------------------------------------
+
+2) file handling- employee class
+
+1) create employee class - instance variable,constructor,display()
+
+2) create file for write purpose
+
+3) create object - add it to arraylist  <al>
+
+4) write object <al> into thefile
+
+5) read object  <al>
+
+6) perform logic-
+
+ read id from user
+
+for(Employee e :al)
+{
+   
+   if(e.id == no)
+    e.display()
+}
+
+in case of delete
+
+al - 5 record
+
+al - 4 
+re- write the al the file
+
+
+)
+
+write,readall ,search,update,delete
+
+
+-------------------------------------------------------------
+
+3) 
+a) ArrayList
+
+1) create employee class
+2) create object
+3) add to the arraylist
+4) perform logic- display all,search- update,delete
+
+b) map
+
+1) create employee class
+2) create object
+    Emp e1 = new Emp(1001,"shan",2000);
+
+3) create HashMap reference add all employee object into the map
+      HashMap<integer,Employee> hm = new HashMap<>():
+      hm.put(e1.id,e1)
+perform logic- display all,search- update,delete
+
+---------------------------------------------------------------
+4) oops
+- classes,object,inheritance,overriding,interface
+
+interface calculatesal
+{
+ void findsal()
+}
+
+2) create base class employee
+{
+      id,name,basesal
+      constructor()
+      display()
+
+}
+
+
+class permenentEmp extends employee implement calculatesal
+{
+     
+    
+
+void findsal()
+{
+
+}
+
+
+
+
+}
+
+class  contractEmp extends employee  implement calculatesal
+{
+
+
+
+void findsal()
+{
+
+}
+
+
+}
+
+
+main()
+{
+
+permenentEmp p1 = new permenentEmp(1001,"shan",4000);
+p1.display()
+p1.findsal()
+
+}
+
+---------------------------------------------------------------
+4) oops another way
+
+- classes,object,inheritance,overriding,interface
+	
+interface calculatesal
+{
+ void findsal()
+}
+
+2) create class employee implement calculatesal
+{
+      id,name,basesal
+      constructor()
+      display()
+{
+}
+
+  void findsal()
+    {   
+    }
+
+
+}
+
+
+class permenentEmp extends employee 
+{
+     
+    
+
+void findsal()
+{
+   make changes
+}
+
+
+
+
+}
+
+class  contractEmp extends employee  
+{
+
+
+
+void findsal()
+{
+   -do different implementation
+}
+
+
+}
+
+
+main()
+{
+
+permenentEmp p1 = new permenentEmp(1001,"shan",4000);
+p1.display()
+p1.findsal()
+
+}
+
+
+--------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
