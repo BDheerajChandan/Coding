@@ -1,0 +1,318 @@
+				Core Java - Day8
+
+Part II
+
+classes and objects
+constructor
+static and non static
+array of objects
+
+encapsulation
+inheritance
+
+command line arguments
+
+------------------------------------------------------------------------------------
+polymorphism
+
+poly = many
+
+morphic = forms
+
+more than one method having same name with different behaviour
+
+
+hello.c
+
+#include<stdio.io>
+void main()
+{
+
+   fun()
+   
+   
+
+}
+
+
+void fun()
+{
+
+   print("welcome")
+}
+
+void fun()
+{
+
+  print("hello")
+
+}
+
+
+class Emp
+{
+
+   Emp()
+   {
+
+   }
+
+   Emp(int no,String na)
+{
+
+
+}
+
+
+
+}
+
+in two ways
+
+method overloading - type of parameter is different
+
+in method overlaoding , we can have more than one method with same name 
+but the number of parameter and the type of
+parameter should be different
+
+class sortPrimities
+{
+
+sort(int[] num)
+{
+   sorting of integer
+
+}
+
+
+sort(Sting[] sub)
+{
+   sorting of string
+
+}
+
+sort(float[] price)
+{
+   sorting of string
+
+}
+
+
+}
+main()
+{
+   int[] sub = {"c++", "java","python}
+    sort(sub)
+
+}
+
+-------------------------------------------------------------------
+method overloading - no of  parameter is different
+
+
+void add(int n)
+{
+   value added
+
+}
+
+void add(int n,int pos)
+{
+   value added
+
+}
+
+
+
+10,20,30 ,40
+
+
+main()
+{
+
+add(10)
+add(20)
+add(30)
+add(40)
+add(3,50)
+
+
+}
+
+-----------------------------------------------------------------------------------------
+method overriding
+
+in overriding the method name can be same
+and the number of parameter and the type of parameter also can be same
+
+test.java
+
+
+class Emp
+{
+   
+void disp(int n)
+{
+
+}
+
+}
+
+contractEmp extends Emp
+{
+
+
+  void disp(int n)
+{   super.disp()
+   syso("sub class disp")
+
+}
+
+
+}
+
+test
+{
+   main()
+   
+  contract c = new Contract()
+  c.disp()
+}
+
+
+
+
+
+Static complile time polymorphism
+dynamic /runtime polymorphism
+
+
+office
+{
+
+open()
+{}
+new()
+{}
+save()
+{}
+
+}
+
+msword extends office
+
+{
+open()
+{" word is open}
+new()
+{new doc created}
+save()
+{ word is saves}
+}
+msexcel extends office
+{
+
+open( excel is open)
+{}
+new(new excel createed)
+{}
+save(excel saving)
+{}
+
+
+------------------------------------------------------------------------
+1) define the standard
+
+   class menu
+   {
+
+      void open(){}
+      void new(){}
+      void close(){}
+}
+
+2) implementer
+
+    word extend menu
+   {
+     void open(){word open}
+
+   }
+
+
+   eclipse extends menu
+  {
+     void open(){eclipse open}
+
+  }
+
+3) user
+
+     Word w = new word()
+     w.open() 
+
+    eclipse e = new eclipse
+    e.open()
+
+
+
+
+excel e = new excel()
+e.open
+
+--------------------------------------------------------------------------------
+
+static/compiletime polymorphism
+
+which method to be called will be know at compile time itself
+ - compile time polymorphism
+ - overload static method
+ - static polymorphism
+
+
+runtime/dynamic polymorphism
+
+which method to be called will be known at runtime
+
+
+super class reference can hold sub class object
+
+int a = 10;
+int c = 20;
+float b;
+b = a;
+b = c;
+
+
+byte
+shot
+int
+long
+
+float
+double
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

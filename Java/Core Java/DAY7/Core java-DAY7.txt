@@ -1,0 +1,162 @@
+				Core java-DAY7
+
+Part II
+
+classes and objects
+constructors
+static and non static
+array of object
+encapsulation
+
+inheritance
+
+what is inheritance
+
+super class
+
+sub class
+
+extends
+
+
+sub class object to access the features(data and method) of sub class and super classs
+
+type of inheritance
+
+simple
+multilevel
+hierarchical
+multple is not supported by java
+
+constructor behaviour during inheritance
+
+
+super
+    to access the super class members
+
+
+advantage
+ code reusablity
+ getting runtime polymorphism
+
+-------------------------------------------------------------------------
+1) is a relation
+
+
+2) has a relation
+
+
+class Car
+{
+   String brand;
+   String model
+   float price
+   Engine en
+
+}
+
+
+class Engine
+{
+
+   String enmodel;
+   float enprice
+   String enhp
+   String entype
+
+}
+
+
+class Person
+{
+   int id;
+   String name;
+   Address ad;
+
+}
+
+class Address
+{
+
+   String state;
+   String city
+   int pin;
+   int doorno;
+   String streetName;
+}
+
+
+class System
+{
+
+statiac PrintStream out
+
+}
+
+class PrintStream
+{
+
+
+
+  void println()
+  {
+
+  }
+
+}
+
+
+-------------------------------------
+command line argument
+
+-------------------------------------------------------------------------------------
+Object class
+
+class Object
+{
+- methods
+- void hascode()
+{
+}
+
+}
+
+
+class emp extends Object
+{
+
+main()
+{
+ Emp e = new Emp()
+ 
+e.hascode()
+}
+
+}
+
+
+class Vehicle
+{
+
+
+}
+
+class car extends Vehicle
+{
+
+
+}
+
+---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+

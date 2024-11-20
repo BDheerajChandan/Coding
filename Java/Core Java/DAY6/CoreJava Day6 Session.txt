@@ -1,0 +1,276 @@
+				Core Java-DAY6
+
+PART II
+
+classes and objects
+constructor
+static and non static behaviour
+this
+
+array of objects
+--------------------------------------------------------------------------
+
+
+Emp e1 = new Emp()
+    e1.read()
+    e1.disp()
+Emp e2 = new Emp()
+	e2.read()
+    e2.disp()
+Emp e3 = new Emp()
+	e3.read()
+    e4.disp()
+Emp e4 = new Emp()
+	e4.read()
+    e4.disp()
+
+Array
+
+int[] num = new int[4]
+
+
+Emp[]   e  = new Emp[6];
+
+for(int i; i<4; i++)
+{
+e[i].reademp()
+e[i].disp() 
+}
+
+Encapsulation
+
+
+class A
+{
+   int no;
+
+   void dispno()
+  {
+     syso(no);
+  }
+
+main()
+{
+    A a = new a();
+    a.dispno();
+}
+
+}
+
+
+
+class B
+{
+
+   A a = new A();
+   a.dispno();
+
+
+
+}
+
+
+encapsulation
+
+process of binding the data and the method together
+
+provide properties as private
+        method as public
+
+inheritance
+
+inheritance is process of acquiring the properties and behaviour from one class to 
+another class
+
+class A
+{
+fueatures- properties or behaviours
+
+}
+
+
+class B extends A
+{
+
+  - exclusive features(properties and behaviours)
+
+fueatures- properties or behaviours
+
+}
+
+
+code resuability
+
+
+super classs
+- the class is providing the features
+
+sub class
+- the one receiving the features
+
+
+extend keyword
+
+
+- creating sub class object accessing super class features
+and sub class features
+
+
+
+
+
+class Emp
+{
+
+  int id;
+String name;
+
+
+void reademp()
+{
+
+}
+void dispemp()
+{
+
+}
+}
+
+class test
+{
+
+  main()
+  {  Emp e = new Emp()
+         e.id;e.disp()
+
+
+}
+
+
+------------------------------------------------
+class emp
+{
+
+f1,f2
+
+}
+
+class contractemp extends emp
+{
+f3
+
+}
+
+class test
+{
+
+
+main()
+{    
+      contractemp c = new contractemp()
+      c.f1;
+      c.f2;
+      c.f3
+
+}
+
+
+type of inheritance
+
+simple
+multilevel
+hierarchical
+multiple 
+
+---------------------------------------------------------------------------------------
+class Person
+{
+  id
+  name
+  address
+
+void readPerson()
+void disperson()
+}
+
+
+class student extends Person
+{
+   mark
+
+ void readmark()
+ void dispmark()
+
+}
+
+Student s = new Student()
+
+-----------------------------------------------------------------------
+constructor behaviour
+
+
+when the constructor get called
+
+class Emp
+{  int id;
+   Emp(int id)
+   {this.id =id
+   }
+}
+
+Emp e = new Emp();
+
+class ContractEmp extend Emp
+{
+     sal;
+  ContractEmp(int id,int sal)
+  {   super(id)
+      this.sal = sal;
+  }
+}
+ContractEmp c = new ContractEmp(200,100)
+
+
+public class Stu extends Person
+{
+
+	int mark;
+	
+	void readmark(int mark)
+	{   super.read(1001, "shan", "blr");
+		this.mark = mark;
+	}
+	void dispmark()
+	{    super.dispPerson();
+		System.out.println(mark);
+	}
+	
+	
+	
+}
+public class testinheritancePerson
+{
+
+	public static void main(String[] args) 
+	
+	
+	{
+	
+		Stu s = new Stu();
+	//	s.read(1001, "shan", "blr");
+		s.readmark(40);
+	//	s.dispPerson();
+		s.dispmark();
+		
+		
+		
+		
+	}
+	
+	
+	
+}
+
+
+
+

@@ -1,0 +1,173 @@
+					Core Java-Day1
+
+Part I
+Introduction to java
+data types
+variables
+operators
+conditional statements
+control statements
+method
+Array
+-------------------------------------------
+Part II
+oops
+classes and objects
+constructor
+static and non static behaviour
+
+encapsulation
+
+inheritance
+polymorphism
+   method overlading
+   method overriding
+
+abstraction
+   abstract class
+   interface
+
+this
+super
+final
+
+access specifier
+
+private
+public
+default
+protected
+
+
+
+---------------------------------------------------------------
+part III
+packages
+exception - java.lang
+data structure - java.util
+collection     - stack,queue,linkedlist,Arraylist,map
+file handling - java.io
+networking   - java.net
+multithreading - java.lang
+data base with - java.sql
+java - jdbc
+
+--------------------------------------
+
+lambda
+Stream API
+enum
+generic
+innerclass
+wrapper class
+------------------------------------------------------------------------
+Introduction to java
+    what is java
+
+     java is high level ,object oriented programing language, platform
+
+     
+
+    history of java
+
+     java was developed james Gosling at sun MicroSystem at 1995
+     1991
+     jdk1.0 - 1996
+     java SE 8
+     java SE 9
+
+
+
+    java SE 17
+
+
+    
+     usage of java
+
+     1) used to create Desktop application
+
+       java SE
+       application which runs on local machine
+       javac,java,awt,
+
+     2) used to create web application
+
+       application which runs on server
+
+       Java EE
+       serlet,jsp,spring,
+
+       EJb
+
+     3) used to create mobile application
+
+        application run on electronic devicess.
+        Java ME
+        Android
+
+    component of java- platform independance
+     
+     jdk- `java development kit
+           develop java application and also i can run java application
+
+     jdk = jre+ set of tool(javac java,)
+
+
+     jre
+         - java runtime environment
+           I can only execute the java application
+          
+        jre = jvm + set of libraries
+
+     jvm- java virtual machines
+        - which convert the .class file or byte code  into machine code
+
+
+
+    how java works
+
+    featurs of java
+     
+    1) platform independance
+       write once and run on anywhere
+
+    2) simple
+    3) secure
+    4) robust
+    5) portable
+    6) multithreaded
+    7) dynamic
+    
+ 
+     java -version
+
+javac
+  
+set path
+c:\programfile\jdk\bin
+    
+eclipse
+
+1) execute java helloworld program using commandline
+2) execute java helloworld program using ecliplse
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+public class Student 
+{
+
+	int sid;
+	String sname;
+	int mark;
+	String sub;
+	
+	
+	
+	
+	public static void main(String[] args) 
+	{
+	    
+		Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3 = new Student();
+		
+		System.out.println("first object data");
+		s1.sid = 1001;
+		s1.sname= "shan";
+		s1.mark = 30;
+		s1.sub = "java";
+		
+		System.out.println(s1.sid);
+		System.out.println(s1.sname);
+		System.out.println(s1.mark);
+		System.out.println(s1.sub);
+		
+		
+		
+		
+		System.out.println("Second object data");
+		s2.sid = 1002;
+		s2.sname= "raj";
+		s2.mark = 40;
+		s2.sub = "c++";
+		
+		System.out.println(s2.sid);
+		System.out.println(s2.sname);
+		System.out.println(s2.mark);
+		System.out.println(s2.sub);
+		
+			
+		
+		
+		System.out.println("third object data");
+		s3.sid = 1003;
+		s3.sname= "siju";
+		s3.mark = 80;
+		s3.sub = "python";
+		
+		System.out.println(s3.sid);
+		System.out.println(s3.sname);
+		System.out.println(s3.mark);
+		System.out.println(s3.sub);
+		
+		
+		
+		
+	}
+	
+	
+}
+
+
+--------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Student 
+{
+
+	int sid;
+	String sname;
+	int mark;
+	String sub;
+	
+	public void readStudent()
+	{
+		Scanner s = new Scanner(System.in);
+		sid = s.nextInt();
+		sname = s.next();
+		mark = s.nextInt();
+		sub = s.next();
+		
+		
+		
+	}
+	
+	public  void displayStudent()
+	{
+		System.out.println(sid);
+		System.out.println(sname);
+		System.out.println(mark);
+		System.out.println(sub);
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) 
+	{
+	    
+		Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3 = new Student();
+		
+		System.out.println("first object data");
+		s1.readStudent();		
+		s1.displayStudent();
+		
+				
+		System.out.println("Second object data");
+		s2.readStudent();
+		s2.displayStudent();
+			
+				
+		System.out.println("third object data");
+		s3.readStudent();
+		s3.displayStudent();
+		
+		
+		
+		
+	}
+	
+	
+}
+
+--------------------------------------

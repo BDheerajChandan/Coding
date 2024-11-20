@@ -1,0 +1,147 @@
+				Core java-DAY10
+
+
+this
+super
+
+
+OOPS
+classes and objects
+encapsulation
+inheritance
+polymorphism
+   method overriding
+   method overloding
+
+abstraction
+
+abstraction is a process of hiding the implementation details and showing only the functionality to the user
+
+class emp
+{
+  
+      void print()
+    {
+
+    }
+       
+     
+}
+
+abstract class emp
+{
+     int id;
+     String name;
+
+    Emp(){}
+     
+    abstract  void findsal();
+
+    void disp()
+    {
+
+    }
+
+}
+
+
+rules
+1) you can not create object of obstract class
+2) it ment for inheritance purpose - 
+3) if any any class extends the abstract class
+   should provide the implementation of the abstract method in sub class
+
+ 
+  class contractemp extends emp
+  {
+
+     void findsal()
+    {
+
+    }
+
+
+   }
+
+4) the sub class object can be created 
+
+    Contractemp c = new Contractemp
+     c.findsal()
+
+
+
+   final
+----------------------------------------
+interface
+
+abstract class gives 0 to 90 % abstraction
+
+to get 100% abstraction go with interface
+
+
+interface myinterface
+{
+
+ public void findbillpayment();
+
+}
+
+Rules
+
+
+classs CommercialElectricityBill  implements myinteface
+{
+
+
+public void findbillpayment()
+{
+
+
+
+}
+
+
+
+}
+
+package
+
+part III
+
+exception java.lang
+collection java.util
+filehandling java.io
+jdbc         java.sql
+threading    java.lang
+
+
+collection java.util
+
+
+interface              implemented classes
+
+List                   Arraylist
+                       Linkedlist
+                       vector
+                       stack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

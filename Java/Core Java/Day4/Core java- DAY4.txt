@@ -1,0 +1,93 @@
+				Core java- DAY4
+
+part I
+
+Introduction to java
+data types
+variables
+operators
+conditional and control statements
+break
+continue
+method
+Array
+
+---------------------------------------------------
+Part II
+classes and objects
+
+objects
+1) objects is a real world entity
+2) object has properties(data) and behaviour(method)
+3) object is a instance of the class
+
+class
+  - class is template or bulue print
+  - 
+  - class is collection of similer object
+  - class is used to instantiate the object/class is used to create object
+
+
+
+----------------------------------------------------------------------------
+
+5 object
+
+5 mobile phones
+
+
+class phone
+{
+make
+price
+color
+size
+ram
+processor
+sno
+}
+
+class table
+{
+  length
+  hight
+  price
+  make
+  model
+}
+
+
+
+student
+
+10 student
+
+class Student
+{
+int sid
+String name
+int mark
+String cname
+String subject
+}
+
+Student s1 = new Student()
+
+Student s2 = new Student()
+
+Student s3 = new Student()
+
+
+three ways to initialize the object 
+
+1) using reference
+2) using method
+3) using constructor
+
+
+
+
+
+static and non static behaviour
+
+

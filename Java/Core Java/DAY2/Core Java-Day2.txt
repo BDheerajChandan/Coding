@@ -1,0 +1,470 @@
+					Core Java-Day1
+
+Part I
+Introduction to java
+data types
+variables
+operators
+conditional statements
+control statements
+method
+Array
+-------------------------------------------
+Part II
+oops
+classes and objects
+constructor
+static and non static behaviour
+
+encapsulation
+
+inheritance
+polymorphism
+   method overlading
+   method overriding
+
+abstraction
+   abstract class
+   interface
+
+this
+super
+final
+
+access specifier
+
+private
+public
+default
+protected
+
+
+
+---------------------------------------------------------------
+part III
+packages
+exception - java.lang
+data structure - java.util
+collection     - stack,queue,linkedlist,Arraylist,map
+file handling - java.io
+networking   - java.net
+multithreading - java.lang
+data base with - java.sql
+java - jdbc
+
+--------------------------------------
+
+lambda
+Stream API
+enum
+generic
+innerclass
+wrapper class
+------------------------------------------------------------------------
+Introduction to java
+    what is java
+
+     java is high level ,object oriented programing language, platform
+
+     
+
+    history of java
+
+     java was developed james Gosling at sun MicroSystem at 1995
+     1991
+     jdk1.0 - 1996
+     java SE 8
+     java SE 9
+
+
+
+    java SE 17
+
+
+    
+     usage of java
+
+     1) used to create Desktop application
+
+       java SE
+       application which runs on local machine
+       javac,java,awt,
+
+     2) used to create web application
+
+       application which runs on server
+
+       Java EE
+       serlet,jsp,spring,
+
+       EJb
+
+     3) used to create mobile application
+
+        application run on electronic devicess.
+        Java ME
+        Android
+
+    component of java- platform independance
+     
+     jdk- `java development kit
+           develop java application and also i can run java application
+
+     jdk = jre+ set of tool(javac java,)
+
+
+     jre
+         - java runtime environment
+           I can only execute the java application
+          
+        jre = jvm + set of libraries
+
+     jvm- java virtual machines
+        - which convert the .class file or byte code  into machine code
+
+
+
+    how java works
+
+    featurs of java
+     
+    1) platform independance
+       write once and run on anywhere
+
+    2) simple
+    3) secure
+    4) robust
+    5) portable
+    6) multithreaded
+    7) dynamic
+    
+ 
+     java -version
+
+javac
+  
+set path
+c:\programfile\jdk\bin
+    
+eclipse
+
+1) execute java helloworld program using commandline
+2) execute java helloworld program using ecliplse
+
+
+				Core java - DAY2
+
+Part I
+
+Introduction to java
+
+data types
+
+primitives 
+   in built data types
+
+Integer
+
+
+byte  - 1
+short  2
+int    4
+long   8
+
+floating
+float    4
+double   8
+
+char     2
+boolean  1 bit
+
+boolean b = true
+
+
+grade = 'A'
+---------------------------------------------------------------
+int num =20
+byte num = 10;
+short num = 20;
+long num = 30
+
+non primitives
+Array
+String
+class
+enum
+Emp e = new Emp()
+String name = new String("shan")
+
+   user defined data types
+
+Emp e = new Emp()
+
+e Emp
+
+int[] num = new int[4]
+
+
+variable
+
+- name to a memory location
+- holding the data
+  int a = 20;
+   a=30;
+
+-local variable
+
+- the variable which is declared inside the method
+- scope of the variale is lost when you come out of the method
+
+
+void printA()
+{
+  int a =10;
+   print(a)
+   a = a+1;
+}
+
+print(a)
+
+-instance variable
+
+declared inside the class
+outside the method
+Class emp
+{
+  int empno
+  STring name
+  float sal
+
+   void dispemp()
+{
+
+   print(empno)
+   print(name)
+  print(sal)
+
+}
+
+void findtax()
+{
+   tax= sal*.01f
+
+
+}
+
+}
+
+
+-static variable
+----------------------------------------------------------
+operators
+
+Arithmetic operators
++ - * / %
+
+Relational
+>= <=
+!=
+==
+  
+if(a>b)
+logical
+and or
+&&
+||
+
+  if (a>b) and (a>c)
+
+bitwise
+
+ternary
+
+   int max = (a>b) ? a: b
+
+if(a>b)
+  max = a;
+else
+ max = b
+
+
+
+assignment
+=
+
+operator
+.
+
+new
+Emp e = new Emp()
+e.empno;
+e.name
+e.sal
+e.disp()
+--------------------------------------------------
+control and conditional statement
+
+method
+
+array
+------------------------------------------------------------------------
+
+Hello world in java
+
+#include<stdio.h>
+void main()
+{
+
+
+
+
+
+}
+Hello.java
+
+
+class Hello
+{
+
+public static void main(String[] arg)
+{
+
+System.out.println("welcome to java programming");
+
+}
+
+}
+
+eclipse
+
+workspace
+   - create java project
+   - create class under src
+
+unary operator
+++
+--
+
+conditional statement
+control flow
+
+if ()
+{
+}
+
+
+if()
+{
+}
+ else
+{
+}
+
+
+if()
+{
+}
+elif()
+{
+}
+elif()
+{
+}
+else
+{
+}
+main()
+
+statme1
+statme2
+statme3
+statme4
+
+}
+
+
+switch
+
+write a java program to find the given number is odd or even
+write a program to find the max of given three number
+write a program to find the grade 
+
+per > 80
+grade = A;
+
+per > 70 <80
+grade = b;
+
+per >60 <70
+grade = c
+
+else
+grade d
+
+
+
+int num = 20;
+
+   
+method
+  - userdefined
+  - builtin method
+
+static method
+main
+
+method can be called directly using method name
+or classname.methodname
+
+
+
+
+
+
+
+non static method
+
+
+jdbc
+main()
+{
+createtable()
+insertdata()
+retrive()
+update()
+delete()
+}
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+looping
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+

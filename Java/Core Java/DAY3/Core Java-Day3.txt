@@ -1,0 +1,151 @@
+DAY3 - CORE JAVA
+
+Introduction to java
+data types
+variables
+operators
+
+conditional statement
+if 
+if else
+if else if
+
+sal
+
+>50000
+
+<50000
+
+10000 to 500000
+-----------------------------
+method
+
+inbuilt method
+user defined method
+
+
+static method
+
+you can call the method using method name or class name .method name
+
+non static method
+you need to have a reference of the class where the method is defined
+
+
+
+
+method
+1) how to define the method
+2) how to pass data as argument
+3) how to process
+4) how to return the result to the class
+
+
+--------------------------------------------------------------------------------
+read the data from the console
+
+class Scanner
+{
+int nextInt()
+{
+}
+float nextFloat()
+{
+}
+String next()
+{
+}
+String nextList()
+{
+
+}
+}
+
+method
+control statement
+
+for
+while
+
+1: add
+2: sub
+3: div
+4: mul
+
+
+switch(expression)
+{
+
+  case: 1
+       add()
+       break;
+  case: 2
+      sub()
+
+  case: 3
+      mull()
+
+  default: 3
+      div()
+
+}
+
+
+int n = 10;
+			
+while(n>0)
+{
+n--;
+System.out.println(n);
+}			
+
+
+do while
+
+ do
+	     {
+	    	n--;
+	    	System.out.println(n);
+	    	 
+	     }	 
+	    while(n>0);
+
+---------------------------------------------------------------------------------------------
+
+Array
+- container  contain similer data
+- used to store same type of data
+- array size is fixed, can not be changed during runtime
+- individual element can be accessed using index
+
+
+how to create array;
+
+int[] num = new int[4]
+String[] str = new String[4];
+float[] f = new float[4];
+
+
+how to initialize the data to the array
+
+num[0] = 10;
+num[1] = 20;
+num[2] = 30;
+num[3] = 40;
+
+int[] num = { 10,20,30,40}
+
+String[] subject = {'c++','java','python','dbt'}
+
+
+what you what do with the data
+
+for(int i =0; i<4;i++)
+{
+   syso(num[i])
+
+}
+
+how to retrive
+
+switch()

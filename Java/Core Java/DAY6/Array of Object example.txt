@@ -1,0 +1,60 @@
+public class Empmain 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		Emp[] e = new Emp[10];
+		System.out.println("enter the object");
+		for(int i=0;i<e.length;i++)
+		{
+		 e[i] = new Emp();
+		
+	     e[i].reademp();
+	    
+	    }
+		
+		for(int i=0;i<e.length;i++)
+		{
+		  e[i].dispemp();
+	    }
+		
+		
+		
+	}
+}
+
+
+inheritance
+
+public class Person 
+{
+
+	int id;
+	String name;
+	String add;
+	
+	void read(int id,String name,String add)
+	{
+		this.id  = id;
+		this.name = name;
+		this.add = add;
+	}
+	
+	void dispPerson()
+	{
+		System.out.print(id+name+add);
+	}
+	
+	
+	
+}
+
+
+
+
+
+		
+		
+		
+		
