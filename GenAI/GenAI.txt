@@ -1,0 +1,44 @@
+- AI is combination o ML and Computer vision
+- Gen AI includes LLM and NLP
+- Example of LLM is GPT(Generative PreTrained Transformer)
+- LLM is a subpart of GenAI and GenAI is subpart of AI
+- AI works using Neuaral Network [ANN], where input layers is given to relu then sigmoid and finally output.
+- Unsupervised Generative Pretraining : Training a model to learn useful representation of data without abelling training. 	Like GPT
+- Reinforcement Learning : Learns to make decisions by performing actions and recieving feedback
+	Like Learning to play by recieving +/i rewards
+- GenAI model types : Text to [Text,Image,Audio,Video] and Image to image
+- Multimodel model : Text,Image,Audio,Video to Text,Image,Audio,Video
+- Combination of Human and AI product like ChatBot,CoPiolet is AIModel like ChatGPT
+- Example of LLM is GPT which generates text based examples
+- LLM are type of GenAI and GenAI is a subset of broader field of AI
+
+===========================================================================================================================
+
+- Types of AI : NonGenAI and GenAI
+- Non GenAI are Unsupervised model and GenA are models that created own new content
+- Statistical NL -> Neural Network -> Recurrent Neural Network -> Transformers
+- Language Models is a AI model which predicts next word or words for a given sequence of words by Neural Network.
+- RLHF :
+- Deep Learning : Supervised [AN, CNN, RNN]
+		  UnSupervised [Recommendation Systems, AutoEncoders, SOM]
+- Transformers : Text to Text [BERT, GPT]
+		 Text to Image [DALL-E , Stable Diffusion]
+		 Text to Video [OpenAI Sora]
+- Embedding : Numerical representation of text in form of a vector
+  Vector database embedding : Allows to store these embedding and perform efficient search on these embeddings.
+- Symmetric search :
+- Query vector go under Cosine simulation -> vectors -> Similar vectors
+- LSH(Locality Sensitivity Hashing) - 
+- Benefits of Vector Databases : Fast search and Optimized storage
+
+===========================================================================================================================
+
+- LangChain is a python framework used to build a GenAI applications that makes LLM apps easier
+- Applications -> LangChain -> ChatGPT,Llama
+- Tooling for GenAI : GPT4,Llma2, Mistral, Stable Diffusion, DALL-E, 
+			Azure OpenAI, Amazon BedRock, 
+			Langchain, Transformers, 
+			Pytorch, Tensorflow
+- Limitations : High cost, No access to internet , No access to private data source
+- pip install langchain ; pip install OpenAI
+- Simple Sequencial chain and Sequential chain
