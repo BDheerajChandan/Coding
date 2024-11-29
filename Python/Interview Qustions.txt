@@ -1,0 +1,24 @@
+What is Difference between List and Tuple ?
+What are Python Features ?
+How to Optimize Python ?
+What is difference between Python 2and3 ?
+What are Generators ?
+What are Decorators ?
+What is List comprehension ?
+what is shallow copy and deep copy ?
+What is OOPs ?
+What is Polymorphism and its types ?
+What is inheritance ?
+What is abstraction ?
+What is difference between '==' and 'is' ?
+What is lambda function ? When to use filter,map,reduce ?
+
+What is main purpose of Python ?
+What is PEP8 and how it is useful ?
+What are modules and packages ? Mention its uses and applications ?
+What is Garbage collector ?
+What is Memory leak and how to handle them ?
+What is Static method and class method ?
+What is __init__(), __str__(), __repr__() ?
+what are Golbal varibles? Public, private, protected ?
+What is difference between del and remove ?
