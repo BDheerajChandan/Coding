@@ -1,19 +1,91 @@
-What is Difference between List and Tuple ?
-What are Python Features ?
-How to Optimize Python ?
-What is difference between Python 2and3 ?
-What are Generators ?
-What are Decorators ?
-What is List comprehension ?
-what is shallow copy and deep copy ?
-What is OOPs ?
-What is Polymorphism and its types ?
-What is inheritance ?
-What is abstraction ?
-What is difference between '==' and 'is' ?
-What is lambda function ? When to use filter,map,reduce ?
+1. What is Difference between List and Tuple ?
+	List  - [], mutable, Data can be modified
+	Tuple - (), immutable, Data cant be modified'
 
-What is main purpose of Python ?
+2. What are Python Features ?
+	Interpreted Language
+	Dynamically Typed
+	High Level Language
+	Cross-Platform
+	Extensive Standard Library:
+
+3. How to Optimize Python ?
+	Use built-in functions and libraries:
+	list comprehensions:
+	Avoid global variables
+	Use appropriate data structures
+	Python's timeit module to test 
+
+4. What is difference between Python 2and3 ?
+	Python2 - print is a statement, xrange()
+	Python3 - print is a function, range()
+
+5. What are Generators ?
+	Type of iterable used with yield keyword.
+	Used to produce values lazily 
+	Don't store the entire sequence in memory
+	They generate values one at a time.
+	Useful for handling large datasets or streams of data.
+
+6. What are Decorators ?
+	To modify add change functionality without editing a code
+	To modify or enhance the behavior of functions or methods without modifying the actual code of the function.
+
+7. What is List comprehension ?
+	Simplest way to create a list using for loop.
+	Concise and efficient way to create lists in Python
+	It has expression, item, iterable, condition writtn in single line
+
+8. what is shallow copy and deep copy ?
+	Shallow copy and deep copy creates a new object reference.
+	Shallow copy - When a data value is changed then orginal also changes.
+		       New object copies references to Original objects.
+	Deep copy - When a data value is changed then original remain unchanged.
+		    Original object and the copy do not share any references.
+
+9. What is OOPs ?
+	OOPs - Object Oriented Programming
+	Objects are instance of a class
+	Object is an identificiable entity that has some features and behaviour.
+	To get those features and behaviour we need to create an object reference.
+	Primary principles of OOPs : Abstraction, Encapsulation, Inheritance, Polymorphism
+
+10. What is abstraction ?
+	Hiding implementation details from the user
+	Exposing only the essential features.
+
+11. What is encapsulation ?
+	Wrapping up of a data into a single unit.
+	Exposing only the essential features
+ 
+12. What is Polymorphism and its types ?
+	Polymorphism is a technique of modifying the existing functionality.
+	It has 2 types - Method Overloading and Method Overriding
+	Method Overloading - Same method name with different signatures
+	Method Overriding - Same method name gets implemented by new functionality
+
+13. What is inheritance ?
+	Inheriting feature and behaviour of Parent class to Child class.
+
+14. What is difference between '==' and 'is' ?
+	'==' is a relational operator used to check equality of a vlaue. Compare the values of two objects.
+	'is' is a key keyword used to check object reference location or two references point to the same object in memory. 
+
+15. What is lambda function ? When to use filter,map,reduce ?
+	It is a simplest form of representation of a anonymous function which takes any number of arguments and one exression
+	filter is used to filter the results which contains elements belongs to true condition.
+	map is used to get output value or entire results for expression. Returns an iterator of the results.
+	reduce is used to reduce to the single valued output result. To reduce an iterable to a single value
+
+16. What is main purpose of Python ?
+	Readability, Ease of use, and developer productivity
+	General-Purpose Programming
+	Cross-Platform Compatibility
+	Extensive Standard Library
+	Rapid Prototyping and Development	
+	Interpreted Language
+	Integration and Extensibility
+
 What is PEP8 and how it is useful ?
 What are modules and packages ? Mention its uses and applications ?
 What is Garbage collector ?
