@@ -7,7 +7,7 @@ Java
 Control statements(if, switch), loops
 6. Strings(original) and functions (format, endswith, startswith, length, indexOf, replace(target,replacement), toLowerCare, toUpperCase, trim)
 7. Escape sequences
-8. Arrays(String.valueOf, Arrays.equals, Arrays.toString, length, insert, print, removeAt, indexOf)
+8. Arrays(String.valueOf, Arrays.equals, Arrays.toString, Arrays.DeeptoString, length, insert, print, removeAt, indexOf)
 4. Util (Date, Scanner, Arrays(toString))
 5. Awt (Point, setlocation, distance) 
 6. Lang (Math(pow,ceil,floor,max,min,round,random))

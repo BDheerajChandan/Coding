@@ -1,0 +1,95 @@
+Here are some **practice questions** categorized by the key data structures and concepts you should focus on for your **Data Structures exam**. These problems will help you test and solidify your understanding of the most common and important topics.
+
+### 1. **Arrays & Strings**
+   - **Reverse an array**.
+   - **Find the missing number** in an array of size n with values from 1 to n+1.
+   - **Find the "K-th" largest element** in an unsorted array.
+   - **Find the longest subarray with a given sum**.
+   - **Find all pairs in an array that sum up to a specific value**.
+   - **Find the longest substring without repeating characters**.
+   - **Rotate an array** by a given number of steps.
+
+### 2. **Linked Lists**
+   - **Reverse a singly linked list**.
+   - **Detect a cycle in a linked list** using Floyd’s Tortoise and Hare algorithm.
+   - **Find the middle of a linked list** in one pass.
+   - **Merge two sorted linked lists**.
+   - **Remove the N-th node from the end of the list**.
+   - **Find the intersection point of two linked lists**.
+   - **Flatten a multilevel doubly linked list**.
+
+### 3. **Stacks & Queues**
+   - **Implement a stack using queues** (or vice versa).
+   - **Evaluate an expression given in postfix (reverse Polish) notation**.
+   - **Check for balanced parentheses** in an expression (e.g., `{[()()]}`).
+   - **Implement a queue using stacks**.
+   - **Find the next greater element for every element in an array** (using a stack).
+
+### 4. **Trees**
+   - **Level order traversal of a binary tree**.
+   - **Find the height of a binary tree**.
+   - **Check if a tree is balanced**.
+   - **Inorder traversal of a binary search tree** (BST).
+   - **Find the lowest common ancestor (LCA)** of two nodes in a BST.
+   - **Find the diameter of a binary tree**.
+   - **Serialize and deserialize a binary tree**.
+
+### 5. **Graphs**
+   - **Implement depth-first search (DFS)** and **breadth-first search (BFS)** for a graph.
+   - **Find the shortest path between two nodes in an unweighted graph** (BFS).
+   - **Detect a cycle in a directed graph** using DFS.
+   - **Topological sorting** of a Directed Acyclic Graph (DAG).
+   - **Find the connected components in an undirected graph**.
+   - **Find the minimum spanning tree** of a graph using Kruskal’s or Prim’s algorithm.
+   - **Dijkstra’s algorithm** for finding the shortest path in a weighted graph.
+
+### 6. **Hashing**
+   - **Check if a string has all unique characters** (using a hash set).
+   - **Find the first non-repeating character in a string**.
+   - **Group anagrams from a list of strings**.
+   - **Check if two strings are anagrams**.
+   - **Find the longest consecutive subsequence** in an unsorted array.
+
+### 7. **Heaps**
+   - **Implement a min-heap or max-heap**.
+   - **Find the K-th largest element in an array** using a heap.
+   - **Merge K sorted linked lists** using a min-heap.
+   - **Find the median of a data stream** (using a max-heap and min-heap).
+
+### 8. **Sorting & Searching**
+   - **Implement quicksort** and **merge sort**.
+   - **Find the "K-th" smallest element** in an unsorted array.
+   - **Search in a rotated sorted array** (binary search).
+   - **Find the peak element** in an array (an element that is greater than or equal to its neighbors).
+   - **Find the majority element** in an array (element that appears more than n/2 times).
+
+### 9. **Recursion & Backtracking**
+   - **Generate all subsets** of a set (subset sum problem).
+   - **Solve the N-Queens problem**.
+   - **Permutations of a string/array**.
+   - **Solve the subset sum problem**.
+   - **Solve the Sudoku puzzle**.
+   - **Generate all possible combinations of a given set of characters**.
+
+### 10. **Dynamic Programming**
+   - **Fibonacci sequence** (recursive and DP approach).
+   - **Coin change problem** (minimum number of coins to make a target amount).
+   - **Longest common subsequence** between two strings.
+   - **Knapsack problem** (0/1 knapsack).
+   - **Longest increasing subsequence**.
+   - **Matrix chain multiplication** (minimize the cost of matrix multiplications).
+   - **Word break problem** (check if a string can be segmented into a space-separated sequence of dictionary words).
+
+### 11. **Miscellaneous**
+   - **Find the longest palindrome substring** in a string.
+   - **Find the shortest path in a grid** with obstacles.
+   - **Find the maximum sum subarray** (Kadane’s algorithm).
+   - **Count the number of set bits** in a number (Hamming weight).
+   - **Find all permutations of a given array or string**.
+
+### Additional Suggestions:
+- **Mock Interviews:** Practice with platforms like LeetCode, HackerRank, or Codeforces to simulate real coding interviews.
+- **Time Complexity:** Always analyze the time and space complexity of your solutions to improve efficiency.
+- **Edge Cases:** Be mindful of edge cases, such as empty inputs, large inputs, and negative numbers.
+
+These questions cover a broad spectrum of data structures and algorithms. Prioritize practicing problems that are most commonly asked in exams, and try to implement solutions efficiently.

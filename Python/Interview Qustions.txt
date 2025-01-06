@@ -86,11 +86,54 @@
 	Interpreted Language
 	Integration and Extensibility
 
-What is PEP8 and how it is useful ?
-What are modules and packages ? Mention its uses and applications ?
-What is Garbage collector ?
-What is Memory leak and how to handle them ?
-What is Static method and class method ?
-What is __init__(), __str__(), __repr__() ?
-what are Golbal varibles? Public, private, protected ?
-What is difference between del and remove ?
+17. What is __init__(), __str__(), __repr__() ?
+	__init__() called when an object is created, to initialize the object's attributes.
+	 __str__() to return a human-readable string that provides useful information about the object.
+	__repr__() to define a string representation of the object that is intended to be more unambiguous, and ideally, one 	           that could be used to recreate the object.
+	__init__() is for initializing the object when it is created.
+	__str__() is for providing a readable, user-friendly string representation of the object (often used with print()).
+	__repr__() is for providing a more precise or detailed string representation, mainly used for debugging or logging 
+
+18. What is Static method and class method ?
+	Staticmethod: The method does not access or modify the state of the class or instance.
+	Classmethod: The method takes the class itself as the first argument (usually cls), and can modify the class state.
+
+19. Class variable and Instance variables ?
+	Class variables: Shared across all instances of a class.
+	Instance variables: Unique to each instance of the class.
+
+20. How do you manage memory in Python?
+	gc module handles memory by reclaiming unused memory, and objects are automatically deallocated when they are no 	longer referenced.
+
+21. What are modules and packages ? Mention its uses and applications ?
+	- modules : Python file that contains a collection of functions, classes, variables, and runnable code. 
+	  modules Uses: Code Reusability, Organization, Maintainability
+	  modules Applications: Math Operations, File Handling, Networking
+	- package  : Collection of Python modules organized in directories. A package can contain sub-packages, modules, and 		  even other files such as data files or configuration files.
+	  package Uses: Code Organization, Namespace Management, Scalability
+	  package Applications: Web Development, Data Science, Machine Learning
+
+
+
+22. What is Garbage collector ?
+	It is process of automatically managing memory by deallocating objects that are no longer in use, thus freeing up 	memory for new objects.
+
+
+23. What is Memory leak and how to handle them ?
+	A memory leak occurs when a program consumes more and more memory over time without releasing it back to the system, 	even though the memory is no longer in use. 
+
+24. what are Golbal varibles? Public, private, protected ?
+	- A global variable is a variable that is declared outside of any function or class, typically at the top of the 		  program or script. This variable is accessible from anywhere in the code.
+	- A public attribute or method can be accessed from anywhere — both within the class and outside the class.Accessible 	  from anywhere in the program.
+	- A protected attribute or method is intended to be accessible within the class and by subclasses (derived classes). 	  It is not intended to be accessed directly outside the class.Accessible within the class and by subclasses. It 	  should not be accessed directly from outside the class. 
+	- A private attribute or method is intended to be accessible only within the class in which it is defined. It should 		  not be accessed or modified outside of the class.Accessible only within the class. Should not be accessed directly 		  from outside the class.
+
+25. What is difference between del and remove ?
+	del statement is used to delete variables or entire items from a collection (such as lists, dictionaries, etc.).
+	remove() method is used to remove the first occurrence of a specific value from a list.
+	Use del: When you want to delete an element by its index or key or when you want to delete a variable entirely.
+	Use remove(): When you want to remove a specific value from a list and you don’t know or don’t want to use the index 	of the item.
+
+26. What is PEP8 and how it is useful ?
+	PEP 8 (Python Enhancement Proposal 8) is the style guide for Python code. It provides a set of guidelines and best 	practices to improve the readability and consistency of Python code.
+	Useful: Consistency, Readability
