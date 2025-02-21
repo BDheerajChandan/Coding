@@ -1,0 +1,60 @@
+Here are some common machine learning (ML) interview questions you might encounter:
+
+### 1. **General ML Concepts**
+   - What is the difference between supervised and unsupervised learning?
+   - What is overfitting? How can it be prevented?
+   - What is the bias-variance tradeoff?
+   - Explain the difference between classification and regression.
+   - What is cross-validation, and why is it used?
+   - What is a confusion matrix, and how do you interpret it?
+   - What is the purpose of regularization in machine learning?
+   - Explain the difference between L1 and L2 regularization.
+   - What are precision, recall, and F1 score? How are they different?
+
+### 2. **Algorithms**
+   - What is the difference between a decision tree and a random forest?
+   - Explain how a k-nearest neighbors (KNN) algorithm works.
+   - What is gradient descent? How does it work?
+   - How do you choose between different classification algorithms (like SVM, logistic regression, etc.)?
+   - Explain the workings of the Naive Bayes classifier.
+   - What is the purpose of the support vector machine (SVM)? How does it work?
+   - How does a neural network work? Explain the concept of backpropagation.
+   - What is the difference between bagging and boosting?
+
+### 3. **Feature Engineering and Data Preprocessing**
+   - What is feature scaling, and why is it important?
+   - What techniques can be used for handling missing data?
+   - How do you handle categorical data in a machine learning model?
+   - What is one-hot encoding, and how does it work?
+   - How would you deal with imbalanced classes in a classification problem?
+   - Explain the concept of dimensionality reduction. What methods can be used?
+
+### 4. **Evaluation and Model Selection**
+   - What is the purpose of a ROC curve, and how do you interpret it?
+   - What is AUC, and how do you use it to evaluate a classifier?
+   - Explain the concept of hyperparameter tuning. How do you optimize a machine learning model?
+   - What is grid search? How does it work?
+   - What is the difference between batch and stochastic gradient descent?
+
+### 5. **Deep Learning and Neural Networks**
+   - What is the difference between deep learning and traditional machine learning?
+   - What is a convolutional neural network (CNN)? How does it work?
+   - Explain a recurrent neural network (RNN) and where it is used.
+   - What are LSTMs (Long Short-Term Memory) and GRUs (Gated Recurrent Units)?
+   - How do you prevent overfitting in deep learning models?
+   - Explain the vanishing gradient problem and how it’s addressed.
+
+### 6. **Real-World Applications and Problem Solving**
+   - Can you describe a project where you applied machine learning techniques? What challenges did you face?
+   - How would you build a recommendation system?
+   - How would you approach an anomaly detection problem?
+   - How do you decide if a machine learning model is performing well in a real-world scenario?
+
+### 7. **Advanced Topics**
+   - Explain the concept of reinforcement learning.
+   - What are generative adversarial networks (GANs)? How do they work?
+   - What is transfer learning, and how is it used in deep learning?
+   - How does attention mechanism work in NLP models like transformers?
+   - Explain the differences between unsupervised learning and semi-supervised learning.
+
+Would you like to dive deeper into any specific category or topic?
