@@ -1,0 +1,5 @@
+1. Predict male or female names
+2. Auto report generaton and find best ML models
+3. GUI
+4. Regex
+5. Exe file creation

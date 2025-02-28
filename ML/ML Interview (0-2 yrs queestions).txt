@@ -56,5 +56,74 @@ Here are some common machine learning (ML) interview questions you might encount
    - What is transfer learning, and how is it used in deep learning?
    - How does attention mechanism work in NLP models like transformers?
    - Explain the differences between unsupervised learning and semi-supervised learning.
+======================================================================================================================
+======================================================================================================================
 
-Would you like to dive deeper into any specific category or topic?
+Here are some additional **Machine Learning (ML) interview questions** for candidates with **0-1 years of experience**:  
+
+---
+
+### **Basic Machine Learning Concepts**  
+1. What is the difference between parametric and non-parametric models?  
+2. What are the key assumptions of linear regression?  
+3. What are different types of machine learning?  
+4. What is the curse of dimensionality, and how can it be handled?  
+5. What is the difference between correlation and causation?  
+
+---
+
+### **Model Evaluation & Performance Metrics**  
+6. What is precision, recall, and F1-score? How do they relate to each other?  
+7. How do you handle an imbalanced dataset?  
+8. What is ROC-AUC, and how is it used in classification problems?  
+9. What is Mean Absolute Error (MAE) vs. Mean Squared Error (MSE) vs. Root Mean Squared Error (RMSE)?  
+10. What is cross-validation, and why is it important?  
+
+---
+
+### **Optimization & Regularization**  
+11. How does gradient descent work, and what are its types?  
+12. What is the difference between batch gradient descent and stochastic gradient descent?  
+13. What are vanishing and exploding gradients, and how can they be solved?  
+14. What is L1 and L2 regularization?  
+15. What is early stopping, and how does it prevent overfitting?  
+
+---
+
+### **Feature Engineering & Data Processing**  
+16. What are different methods for handling missing data?  
+17. What are categorical variables, and how do you handle them in ML models?  
+18. What is feature scaling, and what are different methods to achieve it?  
+19. What is Principal Component Analysis (PCA), and when would you use it?  
+20. What is one-hot encoding, and when should it be used?  
+
+---
+
+### **Supervised & Unsupervised Learning**  
+21. What are the main differences between decision trees and random forests?  
+22. What is k-Nearest Neighbors (k-NN), and how does it work?  
+23. How does K-Means clustering work, and how do you choose the value of K?  
+24. What is hierarchical clustering, and how is it different from K-Means?  
+25. What is Naive Bayes, and why is it considered "naive"?  
+
+---
+
+### **Neural Networks & Deep Learning**  
+26. What is the structure of a neural network?  
+27. What is the activation function, and why is it needed?  
+28. What is backpropagation in neural networks?  
+29. What is dropout regularization in deep learning?  
+30. What is the difference between CNNs and RNNs?  
+
+---
+
+### **Deployment & Real-World ML Applications**  
+31. What are some common challenges when deploying ML models?  
+32. What is model drift, and how can it be handled?  
+33. What are the differences between online and batch learning?  
+34. What are hyperparameters, and how do you tune them?  
+35. What is transfer learning, and when is it used?  
+
+---
+
+These questions cover **fundamental ML concepts, model evaluation, feature engineering, optimization, and real-world applications**. Let me know if you need explanations or answers for any of these! 🚀
