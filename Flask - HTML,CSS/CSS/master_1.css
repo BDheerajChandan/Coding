@@ -1,0 +1,30 @@
+h1{
+    color: blue;
+    font-style: italic;
+    font-size: large;
+}
+p{
+    color: brown;
+    font-style: normal;
+    font-size: small;
+}
+
+h2{
+    color: rgb(rgb(199, 27, 27), rgb(14, 120, 14), rgb(30, 30, 219));
+    font-size: large;
+}
+
+
+ol{
+    color: blue;
+    font-style: italic;
+}
+ul{
+    color: brown;
+    font-style: normal;
+}
+li{
+    color: rgba(rgb(232, 101, 101), rgb(63, 121, 63), rgb(23, 23, 239), 100);
+    font-style: italic;
+    font-size: small;
+}

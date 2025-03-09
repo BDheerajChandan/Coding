@@ -1,0 +1,41 @@
+,,,,,
+,,,,,
+Table: Employees,,,,,
+,,,,,
+EmployeeID,FirstName,LastName,DepartmentID,ManagerID,Salary
+1,John,Doe,1,NULL,50000
+2,Jane,Smith,1,1,60000
+3,Mike,Johnson,2,1,55000
+4,Emily,Brown,2,2,52000
+5,David,Lee,1,1,58000
+6,Sarah,White,2,1,53000
+7,James,Anderson,3,NULL,65000
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Table: Sales,,,,,
+,,,,,
+SaleID,EmployeeID,Amount,SaleDate,,
+1,2,1000,5/1/2023,,
+2,3,1500,10/2/2023,,
+3,1,2000,15/3/2023,,
+4,2,1200,20/4/2023,,
+5,4,1800,25/5/2023,,
+6,5,1300,30/6/2023,,
+7,3,1700,5/7/2023,,
+8,1,1900,10/8/2023,,
+9,2,1100,15/9/2023,,
+10,4,1600,20/10/2023,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Table: Departments,,,,,
+,,,,,
+DepartmentID,DepartmentName,Location,,,
+1,Sales,New York,,,
+2,Marketing,Chicago,,,
+3,Finance,Boston,,,
