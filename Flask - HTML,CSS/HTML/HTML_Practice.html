@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practice</title>        <!-- Set title for page -->
+    <link rel="" href="">               <!-- Link only CSS file -->
+</head>
+<body>
+    <h1>About Me : </h1>
+    <form>
+        <!-- Image from link and using path -->
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHTML&psig=AOvVaw2SI8amoBcBvE6zu5sDHsa0&ust=1741417526638000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCvvv2z94sDFQAAAAAdAAAAABAJ">Logo Link</a>
+        <img src="C:\\Users\\KIIT\\Downloads\\IMG_20220625_091140.jpeg" alt="My Image" width="200" height="150">
+
+        <!-- Click Image to URL , Image as action -->
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+            <img src="HTML_Logo_1.png" alt="HTML Official Logo" width="200">
+        </a>
+        <br>
+
+        <!-- For Hyperlinks-->
+        <a href="https://www.youtube.com/">a_Youtube</a>
+        <br>
+
+        <!-- Open Hyperlinks by button click-->
+        <input type="button" name="Hyperlink_tag" value="Common YouTube " onclick="window.location.href='https://www.youtube.com/'">
+        <br>        
+        <input type="button" name="Hyperlink_tag" value="Personal YouTube" onclick="window.location.href='https://www.youtube.com/@chandandheeraj1381'">
+        <br>
+        
+        <!-- Input Text -->
+        <label for="Text_tag">Name : </label>
+        <input id="Text_tag" type="Text" name="text" value="">
+        <br>
+
+        <!-- Select option DropDown -->
+        Age 18+ ? :
+        &emsp;&emsp;&emsp;
+        <Select>
+            <option value="Option" tabindex="3">Select Option</option>
+            <option>Yes</option>
+            <option>No</option>
+        </Select>
+        <br>
+
+        <label for="choices">Choose an option:</label>
+          &emsp;
+        <select id="choices" tabindex="3">
+            <option value="Select Option" disabled selected>Select Option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br>
+
+        <!-- Radio Buttons -->
+        RadioMale/Female with name="gender":
+        <br>
+        &emsp;&emsp;
+        <label for="RadioMale1">Male:</label>
+        <input id="RadioMale1" type="radio" name="gender" value="male">
+        <br>
+        &emsp;&emsp;
+        <label for="RadioFemale1">Female:</label>
+        <input id="RadioFemale1" type="radio" name="gender" value="female">
+        <br>
+
+        RadioMale/Female with name="":
+        <br>
+        &emsp;&emsp;
+        <label for="RadioMale2">Male:</label>
+        <input id="RadioMale2" type="radio" name="" value="male">
+        <br>
+        &emsp;&emsp;
+        <label for="RadioFemale2">Female:</label>
+        <input id="RadioFemale2" type="radio" name="" value="female">
+        <br>
+        
+
+        RadioMale/FemaleTag with name="gender":
+        <br>
+        &emsp;&emsp;
+        <label for="RadioMaleTag">Male:</label>
+        <input id="RadioMaleTag" type="radio" name="gender" value="male">
+        <br>
+        &emsp;&emsp;
+        <label for="RadioFemaleTag">Female:</label>
+        <input id="RadioFemaleTag" type="radio" name="gender" value="female">
+        <br>
+
+        RadioYes/NoTag with name="gender":
+        <br>
+        &emsp;&emsp;
+        <label for="RadioYesTag">Male:</label>
+        <input id="RadioYesTag"  type="radio" name="confirm" value="">
+        <br>
+        &emsp;&emsp;
+        <label for="RadioNOTag">Female:</label>
+        <input id="RadioNOTag" type="radio" name="confirm" value="">
+        <br>
+
+        RadioYes/NoTag with name="":
+        <br>
+        &emsp;&emsp;
+        <label for="RadioYesTag">Male:</label>
+        <input id="RadioYesTag"  type="radio" name="" value="">
+        <br>
+        &emsp;&emsp;
+        <label for="RadioNOTag">Female:</label>
+        <input id="RadioNOTag" type="radio" name="" value="">
+        <br>
+
+         <!-- TextArea -->
+        <h1>Summary:</h1>
+        <label>Summary Label1 : </label>
+        <textarea for="Summary_tag" rows="3" cols="10"></textarea>
+        <br>
+        <label>Summary Label2 : </label>
+        <textarea name="name" rows="3" cols="10">Text Area:</textarea>
+        <br>
+
+        <!-- Ordered and UnOrdered lists -->
+        <li>Types of ML Algos : </li>
+        <ol>
+            <li>Supervised L</li>
+                <ul>Regression</ul>
+                <ul>Classification</ul>
+            <li>Unsupervised L</li>
+                <ul>Clustering</ul>
+                <ul>Association</ul>
+            <li>Reinforcement L</li>
+        </ol>
+
+        <!-- Paragraph para  -->
+        <p><span>p , First Outside Para: </span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nostrum exercitationem a consequatur dolore doloribus laudantium provident quos ex repudiandae illum, laboriosam eligendi eum obcaecati unde delectus repellat magnam ab?</p>
+        <p id="second_para">p , Outside Div: Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ab ipsa maxime iste odio earum quos, consequatur, perspiciatis fuga enim, laborum animi veniam optio nostrum accusamus voluptatibus soluta architecto sint.</p>
+        
+        <!-- Bundle in single unit  -->
+        <div>
+            <p>p , Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veniam labore cupiditate rerum saepe sunt vitae sit dicta quia perferendis eveniet, laborum, odio quos debitis pariatur incidunt dolore mollitia facere?</p>
+            <p>p , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta sint, eligendi vero sunt cum obcaecati amet ducimus, doloribus odit accusamus tempore ratione veritatis debitis, earum maxime. Porro ipsa unde nemo?</p>
+        </div>
+
+        <!-- Class id and class with css -->        
+        <h3>I am Dheeraj</h3>
+        <div class="first_div">
+            <p>I am first paragraph</p>
+        </div>
+        <div class="second_div">
+            <p>I am second paragraph</p>
+        </div>
+        <p>I am unique</p>
+        <p id="singledout">I am havind id</p>
+
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html>
