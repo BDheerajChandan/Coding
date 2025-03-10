@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Practice</title>        <!-- Set title for page -->
-    <link rel="" href="">               <!-- Link only CSS file -->
+    <link rel="stylesheet" href="../CSS/CSS_Practice.css">               <!-- Link only CSS file -->
 </head>
 <body>
     <h1>About Me : </h1>
     <form>
-        <!-- Image from link and using path -->
-        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHTML&psig=AOvVaw2SI8amoBcBvE6zu5sDHsa0&ust=1741417526638000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCvvv2z94sDFQAAAAAdAAAAABAJ">Logo Link</a>
-        <img src="C:\\Users\\KIIT\\Downloads\\IMG_20220625_091140.jpeg" alt="My Image" width="200" height="150">
+        <!-- For Hyperlinks-->
+        <a id="a1" href="https://www.youtube.com/">a_Youtube</a>
+        <br>
 
+        <!-- Image from link and using path -->
+        <a class="a2" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHTML&psig=AOvVaw2SI8amoBcBvE6zu5sDHsa0&ust=1741417526638000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCvvv2z94sDFQAAAAAdAAAAABAJ">Logo Link</a>
+        <br>
+        <img class="i1" src="C:\\Users\\KIIT\\Downloads\\IMG_20220625_091140.jpeg" alt="My Image" width="200" height="150">
+        <br>
         <!-- Click Image to URL , Image as action -->
-        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+        <a class="a1" href="https://en.wikipedia.org/wiki/HTML" target="_blank">
             <img src="HTML_Logo_1.png" alt="HTML Official Logo" width="200">
         </a>
         <br>
 
-        <!-- For Hyperlinks-->
-        <a href="https://www.youtube.com/">a_Youtube</a>
-        <br>
+        
 
         <!-- Open Hyperlinks by button click-->
         <input type="button" name="Hyperlink_tag" value="Common YouTube " onclick="window.location.href='https://www.youtube.com/'">
@@ -136,9 +139,9 @@
         <p id="second_para">p , Outside Div: Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ab ipsa maxime iste odio earum quos, consequatur, perspiciatis fuga enim, laborum animi veniam optio nostrum accusamus voluptatibus soluta architecto sint.</p>
         
         <!-- Bundle in single unit  -->
-        <div>
-            <p>p , Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veniam labore cupiditate rerum saepe sunt vitae sit dicta quia perferendis eveniet, laborum, odio quos debitis pariatur incidunt dolore mollitia facere?</p>
-            <p>p , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta sint, eligendi vero sunt cum obcaecati amet ducimus, doloribus odit accusamus tempore ratione veritatis debitis, earum maxime. Porro ipsa unde nemo?</p>
+        <div class="d1">
+            <p class="p1">p , Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veniam labore cupiditate rerum saepe sunt vitae sit dicta quia perferendis eveniet, laborum, odio quos debitis pariatur incidunt dolore mollitia facere?</p>
+            <p class="p2">p , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta sint, eligendi vero sunt cum obcaecati amet ducimus, doloribus odit accusamus tempore ratione veritatis debitis, earum maxime. Porro ipsa unde nemo?</p>
         </div>
 
         <!-- Class id and class with css -->        
