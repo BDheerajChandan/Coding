@@ -1,0 +1,10 @@
+{% extends "Base1_InhExt.html" %}
+{% block content %}
+    {{ super() }}
+    <h1>After inheriting Base1_InhExt {{name}}</h1>
+    {% for i in name.lower() %}  
+        {% if i in ['a', 'e', 'i', 'o', 'u'] %}
+            {{ i }}
+        {% endif %}
+    {% endfor %}
+{% endblock %}

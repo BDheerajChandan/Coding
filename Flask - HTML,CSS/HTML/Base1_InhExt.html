@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base1_InhExt</title>
+</head>
+<body>
+    <h1>Inheritance - Base 1 </h1>
+    <br>
+    {{name|capitalize}}
+    {% block content %}
+        <ol>
+            {% for i in name %}
+            <li>{{i}}</li>
+            {% endfor %}
+        </ol>
+    {% endblock %}
+</body>
+</html>
