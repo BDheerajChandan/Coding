@@ -95,10 +95,9 @@ class ImageApp:
 
         btn_frame = tk.Frame(control_frame)
         btn_frame.pack(pady=10)
-
-        tk.Button(btn_frame, text="Live", command=self.reset_controls).pack(side="left", padx=5)
-        tk.Button(btn_frame, text="Save Image 2", command=self.save_image2).pack(side="left", padx=5)
-        tk.Button(btn_frame, text="Stop", fg="red", command=self.stop).pack(side="left", padx=5)
+        tk.Button(btn_frame, text="LIVE", command=self.reset_controls).pack(side="left", padx=5)
+        tk.Button(btn_frame, text="SAVE", command=self.save_image2).pack(side="left", padx=5)
+        tk.Button(btn_frame, text="STOP", fg="red", command=self.stop).pack(side="left", padx=5)
 
     def reset_controls(self):
         self.brightness_scale.set(0)
@@ -173,7 +172,7 @@ class ImageApp:
     def save_image2(self):
         if hasattr(self, 'last_adjusted_frame'):
             self.save_count += 1
-            filename = f"saved_image2_{self.save_count}.png"
+            filename = f"saved_image_{self.save_count}.png"
             cv2.imwrite(filename, self.last_adjusted_frame)
             print(f"Image saved as {filename}")
         else:
