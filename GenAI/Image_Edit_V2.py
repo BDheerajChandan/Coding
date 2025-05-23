@@ -4,6 +4,7 @@ from PIL import Image, ImageTk
 import numpy as np
 import os
 import mediapipe as mp
+import time
 
 class ImageApp:
     def __init__(self, window):
@@ -13,6 +14,8 @@ class ImageApp:
 
         self.cap = cv2.VideoCapture(0)
         self.save_count = 0
+        self.last_frame_time = time.time()
+        self.last_adjusted_frame = None
 
         # Load OpenCV face detector
         haar_xml = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
@@ -68,6 +71,8 @@ class ImageApp:
         self.hue_label.pack(fill="x")
         self.saturation_label = tk.Label(self.image1_frame, font=("Helvetica", 10), anchor="w")
         self.saturation_label.pack(fill="x")
+        self.fps_label = tk.Label(self.image1_frame, font=("Helvetica", 10), anchor="w")
+        self.fps_label.pack(fill="x")
 
         # Image 2 - Mirror + adjustments
         self.image2_frame = tk.Frame(self.main_frame)
@@ -95,7 +100,7 @@ class ImageApp:
         def add_slider_row(label_text, from_, to, resolution=1, default_val=0):
             row = tk.Frame(control_frame)
             row.pack(fill="x", pady=2)
-            lbl = tk.Label(row, text=f"{label_text} :", width=10, anchor='w')
+            lbl = tk.Label(row, text=f"{label_text} :", width=12, anchor='w')
             lbl.pack(side="left")
             scale = tk.Scale(row, from_=from_, to=to, resolution=resolution,
                              orient=tk.HORIZONTAL, length=200)
@@ -107,6 +112,7 @@ class ImageApp:
         self.contrast_scale = add_slider_row("Contrast", 0.5, 3.0, 0.1, 1.0)
         self.hue_scale = add_slider_row("Hue", -180, 180, 1, 0)
         self.saturation_scale = add_slider_row("Saturation", 0.0, 3.0, 0.1, 1.0)
+        self.fps_scale = add_slider_row("FPS Control", 1, 60, 1, 30)
 
         btn_frame = tk.Frame(control_frame)
         btn_frame.pack(pady=10)
@@ -119,6 +125,7 @@ class ImageApp:
         self.contrast_scale.set(1.0)
         self.hue_scale.set(0)
         self.saturation_scale.set(1.0)
+        self.fps_scale.set(30)
 
     def apply_adjustments(self, frame):
         brightness = self.brightness_scale.get()
@@ -146,13 +153,18 @@ class ImageApp:
 
     def detect_faces(self, frame):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = self.face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30,30))
+        faces = self.face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
         return faces
 
     def update_frame(self):
         ret, frame = self.cap.read()
         if not ret:
             return
+
+        current_time = time.time()
+        fps = 1 / (current_time - self.last_frame_time)
+        self.last_frame_time = current_time
+        self.fps_label.config(text=f"FPS: {fps:.2f}")
 
         display_size = (480, 360)
 
@@ -198,25 +210,19 @@ class ImageApp:
         self.image2_label.imgtk = imgtk2
         self.image2_label.config(image=imgtk2)
 
-        self.window.after(10, self.update_frame)
+        # FPS Control Delay
+        fps_control = self.fps_scale.get()
+        delay = int(1000 / fps_control)
+        self.window.after(delay, self.update_frame)
 
     def save_image2(self):
-        if hasattr(self, 'last_adjusted_frame'):
+        if self.last_adjusted_frame is not None:
             self.save_count += 1
-
-            # Ensure directory exists
             save_dir = os.path.join(os.getcwd(), "saved_images")
             os.makedirs(save_dir, exist_ok=True)
-
-            # Define full path to file
             filename = os.path.join(save_dir, f"saved_image_{self.save_count}.png")
-
-            # Save image and check success
             success = cv2.imwrite(filename, self.last_adjusted_frame)
-            if success:
-                print(f"Image saved as {filename}")
-            else:
-                print("Failed to save image.")
+            print(f"Image saved as {filename}" if success else "Failed to save image.")
         else:
             print("No image to save yet.")
 
@@ -224,7 +230,6 @@ class ImageApp:
         self.cap.release()
         self.hands.close()
         self.window.destroy()
-
 
 if __name__ == "__main__":
     root = tk.Tk()
