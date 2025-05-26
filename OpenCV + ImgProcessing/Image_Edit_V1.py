@@ -174,15 +174,20 @@ class ImageApp:
         if hasattr(self, 'last_adjusted_frame'):
             self.save_count += 1
 
-            # Ensure directory exists
             save_dir = os.path.join(os.getcwd(), "saved_images")
             os.makedirs(save_dir, exist_ok=True)
+            filename = os.path.join(save_dir, f"saved_image_{self.save_count}.png")
+            success = cv2.imwrite(filename, self.last_adjusted_frame)
+
+            # Ensure directory exists
+            #save_dir = os.path.join(os.getcwd(), "saved_images")
+            #os.makedirs(save_dir, exist_ok=True)
 
             # Define full path to file
-            filename = os.path.join(save_dir, f"saved_image_{self.save_count}.png")
+            #filename = os.path.join(save_dir, f"saved_image_{self.save_count}.png")
 
             # Save image and check success
-            success = cv2.imwrite(filename, self.last_adjusted_frame)
+            #success = cv2.imwrite(filename, self.last_adjusted_frame)
             if success:
                 print(f"Image saved as {filename}")
             else:
