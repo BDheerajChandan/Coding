@@ -1,0 +1,9 @@
+conda env list
+
+conda remove --name <...> --all
+
+1. conda create --name <...>
+2. conda activate <...>
+3. pip install necessary pacakeges
+4. conda deactivate
+
