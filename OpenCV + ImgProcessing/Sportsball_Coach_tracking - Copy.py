@@ -7,20 +7,25 @@ import numpy as np
 class BallPathTrackerApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("White Ball Path Tracker")
+        self.root.title("Ball Movement Tracker (Motion + Seek)")
 
         self.cap = None
         self.running = False
         self.paused = False
+        self.seeking = False  # Flag to detect slider dragging
         self.last_positions = []
+        self.dot_positions = []
+        self.prev_gray = None
+        self.frame_count = 0
 
         self.fps = 30
         self.max_memory = 10
 
         self.video_width = None
         self.video_height = None
+        self.total_frames = 0
 
-        # UI
+        # UI Controls
         control_frame = tk.Frame(root)
         control_frame.pack(pady=10)
 
@@ -33,7 +38,7 @@ class BallPathTrackerApp:
         self.pause_btn = tk.Button(control_frame, text="Pause", command=self.pause_video, state=tk.DISABLED)
         self.pause_btn.grid(row=0, column=2, padx=5)
 
-        self.stop_btn = tk.Button(control_frame, text="Stop", command=self.stop_video, state=tk.DISABLED)
+        self.stop_btn = tk.Button(control_frame, text="Stop & Close", command=self.stop_and_close, state=tk.DISABLED)
         self.stop_btn.grid(row=0, column=3, padx=5)
 
         tk.Label(control_frame, text="FPS:").grid(row=1, column=0)
@@ -46,8 +51,23 @@ class BallPathTrackerApp:
         self.mem_slider.set(self.max_memory)
         self.mem_slider.grid(row=1, column=3)
 
-        self.video_label = tk.Label(root)
-        self.video_label.pack()
+        tk.Label(control_frame, text="Seek:").grid(row=2, column=0)
+        self.seek_slider = tk.Scale(control_frame, from_=0, to=100, orient=tk.HORIZONTAL, length=300,
+                                    command=self.seek_video)
+        self.seek_slider.grid(row=2, column=1, columnspan=3)
+        # Bind mouse events for seek slider to detect dragging start/end
+        self.seek_slider.bind("<ButtonPress-1>", self.seek_start)
+        self.seek_slider.bind("<ButtonRelease-1>", self.seek_end)
+
+        # Two frames for display: Original + Annotated, and Trace-only
+        video_frame = tk.Frame(root)
+        video_frame.pack()
+
+        self.video_label1 = tk.Label(video_frame)
+        self.video_label1.grid(row=0, column=0, padx=5, pady=5)
+
+        self.video_label2 = tk.Label(video_frame)
+        self.video_label2.grid(row=0, column=1, padx=5, pady=5)
 
     def update_fps(self, val):
         self.fps = int(val)
@@ -58,7 +78,7 @@ class BallPathTrackerApp:
             self.last_positions = self.last_positions[-self.max_memory:]
 
     def upload_video(self):
-        filepath = filedialog.askopenfilename(filetypes=[("MP4 files", "*.mp4")])
+        filepath = filedialog.askopenfilename(filetypes=[("MP4 files", "*.mp4"), ("All files", "*.*")])
         if filepath:
             if self.cap:
                 self.cap.release()
@@ -67,28 +87,33 @@ class BallPathTrackerApp:
                 print("Failed to open video")
                 return
 
-            # Get original dimensions
             self.video_width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
             self.video_height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+            self.total_frames = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
+            self.seek_slider.config(to=self.total_frames - 1)
 
             self.last_positions.clear()
+            self.dot_positions.clear()
+            self.prev_gray = None
+            self.frame_count = 0
             self.running = False
             self.paused = False
+            self.seeking = False
 
             self.start_btn.config(state=tk.NORMAL)
-            self.pause_btn.config(state=tk.DISABLED)
+            self.pause_btn.config(state=tk.DISABLED, text="Pause")
             self.stop_btn.config(state=tk.DISABLED)
-            self.video_label.config(image='')
+            self.video_label1.config(image='')
+            self.video_label2.config(image='')
 
-            # Resize window to video size
-            self.root.geometry(f"{self.video_width}x{self.video_height + 100}")
+            self.root.geometry(f"{self.video_width*2 + 40}x{self.video_height + 140}")
 
     def start_video(self):
         if self.cap and not self.running:
             self.running = True
             self.paused = False
             self.start_btn.config(state=tk.DISABLED)
-            self.pause_btn.config(state=tk.NORMAL)
+            self.pause_btn.config(state=tk.NORMAL, text="Pause")
             self.stop_btn.config(state=tk.NORMAL)
             self.update_frame()
 
@@ -107,91 +132,200 @@ class BallPathTrackerApp:
             self.paused = False
             self.cap.release()
             self.cap = None
+            self.prev_gray = None
+            self.frame_count = 0
             self.start_btn.config(state=tk.DISABLED)
             self.pause_btn.config(state=tk.DISABLED, text="Pause")
             self.stop_btn.config(state=tk.DISABLED)
             self.last_positions.clear()
-            self.video_label.config(image='')
+            self.dot_positions.clear()
+            self.video_label1.config(image='')
+            self.video_label2.config(image='')
 
-    def detect_white_ball(self, frame):
-        # Convert to grayscale for adaptive threshold
+    def stop_and_close(self):
+        self.stop_video()
+        self.root.destroy()
+
+    def seek_start(self, event):
+        # User started dragging seek slider
+        self.seeking = True
+
+    def seek_end(self, event):
+        # User released seek slider
+        self.seeking = False
+        # Force update frame after seeking ends
+        self.seek_video(self.seek_slider.get())
+
+    def seek_video(self, val):
+        if self.cap:
+            frame_num = int(val)
+            self.cap.set(cv2.CAP_PROP_POS_FRAMES, frame_num)
+            self.last_positions.clear()
+            self.dot_positions.clear()
+            self.prev_gray = None
+            self.frame_count = frame_num
+            # If paused or stopped, update frame once for preview
+            if not self.running or self.paused or self.seeking:
+                self.update_frame(single=True)
+
+    def detect_moving_objects(self, frame):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        gray = cv2.GaussianBlur(gray, (21, 21), 0)
 
-        # Blur to reduce noise
-        blurred = cv2.GaussianBlur(gray, (7,7), 0)
+        if self.prev_gray is None:
+            self.prev_gray = gray
+            return []
 
-        # Adaptive threshold to isolate bright objects (white ball)
-        thresh = cv2.adaptiveThreshold(
-            blurred, 255,
-            cv2.ADAPTIVE_THRESH_MEAN_C,
-            cv2.THRESH_BINARY_INV,
-            11, 2)
+        diff = cv2.absdiff(self.prev_gray, gray)
+        self.prev_gray = gray
 
-        # Invert threshold to get white ball as white
-        thresh = cv2.bitwise_not(thresh)
+        _, thresh = cv2.threshold(diff, 25, 255, cv2.THRESH_BINARY)
+        thresh = cv2.dilate(thresh, None, iterations=2)
 
-        # Morphology to clean noise
-        kernel = np.ones((5,5), np.uint8)
-        thresh = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
-        thresh = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
+        contours, _ = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        moving = []
 
-        # Find contours
-        contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        for cnt in contours:
+            if cv2.contourArea(cnt) < 5:  # Lowered threshold for small objects
+                continue
+            (x, y, w, h) = cv2.boundingRect(cnt)
+            center = (x + w // 2, y + h // 2)
+            moving.append((center, w, h))
 
-        if contours:
-            # Filter by area and circularity
-            possible_balls = []
-            for cnt in contours:
-                area = cv2.contourArea(cnt)
-                if area < 50:  # ignore small noise
-                    continue
-                perimeter = cv2.arcLength(cnt, True)
-                if perimeter == 0:
-                    continue
-                circularity = 4 * np.pi * (area / (perimeter * perimeter))
-                if 0.6 < circularity <= 1.2:  # close to circle
-                    possible_balls.append(cnt)
+        return moving
 
-            if possible_balls:
-                largest = max(possible_balls, key=cv2.contourArea)
-                (x, y), radius = cv2.minEnclosingCircle(largest)
-                if radius > 5:
-                    return (int(x), int(y))
-        return None
-
-
-    def update_frame(self):
-        if self.cap and self.running and not self.paused:
+    def update_frame(self, single=False):
+        if self.cap and (self.running or single) and not self.paused:
             ret, frame = self.cap.read()
             if ret:
-                # Use original dimensions (no resize)
+                self.frame_count += 1
                 frame_display = frame.copy()
+                moving_objs = self.detect_moving_objects(frame_display)
 
-                pos = self.detect_white_ball(frame_display)
-                if pos:
-                    self.last_positions.append(pos)
+                new_center = None
+
+                for (pos, w, h) in moving_objs:
+                    cv2.rectangle(frame_display, (pos[0] - w//2, pos[1] - h//2),
+                                (pos[0] + w//2, pos[1] + h//2), (255, 0, 0), 2)
+                    new_center = pos  # Save last detected object in this frame
+
+                # Draw current detected ball center as a red dot for clarity
+                if new_center:
+                    cv2.circle(frame_display, new_center, 8, (0, 0, 255), -1)
+
+                # Add to last_positions and dot_positions if detected
+                if new_center:
+                    self.last_positions.append(new_center)
                     if len(self.last_positions) > self.max_memory:
                         self.last_positions.pop(0)
 
-                # Draw ball path
+                    if self.frame_count % 10 == 0:
+                        self.dot_positions.append(new_center)
+
+                # === Prepare Frame 1: Original + Annotations ===
+                for dot in self.dot_positions:
+                    cv2.circle(frame_display, dot, 5, (0, 255, 0), -1)
+
                 for i in range(1, len(self.last_positions)):
-                    cv2.line(frame_display, self.last_positions[i-1], self.last_positions[i], (0, 255, 255), 3)
+                    cv2.line(frame_display, self.last_positions[i - 1],
+                             self.last_positions[i], (0, 255, 255), 3)
 
-                # Draw current ball position
-                if pos:
-                    cv2.circle(frame_display, pos, 10, (0, 255, 0), -1)
+                # === Prepare Frame 2: Trace Only on White Background ===
+                trace_frame = np.ones_like(frame_display, dtype=np.uint8) * 255  # White background
 
-                # Convert to RGB and display
-                img = cv2.cvtColor(frame_display, cv2.COLOR_BGR2RGB)
-                img = Image.fromarray(img)
-                imgtk = ImageTk.PhotoImage(image=img)
-                self.video_label.imgtk = imgtk
-                self.video_label.config(image=imgtk)
+                if len(self.dot_positions) == 0:
+                    cv2.putText(trace_frame, "Tracking path will appear here...", (30, 30),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
+                else:
+                    # Draw green fixed dots
+                    for dot in self.dot_positions:
+                        x, y = int(dot[0]), int(dot[1])
+                        if 0 <= x < self.video_width and 0 <= y < self.video_height:
+                            cv2.circle(trace_frame, (x, y), 5, (0, 255, 0), -1)
+                    # Draw yellow trailing path
+                    for i in range(1, len(self.last_positions)):
+                        x1, y1 = int(self.last_positions[i-1][0]), int(self.last_positions[i-1][1])
+                        x2, y2 = int(self.last_positions[i][0]), int(self.last_positions[i][1])
+                        if (0 <= x1 < self.video_width and 0 <= y1 < self.video_height and
+                            0 <= x2 < self.video_width and 0 <= y2 < self.video_height):
+                            cv2.line(trace_frame, (x1, y1), (x2, y2), (0, 255, 255), 3)
 
-                delay = int(1000 / self.fps)
-                self.root.after(delay, self.update_frame)
+                # Update seek slider to current frame, only if not seeking (user dragging)
+                if not self.seeking:
+                    current_frame = int(self.cap.get(cv2.CAP_PROP_POS_FRAMES))
+                    self.seek_slider.set(current_frame)
+
+                # Loop if reached end of video
+                current_frame = int(self.cap.get(cv2.CAP_PROP_POS_FRAMES))
+                if current_frame >= self.total_frames - 1:
+                    self.cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+                    self.last_positions.clear()
+                    self.dot_positions.clear()
+                    self.prev_gray = None
+                    self.frame_count = 0
+
+                # Convert for Tkinter
+                img1 = cv2.cvtColor(frame_display, cv2.COLOR_BGR2RGB)
+                img1 = Image.fromarray(img1)
+                imgtk1 = ImageTk.PhotoImage(image=img1)
+                self.video_label1.imgtk = imgtk1
+                self.video_label1.config(image=imgtk1)
+
+                img2 = cv2.cvtColor(trace_frame, cv2.COLOR_BGR2RGB)
+                img2 = Image.fromarray(img2)
+                imgtk2 = ImageTk.PhotoImage(image=img2)
+                self.video_label2.imgtk = imgtk2
+                self.video_label2.config(image=imgtk2)
+
+                if not single:
+                    self.root.after(int(1000 / self.fps), self.update_frame)
             else:
-                self.stop_video()
+                # If frame read fails (e.g. end of video), loop video
+                self.cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+                self.last_positions.clear()
+                self.dot_positions.clear()
+                self.prev_gray = None
+                self.frame_count = 0
+                self.update_frame()
+        elif single:
+            # If single frame update requested (e.g. on seek), just show current frame
+            ret, frame = self.cap.read()
+            if ret:
+                frame_display = frame.copy()
+                # Draw last tracked points as reference
+                for dot in self.dot_positions:
+                    cv2.circle(frame_display, dot, 5, (0, 255, 0), -1)
+                for i in range(1, len(self.last_positions)):
+                    cv2.line(frame_display, self.last_positions[i - 1],
+                             self.last_positions[i], (0, 255, 255), 3)
+
+                trace_frame = np.ones_like(frame_display, dtype=np.uint8) * 255  # White background
+                if len(self.dot_positions) == 0:
+                    cv2.putText(trace_frame, "Tracking path will appear here...", (30, 30),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
+                else:
+                    for dot in self.dot_positions:
+                        x, y = int(dot[0]), int(dot[1])
+                        if 0 <= x < self.video_width and 0 <= y < self.video_height:
+                            cv2.circle(trace_frame, (x, y), 5, (0, 255, 0), -1)
+                    for i in range(1, len(self.last_positions)):
+                        x1, y1 = int(self.last_positions[i-1][0]), int(self.last_positions[i-1][1])
+                        x2, y2 = int(self.last_positions[i][0]), int(self.last_positions[i][1])
+                        if (0 <= x1 < self.video_width and 0 <= y1 < self.video_height and
+                            0 <= x2 < self.video_width and 0 <= y2 < self.video_height):
+                            cv2.line(trace_frame, (x1, y1), (x2, y2), (0, 255, 255), 3)
+
+                img1 = cv2.cvtColor(frame_display, cv2.COLOR_BGR2RGB)
+                img1 = Image.fromarray(img1)
+                imgtk1 = ImageTk.PhotoImage(image=img1)
+                self.video_label1.imgtk = imgtk1
+                self.video_label1.config(image=imgtk1)
+
+                img2 = cv2.cvtColor(trace_frame, cv2.COLOR_BGR2RGB)
+                img2 = Image.fromarray(img2)
+                imgtk2 = ImageTk.PhotoImage(image=img2)
+                self.video_label2.imgtk = imgtk2
+                self.video_label2.config(image=imgtk2)
 
 if __name__ == "__main__":
     root = tk.Tk()
