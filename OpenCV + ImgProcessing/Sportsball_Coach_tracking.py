@@ -41,6 +41,10 @@ class BallPathTrackerApp:
         self.stop_btn = tk.Button(control_frame, text="Stop & Close", command=self.stop_and_close, state=tk.DISABLED)
         self.stop_btn.grid(row=0, column=3, padx=5)
 
+        self.track_btn = tk.Button(self.root, text="Track", command=self.track_button_clicked, state=tk.DISABLED)
+        self.track_btn.pack()  # or .grid() / .place() as per your layout
+
+
         tk.Label(control_frame, text="FPS:").grid(row=1, column=0)
         self.fps_slider = tk.Scale(control_frame, from_=1, to=60, orient=tk.HORIZONTAL, command=self.update_fps)
         self.fps_slider.set(self.fps)
@@ -105,6 +109,7 @@ class BallPathTrackerApp:
             self.stop_btn.config(state=tk.DISABLED)
             self.video_label1.config(image='')
             self.video_label2.config(image='')
+            self.track_btn.config(state=tk.NORMAL)
 
             self.root.geometry(f"{self.video_width*2 + 40}x{self.video_height + 140}")
 
@@ -203,59 +208,52 @@ class BallPathTrackerApp:
                 moving_objs = self.detect_moving_objects(frame_display)
 
                 new_center = None
-
                 for (pos, w, h) in moving_objs:
-                    cv2.rectangle(frame_display, (pos[0] - w//2, pos[1] - h//2),
-                                (pos[0] + w//2, pos[1] + h//2), (255, 0, 0), 2)
-                    new_center = pos  # Save last detected object in this frame
+                    cv2.rectangle(frame_display, (pos[0] - w // 2, pos[1] - h // 2),
+                                (pos[0] + w // 2, pos[1] + h // 2), (255, 0, 0), 2)
+                    new_center = pos  # Save last detected object center
 
-                # Draw current detected ball center as a red dot for clarity
+                # Draw red center dot
                 if new_center:
                     cv2.circle(frame_display, new_center, 8, (0, 0, 255), -1)
-
-                # Add to last_positions and dot_positions if detected
-                if new_center:
                     self.last_positions.append(new_center)
+
                     if len(self.last_positions) > self.max_memory:
                         self.last_positions.pop(0)
 
                     if self.frame_count % 10 == 0:
                         self.dot_positions.append(new_center)
 
-                # === Prepare Frame 1: Original + Annotations ===
+                # Draw trail dots and path on frame_display (Frame 1)
                 for dot in self.dot_positions:
                     cv2.circle(frame_display, dot, 5, (0, 255, 0), -1)
-
                 for i in range(1, len(self.last_positions)):
                     cv2.line(frame_display, self.last_positions[i - 1],
                              self.last_positions[i], (0, 255, 255), 3)
 
-                # === Prepare Frame 2: Trace Only on White Background ===
-                trace_frame = np.ones_like(frame_display, dtype=np.uint8) * 255  # White background
-
+                # Prepare trace-only white frame (Frame 2)
+                trace_frame = np.ones_like(frame_display, dtype=np.uint8) * 255
                 if len(self.dot_positions) == 0:
                     cv2.putText(trace_frame, "Tracking path will appear here...", (30, 30),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
                 else:
-                    # Draw green fixed dots
                     for dot in self.dot_positions:
                         x, y = int(dot[0]), int(dot[1])
                         if 0 <= x < self.video_width and 0 <= y < self.video_height:
                             cv2.circle(trace_frame, (x, y), 5, (0, 255, 0), -1)
-                    # Draw yellow trailing path
                     for i in range(1, len(self.last_positions)):
-                        x1, y1 = int(self.last_positions[i-1][0]), int(self.last_positions[i-1][1])
+                        x1, y1 = int(self.last_positions[i - 1][0]), int(self.last_positions[i - 1][1])
                         x2, y2 = int(self.last_positions[i][0]), int(self.last_positions[i][1])
                         if (0 <= x1 < self.video_width and 0 <= y1 < self.video_height and
                             0 <= x2 < self.video_width and 0 <= y2 < self.video_height):
                             cv2.line(trace_frame, (x1, y1), (x2, y2), (0, 255, 255), 3)
 
-                # Update seek slider to current frame, only if not seeking (user dragging)
+                # Update seek slider if not seeking
                 if not self.seeking:
                     current_frame = int(self.cap.get(cv2.CAP_PROP_POS_FRAMES))
                     self.seek_slider.set(current_frame)
 
-                # Loop if reached end of video
+                # Loop video if end reached
                 current_frame = int(self.cap.get(cv2.CAP_PROP_POS_FRAMES))
                 if current_frame >= self.total_frames - 1:
                     self.cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
@@ -264,42 +262,39 @@ class BallPathTrackerApp:
                     self.prev_gray = None
                     self.frame_count = 0
 
-                # Convert for Tkinter
-                img1 = cv2.cvtColor(frame_display, cv2.COLOR_BGR2RGB)
-                img1 = Image.fromarray(img1)
-                imgtk1 = ImageTk.PhotoImage(image=img1)
-                self.video_label1.imgtk = imgtk1
-                self.video_label1.config(image=imgtk1)
+                # Convert and display both frames in Tkinter
+                img1 = ImageTk.PhotoImage(image=Image.fromarray(cv2.cvtColor(frame_display, cv2.COLOR_BGR2RGB)))
+                self.video_label1.imgtk = img1
+                self.video_label1.config(image=img1)
 
-                img2 = cv2.cvtColor(trace_frame, cv2.COLOR_BGR2RGB)
-                img2 = Image.fromarray(img2)
-                imgtk2 = ImageTk.PhotoImage(image=img2)
-                self.video_label2.imgtk = imgtk2
-                self.video_label2.config(image=imgtk2)
+                img2 = ImageTk.PhotoImage(image=Image.fromarray(cv2.cvtColor(trace_frame, cv2.COLOR_BGR2RGB)))
+                self.video_label2.imgtk = img2
+                self.video_label2.config(image=img2)
 
                 if not single:
                     self.root.after(int(1000 / self.fps), self.update_frame)
+
             else:
-                # If frame read fails (e.g. end of video), loop video
+                # Frame read failed (end of video), reset and restart
                 self.cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
                 self.last_positions.clear()
                 self.dot_positions.clear()
                 self.prev_gray = None
                 self.frame_count = 0
                 self.update_frame()
+
         elif single:
-            # If single frame update requested (e.g. on seek), just show current frame
+            # Single-frame update (e.g., on slider seek)
             ret, frame = self.cap.read()
             if ret:
                 frame_display = frame.copy()
-                # Draw last tracked points as reference
                 for dot in self.dot_positions:
                     cv2.circle(frame_display, dot, 5, (0, 255, 0), -1)
                 for i in range(1, len(self.last_positions)):
                     cv2.line(frame_display, self.last_positions[i - 1],
                              self.last_positions[i], (0, 255, 255), 3)
 
-                trace_frame = np.ones_like(frame_display, dtype=np.uint8) * 255  # White background
+                trace_frame = np.ones_like(frame_display, dtype=np.uint8) * 255
                 if len(self.dot_positions) == 0:
                     cv2.putText(trace_frame, "Tracking path will appear here...", (30, 30),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
@@ -309,23 +304,49 @@ class BallPathTrackerApp:
                         if 0 <= x < self.video_width and 0 <= y < self.video_height:
                             cv2.circle(trace_frame, (x, y), 5, (0, 255, 0), -1)
                     for i in range(1, len(self.last_positions)):
-                        x1, y1 = int(self.last_positions[i-1][0]), int(self.last_positions[i-1][1])
+                        x1, y1 = int(self.last_positions[i - 1][0]), int(self.last_positions[i - 1][1])
                         x2, y2 = int(self.last_positions[i][0]), int(self.last_positions[i][1])
                         if (0 <= x1 < self.video_width and 0 <= y1 < self.video_height and
                             0 <= x2 < self.video_width and 0 <= y2 < self.video_height):
                             cv2.line(trace_frame, (x1, y1), (x2, y2), (0, 255, 255), 3)
 
-                img1 = cv2.cvtColor(frame_display, cv2.COLOR_BGR2RGB)
-                img1 = Image.fromarray(img1)
-                imgtk1 = ImageTk.PhotoImage(image=img1)
-                self.video_label1.imgtk = imgtk1
-                self.video_label1.config(image=imgtk1)
+                img1 = ImageTk.PhotoImage(image=Image.fromarray(cv2.cvtColor(frame_display, cv2.COLOR_BGR2RGB)))
+                self.video_label1.imgtk = img1
+                self.video_label1.config(image=img1)
 
-                img2 = cv2.cvtColor(trace_frame, cv2.COLOR_BGR2RGB)
-                img2 = Image.fromarray(img2)
-                imgtk2 = ImageTk.PhotoImage(image=img2)
-                self.video_label2.imgtk = imgtk2
-                self.video_label2.config(image=imgtk2)
+                img2 = ImageTk.PhotoImage(image=Image.fromarray(cv2.cvtColor(trace_frame, cv2.COLOR_BGR2RGB)))
+                self.video_label2.imgtk = img2
+                self.video_label2.config(image=img2)
+
+    def track_button_clicked(self):
+        if not self.running or self.paused or self.seeking:
+                self.update_frame(single=True)
+                
+        import matplotlib.pyplot as plt
+
+        # Example inside your frame update or tracking function:
+        if len(self.dot_positions) > 0 and self.track_btn['state'] == tk.DISABLED:
+            self.track_btn.config(state=tk.NORMAL)
+
+
+        if not self.dot_positions:
+            print("No tracked path to visualize.")
+            return
+
+        # Separate x and y coordinates
+        x_vals = [pos[0] for pos in self.dot_positions]
+        y_vals = [pos[1] for pos in self.dot_positions]
+
+        plt.figure(figsize=(8, 6))
+        plt.imshow(np.zeros((self.video_height, self.video_width, 3), dtype=np.uint8))  # empty background
+        plt.scatter(x_vals, y_vals, c='red', s=10, label='Ball Path')
+        plt.title("Tracked Ball Path (Trail Visualization)")
+        plt.xlabel("X Position")
+        plt.ylabel("Y Position")
+        plt.legend()
+        plt.gca().invert_yaxis()  # Flip Y axis to match video coordinates
+        plt.tight_layout()
+        plt.show()
 
 if __name__ == "__main__":
     root = tk.Tk()
