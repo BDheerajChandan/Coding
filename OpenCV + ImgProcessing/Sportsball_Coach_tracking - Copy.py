@@ -168,13 +168,48 @@ class BallPathTrackerApp:
             if not self.running or self.paused or self.seeking:
                 self.update_frame(single=True)
 
-    def detect_moving_objects(self, frame):
+    def highlight_moving_colored_objects_white(self, frame):
+        # Convert frame to HSV
+        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+        # HSV Ranges for red and yellow
+        red_lower1 = np.array([0, 100, 100])
+        red_upper1 = np.array([10, 255, 255])
+        red_lower2 = np.array([160, 100, 100])
+        red_upper2 = np.array([179, 255, 255])
+        yellow_lower = np.array([20, 100, 100])
+        yellow_upper = np.array([35, 255, 255])
+
+        # Create color masks
+        mask_red1 = cv2.inRange(hsv, red_lower1, red_upper1)
+        mask_red2 = cv2.inRange(hsv, red_lower2, red_upper2)
+        mask_red = cv2.bitwise_or(mask_red1, mask_red2)
+        mask_yellow = cv2.inRange(hsv, yellow_lower, yellow_upper)
+        combined_mask = cv2.bitwise_or(mask_red, mask_yellow)
+
+        # Clean the color mask
+        kernel = np.ones((5, 5), np.uint8)
+        combined_mask = cv2.morphologyEx(combined_mask, cv2.MORPH_OPEN, kernel)
+        combined_mask = cv2.dilate(combined_mask, kernel, iterations=2)
+
+        # Color contours
+        color_contours, _ = cv2.findContours(combined_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        color_objects = []
+        for cnt in color_contours:
+            area = cv2.contourArea(cnt)
+            if area < 10:
+                continue
+            (x, y, w, h) = cv2.boundingRect(cnt)
+            center = (x + w // 2, y + h // 2)
+            color_objects.append(((x, y, w, h), center))
+
+        # Grayscale for motion detection
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, (21, 21), 0)
 
         if self.prev_gray is None:
             self.prev_gray = gray
-            return []
+            return frame  # First frame, return unchanged
 
         diff = cv2.absdiff(self.prev_gray, gray)
         self.prev_gray = gray
@@ -182,17 +217,25 @@ class BallPathTrackerApp:
         _, thresh = cv2.threshold(diff, 25, 255, cv2.THRESH_BINARY)
         thresh = cv2.dilate(thresh, None, iterations=2)
 
-        contours, _ = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        moving = []
-
-        for cnt in contours:
-            if cv2.contourArea(cnt) < 5:  # Lowered threshold for small objects
+        motion_contours, _ = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        moving_areas = []
+        for cnt in motion_contours:
+            if cv2.contourArea(cnt) < 5:
                 continue
             (x, y, w, h) = cv2.boundingRect(cnt)
-            center = (x + w // 2, y + h // 2)
-            moving.append((center, w, h))
+            moving_areas.append((x, y, x + w, y + h))
 
-        return moving
+        # Only keep color objects that are moving
+        for (bbox, center) in color_objects:
+            x, y, w, h = bbox
+            cx, cy = center
+            for (mx1, my1, mx2, my2) in moving_areas:
+                if mx1 <= cx <= mx2 and my1 <= cy <= my2:
+                    # Change detected area to white in the frame
+                        frame[y:y + h, x:x + w] = 255
+                        break
+
+        return frame
 
     def update_frame(self, single=False):
         if self.cap and (self.running or single) and not self.paused:

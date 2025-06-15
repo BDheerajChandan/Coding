@@ -166,8 +166,7 @@ class BallPathTrackerApp:
             self.last_positions.clear()
             self.dot_positions.clear()
             self.prev_gray = None
-            self.prev_white_mask = None
-            self.tracking_only = False  # ← ADD THIS LINE
+            self.prev_white_mask = None  # FIXED: reset on seek
             self.frame_count = frame_num
             if not self.running or self.paused or self.seeking:
                 self.update_frame(single=True)
@@ -198,7 +197,7 @@ class BallPathTrackerApp:
             moving_white_objects.append((center, w, h))
 
         return moving_white_objects
-    def update_frame(self, single=False, track_mode=True):
+    def update_frame(self, single=False, track_mode=False):
         if self.cap and (self.running or single or track_mode) and not self.paused:
             ret, frame = self.cap.read()
             if ret:
@@ -322,11 +321,10 @@ class BallPathTrackerApp:
             print("No video loaded.")
             return
 
-        # Restart tracking even after pause/seek
-        if not self.tracking_only or self.paused or self.seeking:
+        if not self.tracking_only:
             self.tracking_only = True
-            self.paused = False
-            self.running = False
+            self.paused = False  # Ensure not paused
+            self.running = False  # Disable normal playback
             self.last_positions.clear()
             self.dot_positions.clear()
             self.prev_white_mask = None
