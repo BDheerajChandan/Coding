@@ -32,3 +32,21 @@ Saved images :  docker images
 ==============================================================================================
 Remove temperory containers after updating/commiting : docker rm eager_moser goofy_tharp
 Check for container status : docker ps -a
+
+
+
+
+
+
+
+==============================================================================================
+
+After opening docker again:
+	docker ps
+	docker ps -a
+	docker start <container_name>
+	docker exec -it <container_name> bash
+		ls 
+		exit
+	docker ps
+	docker ps -a
